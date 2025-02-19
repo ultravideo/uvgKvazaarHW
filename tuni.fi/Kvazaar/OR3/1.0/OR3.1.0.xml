@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This file is part of uvgKvazaarHW.-->
+<!-- -->
+<!--Copyright (c) 2025, Tampere University, ITU/ISO/IEC, project contributors-->
+<!--All rights reserved.-->
+<!---->
+<!--Redistribution and use in source and binary forms, with or without modification,-->
+<!--are permitted provided that the following conditions are met:-->
+<!---->
+<!--* Redistributions of source code must retain the above copyright notice, this-->
+<!--  list of conditions and the following disclaimer.-->
+<!---->
+<!--* Redistributions in binary form must reproduce the above copyright notice, this-->
+<!--  list of conditions and the following disclaimer in the documentation and/or-->
+<!--  other materials provided with the distribution.-->
+<!---->
+<!--* Neither the name of the Tampere University or ITU/ISO/IEC nor the names of its-->
+<!--  contributors may be used to endorse or promote products derived from-->
+<!--  this software without specific prior written permission.-->
+<!---->
+<!--THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND-->
+<!--ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED-->
+<!--WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE-->
+<!--DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR-->
+<!--ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES-->
+<!--INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;-->
+<!--LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION HOWEVER CAUSED AND ON-->
+<!--ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT-->
+<!--SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
+<!--INCLUDING NEGLIGENCE OR OTHERWISE ARISING IN ANY WAY OUT OF THE USE OF THIS-->
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>tuni.fi</ipxact:vendor>
+	<ipxact:library>Kvazaar</ipxact:library>
+	<ipxact:name>OR3</ipxact:name>
+	<ipxact:version>1.0</ipxact:version>
+	<ipxact:model>
+		<ipxact:views>
+			<ipxact:view>
+				<ipxact:name>flat_vhdl</ipxact:name>
+				<ipxact:envIdentifier>VHDL:Kactus2:</ipxact:envIdentifier>
+				<ipxact:componentInstantiationRef>vhdl_implementation</ipxact:componentInstantiationRef>
+			</ipxact:view>
+			<ipxact:view>
+				<ipxact:name>sim</ipxact:name>
+				<ipxact:componentInstantiationRef>sim</ipxact:componentInstantiationRef>
+			</ipxact:view>
+		</ipxact:views>
+		<ipxact:instantiations>
+			<ipxact:componentInstantiation>
+				<ipxact:name>vhdl_implementation</ipxact:name>
+				<ipxact:language>VHDL</ipxact:language>
+				<ipxact:moduleName>Combinatorial_OR3</ipxact:moduleName>
+				<ipxact:architectureName>combinatorial</ipxact:architectureName>
+				<ipxact:moduleParameters>
+					<ipxact:moduleParameter dataType="natural" parameterId="uuid_4c162dbf_655e_41ec_871e_66b00d4ac6a0" type="int" usageType="nontyped">
+						<ipxact:name>WIDTH</ipxact:name>
+						<ipxact:description>Default width for inputs and output</ipxact:description>
+						<ipxact:value>uuid_3d15a05c_5598_43a5_9742_d462db16332a</ipxact:value>
+					</ipxact:moduleParameter>
+				</ipxact:moduleParameters>
+			</ipxact:componentInstantiation>
+			<ipxact:componentInstantiation>
+				<ipxact:name>sim</ipxact:name>
+				<ipxact:language>Verilog</ipxact:language>
+				<ipxact:moduleName>Combinatorial_OR3</ipxact:moduleName>
+				<ipxact:architectureName>combinatorial</ipxact:architectureName>
+				<ipxact:moduleParameters>
+					<ipxact:moduleParameter parameterId="uuid_2e42182d_50f5_41ff_b884_536f48438426" usageType="nontyped">
+						<ipxact:name>WIDTH</ipxact:name>
+						<ipxact:description>Default width for inputs and output</ipxact:description>
+						<ipxact:value>uuid_3d15a05c_5598_43a5_9742_d462db16332a</ipxact:value>
+					</ipxact:moduleParameter>
+				</ipxact:moduleParameters>
+				<ipxact:fileSetRef>
+					<ipxact:localName>sim</ipxact:localName>
+				</ipxact:fileSetRef>
+			</ipxact:componentInstantiation>
+		</ipxact:instantiations>
+		<ipxact:ports>
+			<ipxact:port>
+				<ipxact:name>input1</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>uuid_3d15a05c_5598_43a5_9742_d462db16332a-1</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic_vector</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue></ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+				<ipxact:vendorExtensions>
+					<kactus2:adHocVisible/>
+				</ipxact:vendorExtensions>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>input2</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>uuid_3d15a05c_5598_43a5_9742_d462db16332a-1</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic_vector</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue></ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+				<ipxact:vendorExtensions>
+					<kactus2:adHocVisible/>
+				</ipxact:vendorExtensions>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>input3</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>uuid_3d15a05c_5598_43a5_9742_d462db16332a-1</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic_vector</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue></ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+				<ipxact:vendorExtensions>
+					<kactus2:adHocVisible/>
+				</ipxact:vendorExtensions>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>output1</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>uuid_3d15a05c_5598_43a5_9742_d462db16332a-1</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:wireTypeDefs>
+						<ipxact:wireTypeDef>
+							<ipxact:typeName>std_logic_vector</ipxact:typeName>
+							<ipxact:typeDefinition>IEEE.std_logic_1164.all</ipxact:typeDefinition>
+						</ipxact:wireTypeDef>
+					</ipxact:wireTypeDefs>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue></ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+				<ipxact:vendorExtensions>
+					<kactus2:adHocVisible/>
+				</ipxact:vendorExtensions>
+			</ipxact:port>
+		</ipxact:ports>
+	</ipxact:model>
+	<ipxact:fileSets>
+		<ipxact:fileSet>
+			<ipxact:name>rtl</ipxact:name>
+			<ipxact:file>
+				<ipxact:name>../../../../rtls/adapters/OR.v</ipxact:name>
+				<ipxact:fileType>vhdlSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>da39a3ee5e6b4b0d3255bfef95601890afd80709</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>sim</ipxact:name>
+			<ipxact:file>
+				<ipxact:name>../../../../rtls/adapters/OR.v</ipxact:name>
+				<ipxact:fileType>verilogSource</ipxact:fileType>
+			</ipxact:file>
+		</ipxact:fileSet>
+	</ipxact:fileSets>
+	<ipxact:parameters>
+		<ipxact:parameter kactus2:usageCount="5" parameterId="uuid_3d15a05c_5598_43a5_9742_d462db16332a" type="int">
+			<ipxact:name>WIDTH</ipxact:name>
+			<ipxact:description>Default width for inputs and output</ipxact:description>
+			<ipxact:value>1</ipxact:value>
+		</ipxact:parameter>
+	</ipxact:parameters>
+	<ipxact:vendorExtensions>
+		<kactus2:version>3,13,199,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_productHier>Flat</kactus2:kts_productHier>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+			<kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
+		</kactus2:kts_attributes>
+		<kactus2:author>Tampere University</kactus2:author>
+		<kactus2:license>3-BSD clause</kactus2:license>
+	</ipxact:vendorExtensions>
+</ipxact:component>

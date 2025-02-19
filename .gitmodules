@@ -1,0 +1,9 @@
+[submodule "kvazaar"]
+	path = kvazaar
+	url = https://github.com/ultravideo/kvazaar.git
+[submodule "libzmq"]
+	path = libzmq
+	url = https://github.com/zeromq/libzmq.git
+[submodule "uvgKvazaarHW_rtl_gen"]
+	path = uvgKvazaarHW_rtl_gen
+	url = https://github.com/ultravideo/uvgKvazaarHW_rtl_gen.git

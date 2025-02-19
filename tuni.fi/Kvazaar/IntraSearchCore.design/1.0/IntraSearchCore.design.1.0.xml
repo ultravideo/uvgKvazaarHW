@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>tuni.fi</ipxact:vendor>
+	<ipxact:library>Kvazaar</ipxact:library>
+	<ipxact:name>IntraSearchCore.design</ipxact:name>
+	<ipxact:version>1.0</ipxact:version>
+	<ipxact:componentInstances>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>intra_search_control</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarControl" name="IntraSearchControl" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{059891e3-4a51-4272-aa44-c33a3d58276a}</kactus2:uuid>
+				<kactus2:position x="280" y="60"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="420"/>
+					<kactus2:portPosition busRef="cabac_rsc" x="110" y="340"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="400"/>
+					<kactus2:portPosition busRef="coeff_in_rsc" x="110" y="200"/>
+					<kactus2:portPosition busRef="conf_in_rsc" x="-110" y="40"/>
+					<kactus2:portPosition busRef="conf_out_rsc" x="110" y="40"/>
+					<kactus2:portPosition busRef="cu_info" x="110" y="40"/>
+					<kactus2:portPosition busRef="cu_info_hor" x="-110" y="80"/>
+					<kactus2:portPosition busRef="cu_info_hor_str" x="-110" y="240"/>
+					<kactus2:portPosition busRef="cu_info_rsc" x="-110" y="160"/>
+					<kactus2:portPosition busRef="cu_info_ver" x="-110" y="280"/>
+					<kactus2:portPosition busRef="ip_ctrl" x="110" y="40"/>
+					<kactus2:portPosition busRef="lcu_border_left" x="-110" y="320"/>
+					<kactus2:portPosition busRef="lcu_border_top" x="-110" y="200"/>
+					<kactus2:portPosition busRef="lcu_coeff_rsc" x="110" y="300"/>
+					<kactus2:portPosition busRef="lcu_poll" x="110" y="260"/>
+					<kactus2:portPosition busRef="lcu_rec" x="110" y="40"/>
+					<kactus2:portPosition busRef="lcu_rec_rsc" x="-110" y="120"/>
+					<kactus2:portPosition busRef="rec_in_rsc" x="110" y="230"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>intra_search_transform</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarTransform" name="IntraSearchTransform" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{e20919c9-addc-48ed-9e19-00ba29b61187}</kactus2:uuid>
+				<kactus2:position x="1040" y="60"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="150"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="130"/>
+					<kactus2:portPosition busRef="coeff_out" x="-110" y="200"/>
+					<kactus2:portPosition busRef="pred_in" x="-110" y="70"/>
+					<kactus2:portPosition busRef="rec_out" x="-110" y="230"/>
+					<kactus2:portPosition busRef="ref_in" x="-110" y="100"/>
+					<kactus2:portPosition busRef="resid_in" x="-110" y="40"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>intra_search_prediction</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="intra_prediction" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{f07eb82b-0978-45bc-b0f5-f4a7d78e27ef}</kactus2:uuid>
+				<kactus2:position x="720" y="60"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="170"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="120"/>
+					<kactus2:portPosition busRef="clk_base" x="-110" y="140"/>
+					<kactus2:portPosition busRef="ip_config_in" x="-110" y="40"/>
+					<kactus2:portPosition busRef="lcu_ref_rsc" x="-110" y="80"/>
+					<kactus2:portPosition busRef="normal_clock" x="-110" y="160"/>
+					<kactus2:portPosition busRef="pred_out_rsc" x="110" y="70"/>
+					<kactus2:portPosition busRef="ref_out_rsc" x="110" y="100"/>
+					<kactus2:portPosition busRef="resid_out_rsc" x="110" y="40"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+	</ipxact:componentInstances>
+	<ipxact:interconnections>
+		<ipxact:interconnection>
+			<ipxact:name>intra_search_prediction_arst_n_to_reset</ipxact:name>
+			<ipxact:activeInterface componentRef="intra_search_prediction" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="reset"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>intra_search_transform_arst_n_to_reset</ipxact:name>
+			<ipxact:activeInterface componentRef="intra_search_transform" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="reset"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>intra_search_control_arst_n_to_reset</ipxact:name>
+			<ipxact:activeInterface componentRef="intra_search_control" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="reset"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>intra_search_control_conf_in_rsc_to_bus</ipxact:name>
+			<ipxact:activeInterface componentRef="intra_search_control" busRef="conf_in_rsc"/>
+			<ipxact:hierInterface busRef="conf_in_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>intra_search_control_cu_info_hor_to_bus</ipxact:name>
+			<ipxact:activeInterface componentRef="intra_search_control" busRef="cu_info_hor"/>
+			<ipxact:hierInterface busRef="cu_info_hor"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>intra_search_control_lcu_border_top_to_bus</ipxact:name>
+			<ipxact:activeInterface componentRef="intra_search_control" busRef="lcu_border_top"/>
+			<ipxact:hierInterface busRef="lcu_border_top"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>intra_search_control_cu_info_hor_str_to_bus</ipxact:name>
+			<ipxact:activeInterface componentRef="intra_search_control" busRef="cu_info_hor_str"/>
+			<ipxact:hierInterface busRef="cu_info_hor_str"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>intra_search_control_cu_info_ver_to_bus</ipxact:name>
+			<ipxact:activeInterface componentRef="intra_search_control" busRef="cu_info_ver"/>
+			<ipxact:hierInterface busRef="cu_info_ver"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>intra_search_control_lcu_border_left_to_bus</ipxact:name>
+			<ipxact:activeInterface componentRef="intra_search_control" busRef="lcu_border_left"/>
+			<ipxact:hierInterface busRef="lcu_border_left"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>intra_search_control_cu_info_rsc_to_bus_1</ipxact:name>
+			<ipxact:activeInterface componentRef="intra_search_control" busRef="cu_info_rsc"/>
+			<ipxact:hierInterface busRef="cu_info_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>intra_search_prediction_resid_out_rsc_to_intra_search_transform_resid_in</ipxact:name>
+			<ipxact:activeInterface componentRef="intra_search_prediction" busRef="resid_out_rsc"/>
+			<ipxact:activeInterface componentRef="intra_search_transform" busRef="resid_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>intra_search_prediction_pred_out_rsc_to_intra_search_transform_pred_in</ipxact:name>
+			<ipxact:activeInterface componentRef="intra_search_prediction" busRef="pred_out_rsc"/>
+			<ipxact:activeInterface componentRef="intra_search_transform" busRef="pred_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>intra_search_prediction_ref_out_rsc_to_intra_search_transform_ref_in</ipxact:name>
+			<ipxact:activeInterface componentRef="intra_search_prediction" busRef="ref_out_rsc"/>
+			<ipxact:activeInterface componentRef="intra_search_transform" busRef="ref_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>intra_search_prediction_lcu_ref_rsc_to_bus</ipxact:name>
+			<ipxact:activeInterface componentRef="intra_search_prediction" busRef="lcu_ref_rsc"/>
+			<ipxact:hierInterface busRef="lcu_ref_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>intra_search_transform_rec_out_to_intra_search_control_rec_in_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="intra_search_transform" busRef="rec_out"/>
+			<ipxact:activeInterface componentRef="intra_search_control" busRef="rec_in_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>intra_search_control_coeff_in_rsc_to_intra_search_transform_coeff_out</ipxact:name>
+			<ipxact:activeInterface componentRef="intra_search_control" busRef="coeff_in_rsc"/>
+			<ipxact:activeInterface componentRef="intra_search_transform" busRef="coeff_out"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>intra_search_control_conf_out_rsc_to_intra_search_prediction_ip_config_in</ipxact:name>
+			<ipxact:activeInterface componentRef="intra_search_control" busRef="conf_out_rsc"/>
+			<ipxact:activeInterface componentRef="intra_search_prediction" busRef="ip_config_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>intra_search_control_cabac_rsc_to_bus_1</ipxact:name>
+			<ipxact:activeInterface componentRef="intra_search_control" busRef="cabac_rsc"/>
+			<ipxact:hierInterface busRef="cabac_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>intra_search_control_lcu_poll_to_bus</ipxact:name>
+			<ipxact:activeInterface componentRef="intra_search_control" busRef="lcu_poll"/>
+			<ipxact:hierInterface busRef="lcu_poll"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>intra_search_control_lcu_rec_rsc_to_bus</ipxact:name>
+			<ipxact:activeInterface componentRef="intra_search_control" busRef="lcu_rec_rsc"/>
+			<ipxact:hierInterface busRef="lcu_rec_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>intra_search_control_lcu_coeff_rsc_to_bus_1</ipxact:name>
+			<ipxact:activeInterface componentRef="intra_search_control" busRef="lcu_coeff_rsc"/>
+			<ipxact:hierInterface busRef="lcu_coeff_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>intra_search_prediction_clk_to_clk_intra</ipxact:name>
+			<ipxact:activeInterface componentRef="intra_search_prediction" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk_intra"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>intra_search_control_clk_to_clk_base</ipxact:name>
+			<ipxact:activeInterface componentRef="intra_search_control" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk_base"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>intra_search_prediction_clk_base_to_clk_base</ipxact:name>
+			<ipxact:activeInterface componentRef="intra_search_prediction" busRef="clk_base"/>
+			<ipxact:hierInterface busRef="clk_base"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>intra_search_transform_clk_to_clk_base</ipxact:name>
+			<ipxact:activeInterface componentRef="intra_search_transform" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk_base"/>
+		</ipxact:interconnection>
+	</ipxact:interconnections>
+	<ipxact:vendorExtensions>
+		<kactus2:version>3,11,1,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+		</kactus2:kts_attributes>
+		<kactus2:columnLayout>
+			<kactus2:column name="IO" contentType="0" allowedItems="1" minWidth="119" width="119" x="0"/>
+			<kactus2:column name="Prediction" contentType="2" allowedItems="2" minWidth="319" width="319" x="560"/>
+			<kactus2:column name="IO" contentType="0" allowedItems="1" minWidth="119" width="119" x="440"/>
+			<kactus2:column name="Transform" contentType="2" allowedItems="2" minWidth="319" width="319" x="880"/>
+			<kactus2:column name="Control" contentType="2" allowedItems="2" minWidth="319" width="319" x="120"/>
+		</kactus2:columnLayout>
+		<kactus2:routes>
+			<kactus2:route kactus2:connRef="intra_search_prediction_arst_n_to_reset" kactus2:offPage="true">
+				<kactus2:position x="580" y="230"/>
+				<kactus2:position x="90" y="560"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_transform_arst_n_to_reset" kactus2:offPage="true">
+				<kactus2:position x="900" y="210"/>
+				<kactus2:position x="90" y="560"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_arst_n_to_reset" kactus2:offPage="true">
+				<kactus2:position x="140" y="480"/>
+				<kactus2:position x="90" y="560"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_conf_in_rsc_to_conf_in_rsc" kactus2:offPage="false">
+				<kactus2:position x="170" y="190"/>
+				<kactus2:position x="60" y="190"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_conf_in_rsc_to_bus" kactus2:offPage="false">
+				<kactus2:position x="170" y="100"/>
+				<kactus2:position x="60" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_cu_info_hor_to_cu_info_hor" kactus2:offPage="false">
+				<kactus2:position x="170" y="310"/>
+				<kactus2:position x="60" y="310"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_cu_info_hor_to_bus" kactus2:offPage="false">
+				<kactus2:position x="170" y="140"/>
+				<kactus2:position x="60" y="140"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_lcu_border_top_to_lcu_border_top" kactus2:offPage="false">
+				<kactus2:position x="170" y="480"/>
+				<kactus2:position x="60" y="480"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_lcu_border_top_to_bus" kactus2:offPage="false">
+				<kactus2:position x="170" y="260"/>
+				<kactus2:position x="60" y="260"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_cu_info_hor_str_to_cu_info_hor_str" kactus2:offPage="false">
+				<kactus2:position x="170" y="540"/>
+				<kactus2:position x="60" y="540"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_cu_info_hor_str_to_bus" kactus2:offPage="false">
+				<kactus2:position x="170" y="300"/>
+				<kactus2:position x="60" y="300"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_cu_info_ver_to_cu_info_ver" kactus2:offPage="false">
+				<kactus2:position x="170" y="590"/>
+				<kactus2:position x="60" y="590"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_cu_info_ver_to_bus" kactus2:offPage="false">
+				<kactus2:position x="170" y="340"/>
+				<kactus2:position x="60" y="340"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_lcu_border_left_to_lcu_border_left" kactus2:offPage="false">
+				<kactus2:position x="170" y="650"/>
+				<kactus2:position x="60" y="650"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_lcu_border_left_to_bus" kactus2:offPage="false">
+				<kactus2:position x="170" y="380"/>
+				<kactus2:position x="60" y="380"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_lcu_rec_rsc_to_lcu_rec_rsc" kactus2:offPage="false">
+				<kactus2:position x="170" y="380"/>
+				<kactus2:position x="60" y="380"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_cu_info_rsc_to_cu_info_rsc" kactus2:offPage="false">
+				<kactus2:position x="170" y="420"/>
+				<kactus2:position x="60" y="420"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_cu_info_rsc_to_bus_1" kactus2:offPage="false">
+				<kactus2:position x="170" y="220"/>
+				<kactus2:position x="60" y="220"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_prediction_resid_out_rsc_to_intra_search_transform_resid_in" kactus2:offPage="false">
+				<kactus2:position x="830" y="100"/>
+				<kactus2:position x="930" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_prediction_pred_out_rsc_to_intra_search_transform_pred_in" kactus2:offPage="false">
+				<kactus2:position x="830" y="130"/>
+				<kactus2:position x="930" y="130"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_prediction_ref_out_rsc_to_intra_search_transform_ref_in" kactus2:offPage="false">
+				<kactus2:position x="830" y="160"/>
+				<kactus2:position x="930" y="160"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_prediction_lcu_ref_rsc_to_lcu_ref_rsc" kactus2:offPage="false">
+				<kactus2:position x="610" y="140"/>
+				<kactus2:position x="500" y="140"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_prediction_lcu_ref_rsc_to_bus" kactus2:offPage="false">
+				<kactus2:position x="610" y="140"/>
+				<kactus2:position x="500" y="140"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_transform_rec_out_to_intra_search_control_rec_in_rsc" kactus2:offPage="false">
+				<kactus2:position x="930" y="290"/>
+				<kactus2:position x="390" y="290"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_coeff_in_rsc_to_intra_search_transform_coeff_out" kactus2:offPage="false">
+				<kactus2:position x="390" y="260"/>
+				<kactus2:position x="930" y="260"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_conf_out_rsc_to_intra_search_prediction_ip_config_in" kactus2:offPage="false">
+				<kactus2:position x="390" y="100"/>
+				<kactus2:position x="610" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_lcu_coeff_rsc_to_lcu_coeff_rsc" kactus2:offPage="false">
+				<kactus2:position x="390" y="520"/>
+				<kactus2:position x="480" y="520"/>
+				<kactus2:position x="480" y="530"/>
+				<kactus2:position x="500" y="530"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_cabac_rsc_to_cabac_rsc" kactus2:offPage="false">
+				<kactus2:position x="390" y="590"/>
+				<kactus2:position x="480" y="590"/>
+				<kactus2:position x="480" y="620"/>
+				<kactus2:position x="500" y="620"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_cabac_rsc_to_bus_1" kactus2:offPage="false">
+				<kactus2:position x="390" y="400"/>
+				<kactus2:position x="500" y="400"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_lcu_poll_to_lcu_poll" kactus2:offPage="false">
+				<kactus2:position x="390" y="470"/>
+				<kactus2:position x="500" y="470"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_lcu_poll_to_bus" kactus2:offPage="false">
+				<kactus2:position x="390" y="320"/>
+				<kactus2:position x="500" y="320"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_lcu_rec_rsc_to_lcu_rec_rsc" kactus2:offPage="false">
+				<kactus2:position x="170" y="380"/>
+				<kactus2:position x="60" y="380"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_lcu_coeff_rsc_to_lcu_coeff_rsc" kactus2:offPage="false">
+				<kactus2:position x="390" y="520"/>
+				<kactus2:position x="500" y="520"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_lcu_rec_rsc_to_bus" kactus2:offPage="false">
+				<kactus2:position x="170" y="180"/>
+				<kactus2:position x="60" y="180"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_lcu_coeff_rsc_to_bus_1" kactus2:offPage="false">
+				<kactus2:position x="390" y="360"/>
+				<kactus2:position x="500" y="360"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_prediction_clk_to_clk_intra" kactus2:offPage="false">
+				<kactus2:position x="610" y="180"/>
+				<kactus2:position x="500" y="180"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_control_clk_to_clk_base" kactus2:offPage="true">
+				<kactus2:position x="140" y="460"/>
+				<kactus2:position x="90" y="460"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_prediction_clk_base_to_clk_base" kactus2:offPage="true">
+				<kactus2:position x="580" y="200"/>
+				<kactus2:position x="90" y="460"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="intra_search_transform_clk_to_clk_base" kactus2:offPage="true">
+				<kactus2:position x="900" y="190"/>
+				<kactus2:position x="90" y="460"/>
+			</kactus2:route>
+		</kactus2:routes>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>intra_oc</kactus2:name>
+			<kactus2:position x="280" y="260"/>
+			<kactus2:direction x="0" y="-1"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>reset</kactus2:name>
+			<kactus2:position x="60" y="560"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>normal_clock</kactus2:name>
+			<kactus2:position x="500" y="220"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>clk_intra_oc</kactus2:name>
+			<kactus2:position x="60" y="460"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>ip_ctrl</kactus2:name>
+			<kactus2:position x="60" y="140"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>conf_in_rsc</kactus2:name>
+			<kactus2:position x="60" y="100"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cu_info_hor</kactus2:name>
+			<kactus2:position x="60" y="140"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>lcu_border_top</kactus2:name>
+			<kactus2:position x="60" y="260"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cu_info_hor_str</kactus2:name>
+			<kactus2:position x="60" y="300"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cu_info_ver</kactus2:name>
+			<kactus2:position x="60" y="340"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>lcu_border_left</kactus2:name>
+			<kactus2:position x="60" y="380"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cu_info_rsc</kactus2:name>
+			<kactus2:position x="60" y="220"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>lcu_ref_rsc</kactus2:name>
+			<kactus2:position x="500" y="140"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cabac_rsc</kactus2:name>
+			<kactus2:position x="500" y="400"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>lcu_poll</kactus2:name>
+			<kactus2:position x="500" y="320"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>lcu_rec_rsc</kactus2:name>
+			<kactus2:position x="60" y="180"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>lcu_coeff_rsc</kactus2:name>
+			<kactus2:position x="500" y="360"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>intra_clk</kactus2:name>
+			<kactus2:position x="60" y="590"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>base_clk</kactus2:name>
+			<kactus2:position x="60" y="550"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>clk_intra</kactus2:name>
+			<kactus2:position x="500" y="180"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>clk_base</kactus2:name>
+			<kactus2:position x="60" y="460"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:adHocVisibilities/>
+	</ipxact:vendorExtensions>
+</ipxact:design>

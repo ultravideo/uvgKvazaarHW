@@ -1,0 +1,1366 @@
+diff --git a/configure.ac b/configure.ac
+index 96d36d1..7d450c2 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -73,7 +73,7 @@ AM_CONDITIONAL([HAVE_AVX2_CLANG], [test x"$flag_avx2" = x"true" -a x"$flag_bmi"
+ AM_CONDITIONAL([HAVE_SSE4_1], [test x"$flag_sse4_1" = x"true"])
+ AM_CONDITIONAL([HAVE_SSE2], [test x"$flag_sse2" = x"true"])
+ 
+-KVZ_CFLAGS="-Wall -Wextra -Wvla -Wno-sign-compare -Wno-unused-parameter -I$srcdir/src -I$srcdir/src/extras -ftree-vectorize -fvisibility=hidden"
++KVZ_CFLAGS="-Wall -Wextra -Wvla -Wno-sign-compare -Wno-unused-parameter -I$srcdir/src -I$srcdir/src/extras -ftree-vectorize -fvisibility=hidden -lzmq"
+ CFLAGS="$KVZ_CFLAGS $CFLAGS"
+ 
+ AC_SEARCH_LIBS([log], [m c], [], [exit 1])
+diff --git a/src/Makefile.am b/src/Makefile.am
+index abc5ffe..5757ac8 100644
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -42,6 +42,8 @@ kvazaar_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+ endif
+ 
+ libkvazaar_la_SOURCES = \
++	accelerator.c \
++	acceleraotr.h \
+ 	bitstream.c \
+ 	bitstream.h \
+ 	cabac.c \
+diff --git a/src/accelerator.c b/src/accelerator.c
+new file mode 100644
+index 0000000..a3d3fb3
+--- /dev/null
++++ b/src/accelerator.c
+@@ -0,0 +1,762 @@
++#include "accelerator.h"
++#include <stdio.h>
++#include <errno.h>
++
++int8_t cu_get_mode(acc_cu_info_t cu) {
++	return cu & 0x3F;
++}
++
++int8_t cu_get_mode_chroma(acc_cu_info_t cu) {
++  return (cu >> 8) & 0x3f;
++}
++
++uint8_t cu_get_depth(acc_cu_info_t cu) {
++  return ((cu >> 6) & 0x03) + 1;
++}
++
++int8_t cu_get_tsf(acc_cu_info_t cu) {
++  return (cu >> 14) & 0x01;
++}
++
++uint16_t cu_get_cbf(acc_cu_info_t cu) {
++  return cu >> 16;
++}
++
++acc_cu_simple_info_t set_cu_simple_info(int8_t mode, uint8_t depth) {
++  acc_cu_simple_info_t cu = mode & 0x3f;
++
++  // Add depth to top two bits
++  cu |= ((depth - 1) & 0x03) << 6;
++
++  return cu;
++}
++
++void print_cabac(cabac_data_t* src)
++{
++	int a = 0;
++	
++	fprintf(stderr,"%d\n", src->ctx.sao_merge_flag_model.uc_state);
++	
++	fprintf(stderr,"%d\n", src->ctx.sao_type_idx_model.uc_state);
++
++	for (a = 0; a < 3; a++)
++	{
++		fprintf(stderr,"%d, ", src->ctx.split_flag_model[a].uc_state);
++	}
++	fprintf(stderr,"\n");
++
++	fprintf(stderr,"%d\n", src->ctx.intra_mode_model.uc_state);
++
++	for (a = 0; a < 2; a++)
++	{
++		fprintf(stderr,"%d, ", src->ctx.chroma_pred_model[a].uc_state);
++	}
++	fprintf(stderr,"\n");
++
++	for (a = 0; a < 5; a++)
++	{
++		fprintf(stderr,"%d, ", src->ctx.inter_dir[a].uc_state);
++	}
++	fprintf(stderr,"\n");
++
++	for (a = 0; a < 3; a++)
++	{
++		fprintf(stderr,"%d, ", src->ctx.trans_subdiv_model[a].uc_state);
++	}
++	fprintf(stderr,"\n");
++
++	for (a = 0; a < 4; a++)
++	{
++		fprintf(stderr,"%d, ", src->ctx.qt_cbf_model_luma[a].uc_state);
++	}
++	fprintf(stderr,"\n");
++
++	for (a = 0; a < 4; a++)
++	{
++		fprintf(stderr,"%d, ", src->ctx.qt_cbf_model_chroma[a].uc_state);
++	}
++	fprintf(stderr,"\n");
++
++	for (a = 0; a < 4; a++)
++	{
++		fprintf(stderr,"%d, ", src->ctx.cu_qp_delta_abs[a].uc_state);
++	}
++	fprintf(stderr,"\n");
++
++	for (a = 0; a < 4; a++)
++	{
++		fprintf(stderr,"%d, ", src->ctx.part_size_model[a].uc_state);
++	}
++	fprintf(stderr,"\n");
++
++	for (a = 0; a < 4; a++)
++	{
++		fprintf(stderr,"%d, ", src->ctx.cu_sig_coeff_group_model[a].uc_state);
++	}
++	fprintf(stderr,"\n");
++
++	for (a = 0; a < 27; a++)
++	{
++		fprintf(stderr,"%d, ", src->ctx.cu_sig_model_luma[a].uc_state);
++	}
++	fprintf(stderr,"\n");
++
++	for (a = 0; a < 15; a++)
++	{
++		fprintf(stderr,"%d, ", src->ctx.cu_sig_model_chroma[a].uc_state);
++	}
++	fprintf(stderr,"\n");
++
++	for (a = 0; a < 15; a++)
++	{
++		fprintf(stderr,"%d, ", src->ctx.cu_ctx_last_y_luma[a].uc_state);
++	}
++	fprintf(stderr,"\n");
++
++	for (a = 0; a < 15; a++)
++	{
++		fprintf(stderr,"%d, ", src->ctx.cu_ctx_last_y_chroma[a].uc_state);
++	}
++	fprintf(stderr,"\n");
++
++	for (a = 0; a < 15; a++)
++	{
++		fprintf(stderr,"%d, ", src->ctx.cu_ctx_last_x_luma[a].uc_state);
++	}
++	fprintf(stderr,"\n");
++
++	for (a = 0; a < 15; a++)
++	{
++		fprintf(stderr,"%d, ", src->ctx.cu_ctx_last_x_chroma[a].uc_state);
++	}
++	fprintf(stderr,"\n");
++
++	for (a = 0; a < 16; a++)
++	{
++		fprintf(stderr,"%d, ", src->ctx.cu_one_model_luma[a].uc_state);
++	}
++	fprintf(stderr,"\n");
++
++	for (a = 0; a < 8; a++)
++	{
++
++		fprintf(stderr,"%d, ", src->ctx.cu_one_model_chroma[a].uc_state);
++	}
++	fprintf(stderr,"\n");
++
++	for (a = 0; a < 4; a++)
++	{
++		fprintf(stderr,"%d, ", src->ctx.cu_abs_model_luma[a].uc_state);
++	}
++	fprintf(stderr,"\n");
++
++	for (a = 0; a < 2; a++)
++	{
++		fprintf(stderr,"%d, ", src->ctx.cu_abs_model_chroma[a].uc_state);
++	}
++	fprintf(stderr,"\n");
++
++	fprintf(stderr,"%d\n", src->ctx.cu_pred_mode_model.uc_state);
++
++	for (a = 0; a < 3; a++)
++	{
++
++		fprintf(stderr,"%d, ", src->ctx.cu_skip_flag_model[a].uc_state);
++	}
++	fprintf(stderr,"\n");
++
++	fprintf(stderr,"%d\n", src->ctx.cu_merge_idx_ext_model.uc_state);
++
++	fprintf(stderr,"%d\n", src->ctx.cu_merge_flag_ext_model.uc_state);
++
++	fprintf(stderr,"%d\n", src->ctx.cu_transquant_bypass.uc_state);
++    
++	for (a = 0; a < 2; a++)
++	{
++		fprintf(stderr,"%d, ", src->ctx.cu_mvd_model[a].uc_state);
++	}
++	fprintf(stderr,"\n");
++
++	for (a = 0; a < 2; a++)
++	{
++		fprintf(stderr,"%d, ", src->ctx.cu_ref_pic_model[a].uc_state);
++	}
++	fprintf(stderr,"\n");
++
++	for (a = 0; a < 2; a++)
++	{
++		fprintf(stderr,"%d, ", src->ctx.mvp_idx_model[a].uc_state);
++	}
++	fprintf(stderr,"\n");
++
++	fprintf(stderr,"%d\n", src->ctx.cu_qt_root_cbf_model.uc_state);
++	
++	fprintf(stderr,"%d\n", src->ctx.transform_skip_model_luma.uc_state);
++	
++	fprintf(stderr,"%d\n", src->ctx.transform_skip_model_chroma.uc_state);
++}
++
++void copy_cabac_ctx(uint8_t* dst, cabac_data_t* src)
++{
++	int a = 0;
++    int pos = 0;
++    
++	dst[pos] = src->ctx.sao_merge_flag_model.uc_state;
++    pos++;
++	dst[pos] = src->ctx.sao_type_idx_model.uc_state;
++    pos++;
++
++	for (a = 0; a < 3; a++)
++	{
++		dst[pos+a] = src->ctx.split_flag_model[a].uc_state;
++
++	}
++
++    pos+=3;
++
++	dst[pos] = src->ctx.intra_mode_model.uc_state;
++    pos++;
++
++	for (a = 0; a < 2; a++)
++	{
++		dst[pos+a] = src->ctx.chroma_pred_model[a].uc_state;
++
++	}
++
++    pos+=2;
++
++	for (a = 0; a < 5; a++)
++	{
++		dst[pos+a] = src->ctx.inter_dir[a].uc_state;
++
++	}
++
++    pos+=5;
++
++	for (a = 0; a < 3; a++)
++	{
++		dst[pos+a] = src->ctx.trans_subdiv_model[a].uc_state;
++
++	}
++
++    pos+=3;
++
++	for (a = 0; a < 4; a++)
++	{
++		dst[pos+a] = src->ctx.qt_cbf_model_luma[a].uc_state;
++
++	}
++
++    pos+=4;
++
++	for (a = 0; a < 4; a++)
++	{
++		dst[pos+a] = src->ctx.qt_cbf_model_chroma[a].uc_state;
++
++	}
++
++    pos+=4;
++
++	for (a = 0; a < 4; a++)
++	{
++		dst[pos+a] = src->ctx.cu_qp_delta_abs[a].uc_state;
++
++	}
++
++    pos+=4;
++
++	for (a = 0; a < 4; a++)
++	{
++		dst[pos+a] = src->ctx.part_size_model[a].uc_state;
++
++	}
++
++    pos+=4;
++
++	for (a = 0; a < 4; a++)
++	{
++		dst[pos+a] = src->ctx.cu_sig_coeff_group_model[a].uc_state;
++
++	}
++
++    pos+=4;
++
++	for (a = 0; a < 27; a++)
++	{
++		dst[pos+a] = src->ctx.cu_sig_model_luma[a].uc_state;
++
++	}
++
++    pos+=27;
++
++	for (a = 0; a < 15; a++)
++	{
++		dst[pos+a] = src->ctx.cu_sig_model_chroma[a].uc_state;
++
++	}
++
++    pos+=15;
++
++	for (a = 0; a < 15; a++)
++	{
++		dst[pos+a] = src->ctx.cu_ctx_last_y_luma[a].uc_state;
++
++	}
++
++    pos+=15;
++
++	for (a = 0; a < 15; a++)
++	{
++		dst[pos+a] = src->ctx.cu_ctx_last_y_chroma[a].uc_state;
++
++	}
++
++    pos+=15;
++
++	for (a = 0; a < 15; a++)
++	{
++		dst[pos+a] = src->ctx.cu_ctx_last_x_luma[a].uc_state;
++
++	}
++
++    pos+=15;
++
++	for (a = 0; a < 15; a++)
++	{
++		dst[pos+a] = src->ctx.cu_ctx_last_x_chroma[a].uc_state;
++
++	}
++
++    pos+=15;
++
++	for (a = 0; a < 16; a++)
++	{
++		dst[pos+a] = src->ctx.cu_one_model_luma[a].uc_state;
++
++	}
++
++    pos+=16;
++
++	for (a = 0; a < 8; a++)
++	{
++		dst[pos+a] = src->ctx.cu_one_model_chroma[a].uc_state;
++
++	}
++
++    pos+=8;
++
++	for (a = 0; a < 4; a++)
++	{
++		dst[pos+a] = src->ctx.cu_abs_model_luma[a].uc_state;
++
++	}
++
++    pos+=4;
++
++	for (a = 0; a < 2; a++)
++	{
++		dst[pos+a] = src->ctx.cu_abs_model_chroma[a].uc_state;
++
++	}
++
++    pos+=2;
++
++	dst[pos] = src->ctx.cu_pred_mode_model.uc_state;
++    pos++;
++
++	for (a = 0; a < 3; a++)
++	{
++		dst[pos+a] = src->ctx.cu_skip_flag_model[a].uc_state;
++
++	}
++
++    pos+=3;
++
++	dst[pos] = src->ctx.cu_merge_idx_ext_model.uc_state;
++    pos++;
++	dst[pos] = src->ctx.cu_merge_flag_ext_model.uc_state;
++    pos++;
++	dst[pos] = src->ctx.cu_transquant_bypass.uc_state;
++    pos++;
++
++	for (a = 0; a < 2; a++)
++	{
++		dst[pos+a] = src->ctx.cu_mvd_model[a].uc_state;
++
++	}
++
++    pos+=2;
++
++	for (a = 0; a < 2; a++)
++	{
++		dst[pos+a] = src->ctx.cu_ref_pic_model[a].uc_state;
++
++	}
++
++
++    pos+=2;
++
++	for (a = 0; a < 2; a++)
++	{
++		dst[pos+a] = src->ctx.mvp_idx_model[a].uc_state;
++
++	}
++
++    pos+=2;
++
++	dst[pos] = src->ctx.cu_qt_root_cbf_model.uc_state;
++    pos++;
++	dst[pos] = src->ctx.transform_skip_model_luma.uc_state;
++    pos++;
++	dst[pos] = src->ctx.transform_skip_model_chroma.uc_state;
++    pos++;
++}
++
++void copy_cabac_ctx_back(cabac_data_t* dst, uint8_t* src)
++{
++	int a = 0;
++    int pos = 0;
++
++	dst->ctx.sao_merge_flag_model.uc_state = src[pos];
++    pos++;
++
++	dst->ctx.sao_type_idx_model.uc_state = src[pos];
++    pos++;
++
++	for (a = 0; a < 3; a++)
++	{
++		dst->ctx.split_flag_model[a].uc_state = src[pos+a];
++	}
++    pos+=3;
++
++	dst->ctx.intra_mode_model.uc_state = src[pos];
++    pos++;
++
++	for (a = 0; a < 2; a++)
++	{
++		dst->ctx.chroma_pred_model[a].uc_state = src[pos+a];
++	}
++    pos+=2;
++
++	for (a = 0; a < 5; a++)
++	{
++		dst->ctx.inter_dir[a].uc_state = src[pos+a];
++	}
++    pos+=5;
++
++	for (a = 0; a < 3; a++)
++	{
++		dst->ctx.trans_subdiv_model[a].uc_state = src[pos+a];
++	}
++    pos+=3;
++
++	for (a = 0; a < 4; a++)
++	{
++		dst->ctx.qt_cbf_model_luma[a].uc_state = src[pos+a];
++	}
++    pos+=4;
++
++	for (a = 0; a < 4; a++)
++	{
++		dst->ctx.qt_cbf_model_chroma[a].uc_state = src[pos+a];
++	}
++    pos+=4;
++
++	for (a = 0; a < 4; a++)
++	{
++		dst->ctx.cu_qp_delta_abs[a].uc_state = src[pos+a];
++	}
++    pos+=4;
++
++	for (a = 0; a < 4; a++)
++	{
++		dst->ctx.part_size_model[a].uc_state = src[pos+a];
++	}
++    pos+=4;
++
++	for (a = 0; a < 4; a++)
++	{
++		dst->ctx.cu_sig_coeff_group_model[a].uc_state = src[pos+a];
++	}
++    pos+=4;
++
++	for (a = 0; a < 27; a++)
++	{
++		dst->ctx.cu_sig_model_luma[a].uc_state = src[pos+a];
++	}
++    pos+=27;
++
++	for (a = 0; a < 15; a++)
++	{
++		dst->ctx.cu_sig_model_chroma[a].uc_state = src[pos+a];
++	}
++    pos+=15;
++
++	for (a = 0; a < 15; a++)
++	{
++		dst->ctx.cu_ctx_last_y_luma[a].uc_state = src[pos+a];
++	}
++    pos+=15;
++
++	for (a = 0; a < 15; a++)
++	{
++		dst->ctx.cu_ctx_last_y_chroma[a].uc_state = src[pos+a];
++	}
++    pos+=15;
++
++	for (a = 0; a < 15; a++)
++	{
++		dst->ctx.cu_ctx_last_x_luma[a].uc_state = src[pos+a];
++	}
++    pos+=15;
++
++	for (a = 0; a < 15; a++)
++	{
++		dst->ctx.cu_ctx_last_x_chroma[a].uc_state = src[pos+a];
++	}
++    pos+=15;
++
++	for (a = 0; a < 16; a++)
++	{
++		dst->ctx.cu_one_model_luma[a].uc_state = src[pos+a];
++	}
++    pos+=16;
++
++	for (a = 0; a < 8; a++)
++	{
++		dst->ctx.cu_one_model_chroma[a].uc_state = src[pos+a];
++	}
++    pos+=8;
++
++	for (a = 0; a < 4; a++)
++	{
++		dst->ctx.cu_abs_model_luma[a].uc_state = src[pos+a];
++	}
++    pos+=4;
++
++	for (a = 0; a < 2; a++)
++	{
++		dst->ctx.cu_abs_model_chroma[a].uc_state = src[pos+a];
++	}
++    pos+=2;
++
++	dst->ctx.cu_pred_mode_model.uc_state = src[pos];
++    pos++;
++
++	for (a = 0; a < 3; a++)
++	{
++		dst->ctx.cu_skip_flag_model[a].uc_state = src[pos+a];
++	}
++    pos+=3;
++
++	dst->ctx.cu_merge_idx_ext_model.uc_state = src[pos];
++    pos++;
++	dst->ctx.cu_merge_flag_ext_model.uc_state = src[pos];
++    pos++;
++	dst->ctx.cu_transquant_bypass.uc_state = src[pos];
++    pos++;
++
++	for (a = 0; a < 2; a++)
++	{
++		dst->ctx.cu_mvd_model[a].uc_state = src[pos+a];
++	}
++    pos+=2;
++
++	for (a = 0; a < 2; a++)
++	{
++		dst->ctx.cu_ref_pic_model[a].uc_state = src[pos+a];
++	}
++    pos+=2;
++
++	for (a = 0; a < 2; a++)
++	{
++		dst->ctx.mvp_idx_model[a].uc_state = src[pos+a];
++	}
++    pos+=2;
++
++	dst->ctx.cu_qt_root_cbf_model.uc_state = src[pos];
++    pos++;
++	dst->ctx.transform_skip_model_luma.uc_state = src[pos];
++    pos++;
++	dst->ctx.transform_skip_model_chroma.uc_state = src[pos];
++    pos++;
++}
++
++kvz_acc_conf_t get_acc_conf(encoder_state_t* state, lcu_t* lcu, int x, int y)
++{    
++  kvz_acc_conf_t r;
++  kvz_acc_conf_t* acc = &r;
++
++  FILL(*acc, 0);
++
++  // Set reference array pointers
++  acc->ref = &lcu->ref;
++  acc->top_ref = &lcu->top_ref;
++  acc->left_ref = &lcu->left_ref;
++
++  acc->rec = &lcu->rec;
++  acc->coeff = &lcu->coeff;
++
++  // Set configuration variablesoid *
++  acc->x = x;
++  acc->y = y;
++    
++  acc->qp = state->qp;
++  const int x_cu = 8 * (x / 8);
++  const int y_cu = 8 * (y / 8);
++  acc->ref_qp = kvz_get_cu_ref_qp(state, x_cu, y_cu, state->last_qp);
++ 
++  {
++    if (state->frame->max_qp_delta_depth != -1) 
++    {
++        acc->must_code_qp_delta = 1;
++    }
++  }
++
++  acc->in_width = state->encoder_control->in.width;
++  acc->in_height = state->encoder_control->in.height;
++  
++  acc->width = state->tile->frame->width;
++  acc->height = state->tile->frame->height;
++  
++  acc->offset_x = state->tile->offset_x;
++  acc->offset_y = state->tile->offset_y;
++  
++  acc->lambda = (uint8_t)(state->lambda);
++  acc->lambda_sqrt = (uint8_t)(state->lambda_sqrt + 0.5);
++
++  acc->tr_skip = state->encoder_control->cfg.trskip_enable;
++  acc->min_depth = state->encoder_control->cfg.pu_depth_intra.min[0];
++  acc->max_depth = state->encoder_control->cfg.pu_depth_intra.max[0];
++
++  acc->cu = malloc(16 * 16 * sizeof(acc_cu_info_t));
++  acc->cu_ver = malloc(17 * sizeof(acc_cu_simple_info_t));
++  acc->cu_hor = malloc(17 * sizeof(acc_cu_simple_info_t));
++  
++  if(y > 0 && x > 0)
++  {
++    const cu_info_t *from_cu_corner = kvz_cu_array_at_const(state->tile->frame->cu_array, x - 1, y - 1);
++    acc->cu_ver[0] = set_cu_simple_info(from_cu_corner->intra.mode, from_cu_corner->depth);
++    acc->cu_hor[0] = set_cu_simple_info(from_cu_corner->intra.mode, from_cu_corner->depth);
++  }
++  
++  // Copy top CU column.
++  if (y > 0) {
++    for (int i = 0, j = 1; i < LCU_WIDTH; i += SCU_WIDTH, ++j) {
++      const cu_info_t *from_cu = kvz_cu_array_at_const(state->tile->frame->cu_array, x + i, y - 1);
++      //acc->cu_ver[j] = set_cu_simple_info(from_cu->intra.mode, from_cu->depth);
++      acc->cu_hor[j] = set_cu_simple_info(from_cu->intra.mode, from_cu->depth);
++    }
++  }
++  
++  // Copy left CU row.
++  if (x > 0) {
++    for (int i = 0, j = 1; i < LCU_WIDTH; i += SCU_WIDTH, ++j) {
++      const cu_info_t *from_cu = kvz_cu_array_at_const(state->tile->frame->cu_array, x - 1, y + i);
++      acc->cu_ver[j] = set_cu_simple_info(from_cu->intra.mode, from_cu->depth);
++      //acc->cu_hor[j] = set_cu_simple_info(from_cu->intra.mode, from_cu->depth);
++    }
++  }
++
++  // Set CABAC states
++  acc->cabac[0] = state->cabac.ctx.trans_subdiv_model[0].uc_state;
++  acc->cabac[1] = state->cabac.ctx.trans_subdiv_model[1].uc_state;
++  acc->cabac[2] = state->cabac.ctx.trans_subdiv_model[2].uc_state;
++  acc->cabac[3] = state->cabac.ctx.qt_cbf_model_luma[1].uc_state;
++  acc->cabac[4] = state->cabac.ctx.qt_cbf_model_chroma[0].uc_state;
++  acc->cabac[5] = state->cabac.ctx.intra_mode_model.uc_state;
++  acc->cabac[6] = state->cabac.ctx.chroma_pred_model[0].uc_state;
++  acc->cabac[7] = state->cabac.ctx.split_flag_model[0].uc_state;
++  acc->cabac[8] = state->cabac.ctx.split_flag_model[1].uc_state;
++  acc->cabac[9] = state->cabac.ctx.split_flag_model[2].uc_state;
++  acc->cabac[10] = state->cabac.ctx.part_size_model[0].uc_state;
++  
++  acc->bitstream = calloc(2048, sizeof(uint8_t));
++  
++  acc->cabac_states = calloc(184, sizeof(uint8_t));
++  copy_cabac_ctx(acc->cabac_states, &state->cabac);
++  
++  acc->metadata = calloc(12, sizeof(uint8_t));
++  
++  acc->bits_left          = state->cabac.bits_left;
++  acc->buffered_byte      = state->cabac.buffered_byte;
++  acc->low                = state->cabac.low;
++  acc->num_buffered_bytes = state->cabac.num_buffered_bytes;
++  acc->range              = state->cabac.range;  
++    
++  acc->data      = state->cabac.stream->data;
++  acc->cur_bit   = state->cabac.stream->cur_bit;
++  acc->zerocount = state->cabac.stream->zerocount;  
++  
++  return r;
++}
++
++static pthread_mutex_t init_fpga_lock = PTHREAD_MUTEX_INITIALIZER;
++static sem_t reserve_ctu_id_sem;
++static pthread_mutex_t reserve_ctu_id_lock = PTHREAD_MUTEX_INITIALIZER;
++static kvz_acc_t kvz_acc;
++static bool available_id[CTU_IDS_PER_INTRA_CORE] = {false};
++static const char* loopback_tcp = "tcp://127.0.0.1:";
++
++kvz_acc_t init_fpga()
++{
++  static bool is_done = false;
++  
++  pthread_mutex_lock(&init_fpga_lock);
++
++  if (is_done) 
++  {
++	pthread_mutex_unlock(&init_fpga_lock);
++	return kvz_acc;
++  }
++
++  sem_init(&reserve_ctu_id_sem, 0, 16);
++
++  // Create ZeroMQ context
++  for(int ctu_id = 0; ctu_id < CTU_IDS_PER_INTRA_CORE; ctu_id++)
++  {
++  	kvz_acc.context[ctu_id] = zmq_ctx_new();
++
++	char address[256];
++	sprintf(address, "%s%d", loopback_tcp, 5560 + ctu_id);
++
++  	kvz_acc.requester[ctu_id] = zmq_socket(kvz_acc.context[ctu_id], ZMQ_REQ);
++  	zmq_bind(kvz_acc.requester[ctu_id], address); // Bind to REP socket
++  }
++ 
++  is_done = true;
++
++  pthread_mutex_unlock(&init_fpga_lock);
++  return kvz_acc;
++}
++
++int reserve_ctu_id()
++{
++	sem_wait(&reserve_ctu_id_sem);
++	pthread_mutex_lock(&reserve_ctu_id_lock);
++	int ctu_id_reserved = 0;
++
++	for(int ctu_id = 0; ctu_id < CTU_IDS_PER_INTRA_CORE; ctu_id++)
++  	{
++		if(available_id[ctu_id] == false)
++		{
++			ctu_id_reserved = ctu_id;
++			available_id[ctu_id] = true;
++			break;
++		}
++  	}
++	sem_post(&reserve_ctu_id_sem);
++	pthread_mutex_unlock(&reserve_ctu_id_lock);
++	return ctu_id_reserved;
++}
++
++void free_ctu_id(int ctu_id)
++{
++	available_id[ctu_id] = false;
++}
++
++void close_fpga()
++{
++  zmq_close(kvz_acc.requester);
++  zmq_ctx_destroy(kvz_acc.context);
++}
+diff --git a/src/accelerator.h b/src/accelerator.h
+new file mode 100644
+index 0000000..e1deb1e
+--- /dev/null
++++ b/src/accelerator.h
+@@ -0,0 +1,184 @@
++#ifndef KVZ_ACC_H_
++#define KVZ_ACC_H_
++
++#include <sys/ioctl.h>
++#include <pthread.h>
++#include <semaphore.h>
++#include <fcntl.h>
++#include <unistd.h>
++
++#include "cu.h"
++#include "global.h"
++#include "image.h"
++#include "cabac.h"
++#include "encoder.h"
++#include "encoderstate.h"
++
++#include <zmq.h>
++#define CTU_IDS_PER_INTRA_CORE 16
++#define ENCODING_DATA_SIZE  6992
++#define ENCODED_DATA_SIZE   9504
++
++// Virtual addresses
++#define REF_OFFSET          0
++#define TOP_OFFSET          6144
++#define LEFT_OFFSET         6400
++#define CU_VER_OFFSET       6656
++#define CU_HOR_OFFSET       6672
++#define CU_HOR_STR_OFFSET   6688
++#define CABAC_OFFSET        6704
++#define CABAC_STATES_OFFSET 6720
++#define CABAC_METAS_OFFSET  6976
++
++#define REC_OFFSET             0
++//#define COEFF_OFFSET         6144
++#define CABAC_STATES_HW_OFFSET 6144
++#define CU_INFO_OFFSET         6400
++#define CABAC_METAS_HW_OFFSET  7424
++#define BITSTREAM_OFFSET       7456
++
++#define INTRA_OFFSET 3
++
++#define LCU_LUMA_SIZE (LCU_WIDTH * LCU_WIDTH)
++#define LCU_CHROMA_SIZE (LCU_WIDTH * LCU_WIDTH >> 2)
++
++#define LCU_U_OFFSET (LCU_LUMA_SIZE)
++#define LCU_V_OFFSET (LCU_LUMA_SIZE + LCU_CHROMA_SIZE)
++#define LCU_SIZE (LCU_LUMA_SIZE + 2 * LCU_CHROMA_SIZE)
++
++#define LCU_CU_WIDTH 16
++#define LCU_CU_SIZE (LCU_CU_WIDTH * LCU_CU_WIDTH)
++
++// Width from top left of the LCU, so +1 for ref buffer size.
++#define LCU_REF_PX_WIDTH (LCU_WIDTH + LCU_WIDTH / 2)
++
++#define PRINT_LCU(msg, size, a) \
++printf(msg); \
++for (int y = 0; y < size; ++y) { \
++	for (int x = 0; x < size; ++x) { \
++		printf("%02x ", a[y * size + x] & 0xFF); \
++		if (x % 8 == 7) printf(" "); \
++	} \
++	printf("\n"); \
++	if (y % 8 == 7) printf("\n"); \
++}
++
++#define PRINT_LCU_DIFF(msg, size, a, b) \
++printf(msg); \
++for (int y = 0; y < size; ++y) { \
++	for (int x = 0; x < size; ++x) { \
++		printf("%1x ", a[y * size + x] == b[y * size + x]); \
++		if (x % 8 == 7) printf(" "); \
++	} \
++	printf("\n"); \
++	if (y % 8 == 7) printf("\n"); \
++}
++
++#define PRINT_LCU_CU(msg, cu, a) \
++printf(msg); \
++for (int y = 0; y < 16; ++y) { \
++	for (int x = 0; x < 16; ++x) { \
++		printf("%2d ", cu[y * LCU_T_CU_WIDTH + x + LCU_CU_OFFSET].a); \
++    if (x % 4 == 3) printf(" "); \
++	} \
++	printf("\n"); \
++  if (y % 4 == 3) printf("\n"); \
++}
++
++#define PRINT_LCU_CU_DIFF(msg, cu_a, cu_b, c) \
++printf(msg); \
++for (int y = 0; y < 16; ++y) { \
++	for (int x = 0; x < 16; ++x) { \
++		printf("%1x ", cu_a[y * LCU_T_CU_WIDTH + x + LCU_CU_OFFSET].c == cu_b[y * LCU_T_CU_WIDTH + x + LCU_CU_OFFSET].c); \
++    if (x % 4 == 3) printf(" "); \
++	} \
++	printf("\n"); \
++  if (y % 4 == 3) printf("\n"); \
++}
++
++typedef uint32_t acc_cu_info_t;
++typedef uint8_t acc_cu_simple_info_t;
++
++typedef struct kvz_acc_conf_t {
++  int8_t id;
++
++  const lcu_yuv_t* ref;
++  const lcu_ref_px_t* top_ref;
++  const lcu_ref_px_t* left_ref;
++
++  acc_cu_info_t* cu;
++  acc_cu_simple_info_t* cu_ver;
++  acc_cu_simple_info_t* cu_hor;
++
++  lcu_yuv_t* rec;
++  lcu_coeff_t* coeff;
++
++  uint8_t cabac[16];
++  
++  uint8_t* bitstream;
++  uint8_t* cabac_states;
++  uint8_t* metadata;
++  uint32_t bits_left;
++  uint32_t buffered_byte;
++  uint32_t low;
++  uint32_t num_buffered_bytes;
++  //uint8_t  only_count;
++  uint32_t range;
++  //stream;
++  
++  //uint32_t len;
++  uint8_t data;
++  uint8_t cur_bit;
++  uint8_t zerocount;
++
++  uint8_t min_depth;
++  uint8_t max_depth;
++
++  uint16_t x;
++  uint16_t y;
++  
++  uint16_t offset_x;
++  uint16_t offset_y;
++
++  int8_t qp;
++  uint8_t ref_qp;
++  uint8_t must_code_qp_delta;
++
++  int8_t chroma;
++  int8_t tr_skip;
++
++  uint8_t lambda;
++  uint8_t lambda_sqrt;
++
++  uint16_t in_width;
++  uint16_t in_height;
++  
++  uint16_t width;
++  uint16_t height;
++
++  int8_t debug;
++} kvz_acc_conf_t;
++
++typedef struct kvz_acc_t
++{
++  void *context[CTU_IDS_PER_INTRA_CORE];
++  void* requester[CTU_IDS_PER_INTRA_CORE];
++} kvz_acc_t;
++
++int8_t cu_get_mode(acc_cu_info_t cu);
++int8_t cu_get_mode_chroma(acc_cu_info_t cu);
++uint8_t cu_get_depth(acc_cu_info_t cu);
++int8_t cu_get_tsf(acc_cu_info_t cu);
++uint16_t cu_get_cbf(acc_cu_info_t cu);
++acc_cu_simple_info_t set_cu_simple_info(int8_t mode, uint8_t depth);
++
++kvz_acc_conf_t get_acc_conf(encoder_state_t* state, lcu_t* lcu, int x, int y);
++void print_cabac(cabac_data_t* src);
++void copy_cabac_ctx(uint8_t* dst, cabac_data_t* src);
++void copy_cabac_ctx_back(cabac_data_t* dst, uint8_t* src);
++kvz_acc_t init_fpga();
++int reserve_ctu_id();
++void free_ctu_id(int ctu_id);
++void close_fpga();
++
++#endif // KVZ_ACC_H_
+diff --git a/src/encoderstate.c b/src/encoderstate.c
+index 6cf4029..c247a7e 100644
+--- a/src/encoderstate.c
++++ b/src/encoderstate.c
+@@ -54,6 +54,8 @@
+ 
+ #include "strategies/strategies-picture.h"
+ 
++#include "accelerator.h"
++
+ /**
+  * \brief Strength of QP adjustments when using adaptive QP for 360 video.
+  *
+@@ -690,9 +692,32 @@ static void encoder_state_worker_encode_lcu(void * opaque)
+     encode_sao(state, lcu->position.x, lcu->position.y, &frame->sao_luma[lcu->position.y * frame->width_in_lcu + lcu->position.x], &frame->sao_chroma[lcu->position.y * frame->width_in_lcu + lcu->position.x]);
+   }
+ 
+-  //Encode coding tree
+-  kvz_encode_coding_tree(state, lcu->position.x * LCU_WIDTH, lcu->position.y * LCU_WIDTH, 0);
++  if(state->frame->poc == 0)
++  {
++    copy_cabac_ctx_back(&state->cabac, state->hw_cabac_states);
++
++    state->cabac.bits_left          = state->bits_left;
++    state->cabac.buffered_byte      = state->buffered_byte;
++    state->cabac.low                = state->low;
++    state->cabac.num_buffered_bytes = state->num_buffered_bytes;
++    state->cabac.only_count         = 0;
++    state->cabac.range              = state->range;
++    state->cabac.stream->data       = 0;
++    state->cabac.stream->cur_bit    = 0;
++    state->cabac.stream->zerocount  = state->zerocount;
++    
++    //state->last_qp = last_qp;
+ 
++    for(int a = 0; a < state->len; a++)
++    {
++        kvz_bitstream_writebyte(state->cabac.stream, state->hw_bitstream[a]);
++    }
++  }
++  else
++  {
++    //Encode coding tree
++    kvz_encode_coding_tree(state, lcu->position.x * LCU_WIDTH, lcu->position.y * LCU_WIDTH, 0);
++  }
+   // Coeffs are not needed anymore.
+   state->coeff = NULL;
+ 
+diff --git a/src/encoderstate.h b/src/encoderstate.h
+index ac62a5a..90be7ac 100644
+--- a/src/encoderstate.h
++++ b/src/encoderstate.h
+@@ -332,6 +332,17 @@ typedef struct encoder_state_t {
+    */
+   lcu_coeff_t *coeff;
+ 
++  uint8_t hw_cabac_states[184];
++  uint8_t hw_bitstream[2048];
++  
++  uint32_t low;
++  uint16_t range;
++  uint8_t  buffered_byte;
++  uint8_t  num_buffered_bytes;
++  uint8_t  bits_left;
++  uint8_t  zerocount;
++  uint16_t len;
++
+   //Jobs to wait for
+   threadqueue_job_t * tqj_recon_done; //Reconstruction is done
+   threadqueue_job_t * tqj_bitstream_written; //Bitstream is written
+diff --git a/src/kvazaar.c b/src/kvazaar.c
+index 93616a7..f9da8a8 100644
+--- a/src/kvazaar.c
++++ b/src/kvazaar.c
+@@ -52,9 +52,13 @@
+ #include "videoframe.h"
+ #include "rate_control.h"
+ 
++#include "accelerator.h"
+ 
+ static void kvazaar_close(kvz_encoder *encoder)
+ {
++
++  close_fpga();
++
+   if (encoder) {
+     // The threadqueue must be stopped before freeing states.
+     if (encoder->control) {
+diff --git a/src/search.c b/src/search.c
+index 381cd94..ca68b46 100644
+--- a/src/search.c
++++ b/src/search.c
+@@ -51,6 +51,7 @@
+ #include "strategies/strategies-picture.h"
+ #include "strategies/strategies-quant.h"
+ 
++#include "accelerator.h"
+ 
+ #define IN_FRAME(x, y, width, height, block_width, block_height) \
+   ((x) >= 0 && (y) >= 0 \
+@@ -883,7 +884,7 @@ static double search_cu(encoder_state_t * const state, int x, int y, int depth,
+         cur_cu);
+     }
+     else {
+-      // Intra 4×4 PUs
++      // Intra 4ï¿½4 PUs
+       if (state->frame->slicetype != KVZ_SLICE_I) {
+         cabac_ctx_t* ctx = &(cabac->ctx.cu_pred_mode_model);
+         CABAC_FBITS_UPDATE(cabac, ctx, 1, bits, "pred_mode_flag");
+@@ -1180,6 +1181,201 @@ static void copy_lcu_to_cu_data(const encoder_state_t * const state, int x_px, i
+   }
+ }
+ 
++static void set_cu_info(encoder_state_t * const state, int x, int y, int depth, const kvz_acc_conf_t * const acc_cu, lcu_t * const lcu)
++{
++  const encoder_control_t* ctrl = state->encoder_control;
++  const videoframe_t * const frame = state->tile->frame;
++
++  const int chroma_depth = (depth == MAX_PU_DEPTH ? depth - 1 : depth);
++
++  const int x_local = x & 0x3f;
++  const int y_local = y & 0x3f;
++  const int width = LCU_WIDTH >> depth;
++  const int width_c = LCU_WIDTH_C >> chroma_depth;
++  const int z_luma = xy_to_zorder(LCU_WIDTH, x_local, y_local);
++
++  bool in_frame = x + width <= frame->width && y + width <= frame->height;
++  bool is_chroma_cu = x_local % 8 == 0 && y_local % 8 == 0 && state->encoder_control->chroma_format != KVZ_CSP_400;
++
++  cu_info_t* to_cu = LCU_GET_CU_AT_PX(lcu, x_local, y_local);
++
++  // Reset CU type
++  to_cu->type = CU_NOTSET;
++
++  // Stop recursion if the CU is completely outside the frame.
++  if (x >= frame->width || y >= frame->height)
++  {
++    return;
++  }
++
++  if (in_frame) {
++    acc_cu_info_t cu = acc_cu->cu[(y_local >> 2) * 16 + (x_local >> 2)];
++
++    if (cu_get_depth(cu) == depth)
++    {
++      //printf("x_local %d, y_local %d, depth %d", x_local, y_local, depth);
++      to_cu->type = CU_INTRA;
++      to_cu->depth = depth > MAX_DEPTH ? MAX_DEPTH : depth;
++      to_cu->tr_depth = depth > 0 ? depth : 1;
++      to_cu->part_size = depth > MAX_DEPTH ? SIZE_NxN : SIZE_2Nx2N;
++      to_cu->qp  = state->qp;
++
++      to_cu->intra.mode = cu_get_mode(cu);
++      to_cu->intra.mode_chroma = to_cu->intra.mode;
++      //to_cu->intra.mode_chroma = cu_get_mode_chroma(cu);
++      to_cu->tr_skip = cu_get_tsf(cu);
++      
++      //uint16_t cbf_calc = 0;
++      //cbf_calc = to_cu->cbf;
++      to_cu->cbf = cu_get_cbf(cu);
++            
++      kvz_lcu_fill_trdepth(lcu, x, y, depth, depth);
++      lcu_fill_cu_info(lcu, x_local, y_local, width, width, to_cu);
++    }
++  }
++
++  // Split if CU is not set or it is only partly in frame
++  if (to_cu->type == CU_NOTSET && (depth < ctrl->cfg.pu_depth_intra.max[0] || !in_frame)) {
++    // Recursively split all the way to max search depth.
++
++    int half_cu = width / 2;
++    set_cu_info(state, x, y, depth + 1, acc_cu, lcu);
++    set_cu_info(state, x + half_cu, y, depth + 1, acc_cu, lcu);
++    set_cu_info(state, x, y + half_cu, depth + 1, acc_cu, lcu);
++    set_cu_info(state, x + half_cu, y + half_cu, depth + 1, acc_cu, lcu);
++  }
++}
++
++void fill_buffer_with_config(kvz_acc_conf_t* acc_conf, char* buffer)
++{
++
++  uint32_t intra_conf, quant_conf;
++  uint32_t cabac_conf[6];
++
++  intra_conf  = acc_conf->id;
++  intra_conf |= (uint32_t)(acc_conf->min_depth - 1) << 4;
++  intra_conf |= (uint32_t)(acc_conf->max_depth - 1) << 6;
++  intra_conf |= (uint32_t)(acc_conf->tr_skip) << 8;
++  intra_conf |= (uint32_t)(acc_conf->chroma) << 9;
++  intra_conf |= (uint32_t)(MIN(acc_conf->width - acc_conf->x, 96)) << 16;
++  intra_conf |= (uint32_t)(acc_conf->x == 0) << 23;
++  intra_conf |= (uint32_t)(MIN(acc_conf->height - acc_conf->y, 96)) << 24;
++  intra_conf |= (uint32_t)(acc_conf->y == 0) << 31;
++  
++  printf("intra conf %u\n", intra_conf);
++
++  quant_conf  = acc_conf->qp;
++  quant_conf |= (uint32_t)(acc_conf->cabac[5]) << 8;
++  quant_conf |= (uint32_t)(acc_conf->lambda) << 16;
++  quant_conf |= (uint32_t)(acc_conf->lambda_sqrt) << 24;
++
++  printf("quant conf %u\n", quant_conf);
++
++  {
++    memcpy(&buffer[REF_OFFSET], acc_conf->ref->y, sizeof(uint8_t) * LCU_LUMA_SIZE);
++    if (acc_conf->chroma) {
++      memcpy(&buffer[REF_OFFSET + LCU_U_OFFSET], acc_conf->ref->u, sizeof(uint8_t) * LCU_CHROMA_SIZE);
++      memcpy(&buffer[REF_OFFSET + LCU_V_OFFSET], acc_conf->ref->v, sizeof(uint8_t) * LCU_CHROMA_SIZE);
++    }
++
++    memcpy(&buffer[TOP_OFFSET + INTRA_OFFSET], acc_conf->top_ref->y, sizeof(uint8_t) * 97);
++    if (acc_conf->chroma) {
++      memcpy(&buffer[TOP_OFFSET + 128 + INTRA_OFFSET], acc_conf->top_ref->u, sizeof(uint8_t) * 49);
++      memcpy(&buffer[TOP_OFFSET + 192 + INTRA_OFFSET], acc_conf->top_ref->v, sizeof(uint8_t) * 49);
++    }
++    
++    memcpy(&buffer[LEFT_OFFSET + INTRA_OFFSET], acc_conf->left_ref->y, sizeof(uint8_t) * 97);
++    if (acc_conf->chroma) {
++      memcpy(&buffer[LEFT_OFFSET + 128 + INTRA_OFFSET], acc_conf->left_ref->u, sizeof(uint8_t) * 49);
++      memcpy(&buffer[LEFT_OFFSET + 192 + INTRA_OFFSET], acc_conf->left_ref->v, sizeof(uint8_t) * 49);
++    }
++    
++    memcpy(&buffer[CU_VER_OFFSET], &acc_conf->cu_ver[1], sizeof(acc_cu_simple_info_t) * LCU_CU_WIDTH);
++    memcpy(&buffer[CU_HOR_OFFSET], &acc_conf->cu_hor[1], sizeof(acc_cu_simple_info_t) * LCU_CU_WIDTH);
++
++    memcpy(&buffer[CU_HOR_STR_OFFSET], &acc_conf->cu_ver[1], sizeof(acc_cu_simple_info_t) * LCU_CU_WIDTH);
++    
++    memcpy(&buffer[CABAC_OFFSET], acc_conf->cabac, sizeof(uint8_t) * 12);
++    
++    memcpy(&buffer[CABAC_STATES_OFFSET], acc_conf->cabac_states, 184);
++
++    memcpy(&buffer[CABAC_METAS_OFFSET],    &acc_conf->low, 4);
++    memcpy(&buffer[CABAC_METAS_OFFSET+4],  &acc_conf->range, 2);
++    memcpy(&buffer[CABAC_METAS_OFFSET+6],  &acc_conf->buffered_byte, 1);
++    memcpy(&buffer[CABAC_METAS_OFFSET+7],  &acc_conf->num_buffered_bytes, 1);
++    memcpy(&buffer[CABAC_METAS_OFFSET+8],  &acc_conf->bits_left, 1);
++    memcpy(&buffer[CABAC_METAS_OFFSET+9],  &acc_conf->data, 1);
++    memcpy(&buffer[CABAC_METAS_OFFSET+10], &acc_conf->cur_bit, 1);
++    memcpy(&buffer[CABAC_METAS_OFFSET+11], &acc_conf->zerocount, 1);
++  }
++  
++  // CABAC Configs
++  {
++    cabac_conf[0] = acc_conf->in_width;
++    uint8_t lcu_id_cabac = acc_conf->id;;
++    if(lcu_id_cabac >= 8)
++    {
++        lcu_id_cabac -= 8;
++    }
++    
++    cabac_conf[0] |= (acc_conf->in_height<<16);  
++    
++    // X & Y Offset
++    cabac_conf[1] = acc_conf->offset_x;
++    cabac_conf[1] |= (acc_conf->offset_y<<16);
++    
++    // X & Y Real
++    cabac_conf[2] = acc_conf->x;
++    cabac_conf[2] |= (acc_conf->y<<16);
++    
++    // X & Y CTU
++    cabac_conf[3] = 0;
++    
++    // QP data, depth
++    cabac_conf[4] = 0;
++    cabac_conf[4] |= (acc_conf->must_code_qp_delta<<8); 
++    cabac_conf[4] |= (acc_conf->qp<<9);
++    cabac_conf[4] |= (acc_conf->ref_qp<<17);
++    cabac_conf[4] |= (lcu_id_cabac<<25);
++    
++    // Corner cu info
++    cabac_conf[5] = 0;    
++    //uint8_t simple_corner = 0;
++    memcpy(&cabac_conf[5], acc_conf->cu_ver, 1);
++    cabac_conf[5] <<= 8;
++    // Start bit
++    cabac_conf[5] |= 0x80000000;
++  }
++
++  memcpy(&buffer[ENCODING_DATA_SIZE], &intra_conf, 4);
++  memcpy(&buffer[ENCODING_DATA_SIZE+4], &quant_conf, 4);
++  memcpy(&buffer[ENCODING_DATA_SIZE+8], &cabac_conf[0], 4);
++  memcpy(&buffer[ENCODING_DATA_SIZE+12], &cabac_conf[1], 4);
++  memcpy(&buffer[ENCODING_DATA_SIZE+16], &cabac_conf[2], 4);
++  memcpy(&buffer[ENCODING_DATA_SIZE+20], &cabac_conf[3], 4);
++  memcpy(&buffer[ENCODING_DATA_SIZE+24], &cabac_conf[4], 4);
++  memcpy(&buffer[ENCODING_DATA_SIZE+28], &cabac_conf[5], 4);
++}
++
++void update_data_back_to_config(kvz_acc_conf_t* acc_conf, char* buffer)
++{
++    memcpy(acc_conf->rec->y, &buffer[REC_OFFSET], sizeof(uint8_t) * LCU_LUMA_SIZE);
++    if( acc_conf->chroma) {
++      memcpy(acc_conf->rec->u, &buffer[REC_OFFSET + LCU_U_OFFSET], sizeof(uint8_t) * LCU_CHROMA_SIZE);
++      memcpy(acc_conf->rec->v, &buffer[REC_OFFSET + LCU_V_OFFSET], sizeof(uint8_t) * LCU_CHROMA_SIZE);
++    }
++
++    memcpy(acc_conf->cabac_states, &buffer[CABAC_STATES_HW_OFFSET], 184);
++  
++    memcpy(acc_conf->cu, &buffer[CU_INFO_OFFSET], sizeof(acc_cu_info_t) * LCU_CU_SIZE);
++
++    // low 4, range 2, buffered_byte 1, num_buffered_bytes 1, bits_left 1, zerocount 1, len 2
++    memcpy(acc_conf->metadata, &buffer[CABAC_METAS_HW_OFFSET], 4+2+1+1+1+1+2);        
++
++    memcpy(acc_conf->bitstream, &buffer[BITSTREAM_OFFSET], 2048);
++
++}
++
+ 
+ /**
+  * Search LCU for modes.
+@@ -1192,6 +1388,70 @@ void kvz_search_lcu(encoder_state_t * const state, const int x, const int y, con
+   assert(x % LCU_WIDTH == 0);
+   assert(y % LCU_WIDTH == 0);
+ 
++  if(state->frame->poc == 0)
++  {
++    lcu_t acc_lcu;
++    kvz_acc_t kvz_acc = init_fpga();
++    init_lcu_t(state, x, y, &acc_lcu, hor_buf, ver_buf);
++
++    kvz_acc_conf_t acc_conf = get_acc_conf(state, &acc_lcu, x, y);
++    
++    state->lambda = (uint8_t)(state->lambda);
++    state->lambda_sqrt = (uint8_t)(state->lambda_sqrt + 0.5);
++  
++    acc_conf.chroma = 1;
++    acc_conf.id = reserve_ctu_id();
++
++    /*ZeroMQ allocs*/
++    char* buffer_send = malloc((4*1 + 4*1 + 4*6 + ENCODING_DATA_SIZE) * sizeof(char));
++    char* buffer_recv = malloc(ENCODED_DATA_SIZE * sizeof(char));
++
++    fill_buffer_with_config(&acc_conf, buffer_send);
++
++    /*ZeroMQ send and recv*/
++    zmq_send(kvz_acc.requester[acc_conf.id], buffer_send, (4*1 + 4*1 + 4*6 + ENCODING_DATA_SIZE) * sizeof(char), 0);
++    int bytes = zmq_recv(kvz_acc.requester[acc_conf.id], buffer_recv, ENCODED_DATA_SIZE, 0);
++
++    update_data_back_to_config(&acc_conf, buffer_recv);
++
++    free(buffer_send);
++    free(buffer_recv);
++
++    set_cu_info(state, x, y, 0, &acc_conf, &acc_lcu);
++    copy_lcu_to_cu_data(state, x, y, &acc_lcu);
++
++    memcpy(state->hw_cabac_states, acc_conf.cabac_states, 184);
++    memcpy(state->hw_bitstream, acc_conf.bitstream, 2048);
++    
++    memcpy(&state->low,                &acc_conf.metadata[0] ,4);
++    memcpy(&state->range,              &acc_conf.metadata[4] ,2);
++    memcpy(&state->buffered_byte,      &acc_conf.metadata[6] ,1);
++    memcpy(&state->num_buffered_bytes, &acc_conf.metadata[7] ,1);
++    memcpy(&state->bits_left,          &acc_conf.metadata[8] ,1);
++    memcpy(&state->zerocount,          &acc_conf.metadata[9] ,1);
++
++    {
++        uint16_t temp_len = 0;
++        memcpy(&temp_len, &acc_conf.metadata[10], 2);
++        state->len = temp_len;
++        if(temp_len >= 2048)
++        {
++          fprintf(stderr,"################################################### len %d,\n", temp_len);
++        }
++    }
++
++    free_ctu_id(acc_conf.id);
++
++    free(acc_conf.cu);
++    free(acc_conf.cu_ver);
++    free(acc_conf.cu_hor);
++    
++    free(acc_conf.cabac_states);
++    free(acc_conf.bitstream);
++    free(acc_conf.metadata);
++
++    return;
++  }
+   // Initialize the same starting state to every depth. The search process
+   // will use these as temporary storage for predictions before making
+   // a decision on which to use, and they get updated during the search

@@ -1,0 +1,1453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>tuni.fi</ipxact:vendor>
+	<ipxact:library>KvazaarTransform</ipxact:library>
+	<ipxact:name>coeff_cost.design</ipxact:name>
+	<ipxact:version>1.0</ipxact:version>
+	<ipxact:componentInstances>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>coeff_cost_core_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarTransform" name="coeff_cost_core" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{c6d2a8c1-44c4-404a-9fe5-18fd994d34c9}</kactus2:uuid>
+				<kactus2:position x="400" y="60"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="110" y="70"/>
+					<kactus2:portPosition busRef="coeff_in" x="-110" y="40"/>
+					<kactus2:portPosition busRef="coeff_out" x="-110" y="90"/>
+					<kactus2:portPosition busRef="pull_1" x="-110" y="110"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="720" y="60"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_1</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="720" y="180"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_2</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="720" y="300"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_3</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="720" y="420"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_4</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="720" y="540"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_5</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="720" y="660"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_6</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="720" y="780"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_7</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="720" y="900"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="clk" x="110" y="40"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_8</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="720" y="1020"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_9</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="720" y="1140"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_10</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="720" y="1260"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_11</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="720" y="1380"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_12</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="720" y="1500"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_13</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="720" y="1620"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_14</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="720" y="1740"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_15</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="720" y="1860"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_16</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="1040" y="60"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_17</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="1040" y="180"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_18</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="1040" y="300"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_19</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="1040" y="420"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_20</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="1040" y="540"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="clk" x="110" y="40"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_21</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="1040" y="660"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_22</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="1040" y="780"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_23</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="1040" y="900"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_24</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="1040" y="1020"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_25</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="1040" y="1140"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_26</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="1040" y="1260"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_27</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="1040" y="1380"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_28</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="1040" y="1500"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_29</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="1040" y="1620"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_30</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="1040" y="1740"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_31</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">16</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_e376a4ba_faa2_4a38_b4b9_38a514f86fa3">7</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{289fb7ac-1632-4d9e-8970-71340ba51a54}</kactus2:uuid>
+				<kactus2:position x="1040" y="1860"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>fifo_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="fifo" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_7f07a290_908b_4599_aa0e_65a23a41c781">512</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_fd81b965_8582_40f1_a257_0b8a779fcc67">256</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{2b14be58-64ff-4b6f-8498-ff11a21bbba8}</kactus2:uuid>
+				<kactus2:position x="400" y="1150"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="aclr_n" x="110" y="60"/>
+					<kactus2:portPosition busRef="data_in" x="-110" y="40"/>
+					<kactus2:portPosition busRef="data_out" x="-110" y="70"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+	</ipxact:componentInstances>
+	<ipxact:interconnections>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_arst_n_to_bus</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_clk_to_bus_1</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_coeff_in_to_bus_3</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="coeff_in"/>
+			<ipxact:hierInterface busRef="coeff_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_pull_0_to_OnChipMemory_0_mem_read</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_0"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_0" busRef="mem_read"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_1_mem_read_to_coeff_cost_core_0_pull_1</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_1" busRef="mem_read"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_1"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_pull_2_to_OnChipMemory_2_mem_read</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_2"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_2" busRef="mem_read"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_3_mem_read_to_coeff_cost_core_0_pull_3</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_3" busRef="mem_read"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_3"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_pull_4_to_OnChipMemory_4_mem_read</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_4"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_4" busRef="mem_read"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_5_mem_read_to_coeff_cost_core_0_pull_5</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_5" busRef="mem_read"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_5"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_pull_6_to_OnChipMemory_6_mem_read</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_6"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_6" busRef="mem_read"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_7_mem_read_to_coeff_cost_core_0_pull_7</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_7" busRef="mem_read"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_7"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_pull_8_to_OnChipMemory_8_mem_read</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_8"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_8" busRef="mem_read"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_9_mem_read_to_coeff_cost_core_0_pull_9</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_9" busRef="mem_read"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_9"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_pull_10_to_OnChipMemory_10_mem_read</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_10"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_10" busRef="mem_read"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_11_mem_read_to_coeff_cost_core_0_pull_11</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_11" busRef="mem_read"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_11"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_12_mem_read_to_coeff_cost_core_0_pull_12</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_12" busRef="mem_read"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_12"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_pull_13_to_OnChipMemory_13_mem_read</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_13"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_13" busRef="mem_read"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_14_mem_read_to_coeff_cost_core_0_pull_14</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_14" busRef="mem_read"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_14"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_pull_15_to_OnChipMemory_15_mem_read</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_15"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_15" busRef="mem_read"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_pull_16_to_OnChipMemory_16_mem_read</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_16"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_16" busRef="mem_read"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_17_mem_read_to_coeff_cost_core_0_pull_17</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_17" busRef="mem_read"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_17"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_pull_18_to_OnChipMemory_18_mem_read</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_18"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_18" busRef="mem_read"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_19_mem_read_to_coeff_cost_core_0_pull_19</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_19" busRef="mem_read"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_19"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_pull_20_to_OnChipMemory_20_mem_read</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_20"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_20" busRef="mem_read"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_21_mem_read_to_coeff_cost_core_0_pull_21</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_21" busRef="mem_read"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_21"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_pull_22_to_OnChipMemory_22_mem_read</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_22"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_22" busRef="mem_read"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_23_mem_read_to_coeff_cost_core_0_pull_23</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_23" busRef="mem_read"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_23"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_pull_24_to_OnChipMemory_24_mem_read</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_24"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_24" busRef="mem_read"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_25_mem_read_to_coeff_cost_core_0_pull_25</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_25" busRef="mem_read"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_25"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_pull_26_to_OnChipMemory_26_mem_read</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_26"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_26" busRef="mem_read"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_27_mem_read_to_coeff_cost_core_0_pull_27</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_27" busRef="mem_read"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_27"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_pull_28_to_OnChipMemory_28_mem_read</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_28"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_28" busRef="mem_read"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_29_mem_read_to_coeff_cost_core_0_pull_29</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_29" busRef="mem_read"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_29"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_pull_30_to_OnChipMemory_30_mem_read</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_30"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_30" busRef="mem_read"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_31_mem_read_to_coeff_cost_core_0_pull_31</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_31" busRef="mem_read"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="pull_31"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_push_0_to_OnChipMemory_0_mem_write</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_0"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_0" busRef="mem_write"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_1_mem_write_to_coeff_cost_core_0_push_1</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_1" busRef="mem_write"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_1"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_push_2_to_OnChipMemory_2_mem_write</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_2"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_2" busRef="mem_write"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_3_mem_write_to_coeff_cost_core_0_push_3</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_3" busRef="mem_write"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_3"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_push_4_to_OnChipMemory_4_mem_write</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_4"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_4" busRef="mem_write"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_5_mem_write_to_coeff_cost_core_0_push_5</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_5" busRef="mem_write"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_5"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_push_6_to_OnChipMemory_6_mem_write</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_6"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_6" busRef="mem_write"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_7_mem_write_to_coeff_cost_core_0_push_7</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_7" busRef="mem_write"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_7"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_push_8_to_OnChipMemory_8_mem_write</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_8"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_8" busRef="mem_write"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_9_mem_write_to_coeff_cost_core_0_push_9</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_9" busRef="mem_write"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_9"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_push_10_to_OnChipMemory_10_mem_write</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_10"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_10" busRef="mem_write"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_11_mem_write_to_coeff_cost_core_0_push_11</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_11" busRef="mem_write"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_11"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_push_12_to_OnChipMemory_12_mem_write</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_12"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_12" busRef="mem_write"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_13_mem_write_to_coeff_cost_core_0_push_13</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_13" busRef="mem_write"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_13"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_push_14_to_OnChipMemory_14_mem_write</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_14"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_14" busRef="mem_write"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_15_mem_write_to_coeff_cost_core_0_push_15</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_15" busRef="mem_write"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_15"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_push_16_to_OnChipMemory_16_mem_write</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_16"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_16" busRef="mem_write"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_17_mem_write_to_coeff_cost_core_0_push_17</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_17" busRef="mem_write"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_17"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_push_18_to_OnChipMemory_18_mem_write</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_18"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_18" busRef="mem_write"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_19_mem_write_to_coeff_cost_core_0_push_19</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_19" busRef="mem_write"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_19"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_push_20_to_OnChipMemory_20_mem_write</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_20"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_20" busRef="mem_write"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_21_mem_write_to_coeff_cost_core_0_push_21</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_21" busRef="mem_write"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_21"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_push_22_to_OnChipMemory_22_mem_write</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_22"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_22" busRef="mem_write"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_23_mem_write_to_coeff_cost_core_0_push_23</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_23" busRef="mem_write"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_23"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_push_24_to_OnChipMemory_24_mem_write</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_24"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_24" busRef="mem_write"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_25_mem_write_to_coeff_cost_core_0_push_25</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_25" busRef="mem_write"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_25"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_push_26_to_OnChipMemory_26_mem_write</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_26"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_26" busRef="mem_write"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_27_mem_write_to_coeff_cost_core_0_push_27</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_27" busRef="mem_write"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_27"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_push_28_to_OnChipMemory_28_mem_write</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_28"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_28" busRef="mem_write"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_29_mem_write_to_coeff_cost_core_0_push_29</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_29" busRef="mem_write"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_29"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_push_30_to_OnChipMemory_30_mem_write</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_30"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_30" busRef="mem_write"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_31_mem_write_to_coeff_cost_core_0_push_31</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_31" busRef="mem_write"/>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="push_31"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_0_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_0" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_1_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_1" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_2_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_2" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_3_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_3" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_4_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_4" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_5_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_5" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_6_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_6" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_16_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_16" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_17_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_17" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_18_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_18" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_19_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_19" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_20_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_20" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_21_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_21" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_22_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_22" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_23_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_23" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_7_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_7" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_8_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_8" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_24_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_24" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_9_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_9" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_25_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_25" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_10_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_10" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_26_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_26" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_11_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_11" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_27_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_27" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_12_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_12" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_28_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_28" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_13_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_13" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_29_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_29" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_14_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_14" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_30_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_30" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_15_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_15" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_31_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_31" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_core_0_coeff_out_to_fifo_0_data_in</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost_core_0" busRef="coeff_out"/>
+			<ipxact:activeInterface componentRef="fifo_0" busRef="data_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>fifo_0_data_out_to_coeff_out</ipxact:name>
+			<ipxact:activeInterface componentRef="fifo_0" busRef="data_out"/>
+			<ipxact:hierInterface busRef="coeff_out"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>fifo_0_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="fifo_0" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>fifo_0_aclr_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="fifo_0" busRef="aclr_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+	</ipxact:interconnections>
+	<ipxact:vendorExtensions>
+		<kactus2:version>3,11,1,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+		</kactus2:kts_attributes>
+		<kactus2:columnLayout>
+			<kactus2:column name="IO" contentType="0" allowedItems="1" minWidth="119" width="119" x="120"/>
+			<kactus2:column name="Components" contentType="2" allowedItems="2" minWidth="319" width="319" x="240"/>
+			<kactus2:column name="Memories" contentType="2" allowedItems="2" minWidth="319" width="319" x="560"/>
+			<kactus2:column name="IO" contentType="0" allowedItems="1" minWidth="119" width="119" x="1200"/>
+			<kactus2:column name="Memories" contentType="2" allowedItems="2" minWidth="319" width="319" x="880"/>
+			<kactus2:column name="Clocks" contentType="0" allowedItems="1" minWidth="119" width="119" x="0"/>
+		</kactus2:columnLayout>
+		<kactus2:routes>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_arst_n_to_arst_n" kactus2:offPage="false">
+				<kactus2:position x="170" y="100"/>
+				<kactus2:position x="60" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_clk_to_clk" kactus2:offPage="false">
+				<kactus2:position x="390" y="100"/>
+				<kactus2:position x="410" y="100"/>
+				<kactus2:position x="410" y="150"/>
+				<kactus2:position x="60" y="150"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_coeff_out_to_coeff_out" kactus2:offPage="false">
+				<kactus2:position x="170" y="130"/>
+				<kactus2:position x="80" y="130"/>
+				<kactus2:position x="80" y="200"/>
+				<kactus2:position x="60" y="200"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_coeff_in_to_coeff_in" kactus2:offPage="false">
+				<kactus2:position x="390" y="130"/>
+				<kactus2:position x="420" y="130"/>
+				<kactus2:position x="420" y="250"/>
+				<kactus2:position x="60" y="250"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_arst_n_to_bus" kactus2:offPage="true">
+				<kactus2:position x="540" y="130"/>
+				<kactus2:position x="90" y="140"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_clk_to_bus_1" kactus2:offPage="true">
+				<kactus2:position x="540" y="100"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_coeff_in_to_bus_3" kactus2:offPage="false">
+				<kactus2:position x="290" y="100"/>
+				<kactus2:position x="180" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_pull_0_to_OnChipMemory_0_mem_read" kactus2:offPage="true">
+				<kactus2:position x="540" y="160"/>
+				<kactus2:position x="860" y="130"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_1_mem_read_to_coeff_cost_core_0_pull_1" kactus2:offPage="true">
+				<kactus2:position x="860" y="250"/>
+				<kactus2:position x="260" y="170"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_pull_2_to_OnChipMemory_2_mem_read" kactus2:offPage="true">
+				<kactus2:position x="540" y="190"/>
+				<kactus2:position x="860" y="370"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_3_mem_read_to_coeff_cost_core_0_pull_3" kactus2:offPage="true">
+				<kactus2:position x="860" y="490"/>
+				<kactus2:position x="260" y="200"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_pull_4_to_OnChipMemory_4_mem_read" kactus2:offPage="true">
+				<kactus2:position x="540" y="220"/>
+				<kactus2:position x="860" y="610"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_5_mem_read_to_coeff_cost_core_0_pull_5" kactus2:offPage="true">
+				<kactus2:position x="860" y="730"/>
+				<kactus2:position x="260" y="230"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_pull_6_to_OnChipMemory_6_mem_read" kactus2:offPage="true">
+				<kactus2:position x="540" y="250"/>
+				<kactus2:position x="860" y="850"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_7_mem_read_to_coeff_cost_core_0_pull_7" kactus2:offPage="true">
+				<kactus2:position x="860" y="970"/>
+				<kactus2:position x="260" y="260"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_pull_8_to_OnChipMemory_8_mem_read" kactus2:offPage="true">
+				<kactus2:position x="540" y="280"/>
+				<kactus2:position x="860" y="1090"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_9_mem_read_to_coeff_cost_core_0_pull_9" kactus2:offPage="true">
+				<kactus2:position x="860" y="1210"/>
+				<kactus2:position x="260" y="290"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_pull_10_to_OnChipMemory_10_mem_read" kactus2:offPage="true">
+				<kactus2:position x="540" y="310"/>
+				<kactus2:position x="860" y="1330"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_11_mem_read_to_coeff_cost_core_0_pull_11" kactus2:offPage="true">
+				<kactus2:position x="860" y="1450"/>
+				<kactus2:position x="260" y="320"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_12_mem_read_to_coeff_cost_core_0_pull_12" kactus2:offPage="true">
+				<kactus2:position x="860" y="1570"/>
+				<kactus2:position x="540" y="340"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_pull_13_to_OnChipMemory_13_mem_read" kactus2:offPage="true">
+				<kactus2:position x="260" y="350"/>
+				<kactus2:position x="860" y="1690"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_14_mem_read_to_coeff_cost_core_0_pull_14" kactus2:offPage="true">
+				<kactus2:position x="860" y="1810"/>
+				<kactus2:position x="540" y="370"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_pull_15_to_OnChipMemory_15_mem_read" kactus2:offPage="true">
+				<kactus2:position x="260" y="380"/>
+				<kactus2:position x="860" y="1930"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_pull_16_to_OnChipMemory_16_mem_read" kactus2:offPage="true">
+				<kactus2:position x="540" y="400"/>
+				<kactus2:position x="1180" y="130"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_17_mem_read_to_coeff_cost_core_0_pull_17" kactus2:offPage="true">
+				<kactus2:position x="1180" y="250"/>
+				<kactus2:position x="260" y="410"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_pull_18_to_OnChipMemory_18_mem_read" kactus2:offPage="true">
+				<kactus2:position x="540" y="430"/>
+				<kactus2:position x="1180" y="370"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_19_mem_read_to_coeff_cost_core_0_pull_19" kactus2:offPage="true">
+				<kactus2:position x="1180" y="490"/>
+				<kactus2:position x="260" y="440"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_pull_20_to_OnChipMemory_20_mem_read" kactus2:offPage="true">
+				<kactus2:position x="540" y="460"/>
+				<kactus2:position x="1180" y="610"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_21_mem_read_to_coeff_cost_core_0_pull_21" kactus2:offPage="true">
+				<kactus2:position x="1180" y="730"/>
+				<kactus2:position x="260" y="470"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_pull_22_to_OnChipMemory_22_mem_read" kactus2:offPage="true">
+				<kactus2:position x="540" y="490"/>
+				<kactus2:position x="1180" y="850"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_23_mem_read_to_coeff_cost_core_0_pull_23" kactus2:offPage="true">
+				<kactus2:position x="1180" y="970"/>
+				<kactus2:position x="260" y="500"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_pull_24_to_OnChipMemory_24_mem_read" kactus2:offPage="true">
+				<kactus2:position x="540" y="520"/>
+				<kactus2:position x="1180" y="1090"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_25_mem_read_to_coeff_cost_core_0_pull_25" kactus2:offPage="true">
+				<kactus2:position x="1180" y="1210"/>
+				<kactus2:position x="260" y="530"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_pull_26_to_OnChipMemory_26_mem_read" kactus2:offPage="true">
+				<kactus2:position x="540" y="550"/>
+				<kactus2:position x="1180" y="1330"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_27_mem_read_to_coeff_cost_core_0_pull_27" kactus2:offPage="true">
+				<kactus2:position x="1180" y="1450"/>
+				<kactus2:position x="260" y="560"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_pull_28_to_OnChipMemory_28_mem_read" kactus2:offPage="true">
+				<kactus2:position x="540" y="580"/>
+				<kactus2:position x="1180" y="1570"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_29_mem_read_to_coeff_cost_core_0_pull_29" kactus2:offPage="true">
+				<kactus2:position x="1180" y="1690"/>
+				<kactus2:position x="260" y="590"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_pull_30_to_OnChipMemory_30_mem_read" kactus2:offPage="true">
+				<kactus2:position x="540" y="610"/>
+				<kactus2:position x="1180" y="1810"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_31_mem_read_to_coeff_cost_core_0_pull_31" kactus2:offPage="true">
+				<kactus2:position x="1180" y="1930"/>
+				<kactus2:position x="260" y="620"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_push_0_to_OnChipMemory_0_mem_write" kactus2:offPage="true">
+				<kactus2:position x="540" y="640"/>
+				<kactus2:position x="580" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_1_mem_write_to_coeff_cost_core_0_push_1" kactus2:offPage="true">
+				<kactus2:position x="580" y="220"/>
+				<kactus2:position x="260" y="650"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_push_2_to_OnChipMemory_2_mem_write" kactus2:offPage="true">
+				<kactus2:position x="540" y="670"/>
+				<kactus2:position x="580" y="340"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_3_mem_write_to_coeff_cost_core_0_push_3" kactus2:offPage="true">
+				<kactus2:position x="580" y="460"/>
+				<kactus2:position x="260" y="680"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_push_4_to_OnChipMemory_4_mem_write" kactus2:offPage="true">
+				<kactus2:position x="540" y="700"/>
+				<kactus2:position x="580" y="580"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_5_mem_write_to_coeff_cost_core_0_push_5" kactus2:offPage="true">
+				<kactus2:position x="580" y="700"/>
+				<kactus2:position x="260" y="710"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_push_6_to_OnChipMemory_6_mem_write" kactus2:offPage="true">
+				<kactus2:position x="540" y="730"/>
+				<kactus2:position x="580" y="820"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_7_mem_write_to_coeff_cost_core_0_push_7" kactus2:offPage="true">
+				<kactus2:position x="580" y="940"/>
+				<kactus2:position x="260" y="740"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_push_8_to_OnChipMemory_8_mem_write" kactus2:offPage="true">
+				<kactus2:position x="540" y="760"/>
+				<kactus2:position x="580" y="1060"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_9_mem_write_to_coeff_cost_core_0_push_9" kactus2:offPage="true">
+				<kactus2:position x="580" y="1180"/>
+				<kactus2:position x="260" y="770"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_push_10_to_OnChipMemory_10_mem_write" kactus2:offPage="true">
+				<kactus2:position x="540" y="790"/>
+				<kactus2:position x="580" y="1300"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_11_mem_write_to_coeff_cost_core_0_push_11" kactus2:offPage="true">
+				<kactus2:position x="580" y="1420"/>
+				<kactus2:position x="260" y="800"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_push_12_to_OnChipMemory_12_mem_write" kactus2:offPage="true">
+				<kactus2:position x="540" y="820"/>
+				<kactus2:position x="580" y="1540"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_13_mem_write_to_coeff_cost_core_0_push_13" kactus2:offPage="true">
+				<kactus2:position x="580" y="1660"/>
+				<kactus2:position x="260" y="830"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_push_14_to_OnChipMemory_14_mem_write" kactus2:offPage="true">
+				<kactus2:position x="540" y="850"/>
+				<kactus2:position x="580" y="1780"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_15_mem_write_to_coeff_cost_core_0_push_15" kactus2:offPage="true">
+				<kactus2:position x="580" y="1900"/>
+				<kactus2:position x="260" y="860"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_push_16_to_OnChipMemory_16_mem_write" kactus2:offPage="true">
+				<kactus2:position x="540" y="880"/>
+				<kactus2:position x="900" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_17_mem_write_to_coeff_cost_core_0_push_17" kactus2:offPage="true">
+				<kactus2:position x="900" y="220"/>
+				<kactus2:position x="260" y="890"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_push_18_to_OnChipMemory_18_mem_write" kactus2:offPage="true">
+				<kactus2:position x="540" y="910"/>
+				<kactus2:position x="900" y="340"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_19_mem_write_to_coeff_cost_core_0_push_19" kactus2:offPage="true">
+				<kactus2:position x="900" y="460"/>
+				<kactus2:position x="260" y="920"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_push_20_to_OnChipMemory_20_mem_write" kactus2:offPage="true">
+				<kactus2:position x="540" y="940"/>
+				<kactus2:position x="900" y="580"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_21_mem_write_to_coeff_cost_core_0_push_21" kactus2:offPage="true">
+				<kactus2:position x="900" y="700"/>
+				<kactus2:position x="260" y="950"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_push_22_to_OnChipMemory_22_mem_write" kactus2:offPage="true">
+				<kactus2:position x="540" y="970"/>
+				<kactus2:position x="900" y="820"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_23_mem_write_to_coeff_cost_core_0_push_23" kactus2:offPage="true">
+				<kactus2:position x="900" y="940"/>
+				<kactus2:position x="260" y="980"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_push_24_to_OnChipMemory_24_mem_write" kactus2:offPage="true">
+				<kactus2:position x="540" y="1000"/>
+				<kactus2:position x="900" y="1060"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_25_mem_write_to_coeff_cost_core_0_push_25" kactus2:offPage="true">
+				<kactus2:position x="900" y="1180"/>
+				<kactus2:position x="260" y="1010"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_push_26_to_OnChipMemory_26_mem_write" kactus2:offPage="true">
+				<kactus2:position x="540" y="1030"/>
+				<kactus2:position x="900" y="1300"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_27_mem_write_to_coeff_cost_core_0_push_27" kactus2:offPage="true">
+				<kactus2:position x="900" y="1420"/>
+				<kactus2:position x="260" y="1040"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_push_28_to_OnChipMemory_28_mem_write" kactus2:offPage="true">
+				<kactus2:position x="540" y="1060"/>
+				<kactus2:position x="900" y="1540"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_29_mem_write_to_coeff_cost_core_0_push_29" kactus2:offPage="true">
+				<kactus2:position x="900" y="1660"/>
+				<kactus2:position x="260" y="1070"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_push_30_to_OnChipMemory_30_mem_write" kactus2:offPage="true">
+				<kactus2:position x="540" y="1090"/>
+				<kactus2:position x="900" y="1780"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_31_mem_write_to_coeff_cost_core_0_push_31" kactus2:offPage="true">
+				<kactus2:position x="900" y="1900"/>
+				<kactus2:position x="260" y="1100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_0_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="860" y="100"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_1_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="860" y="220"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_2_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="860" y="340"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_3_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="860" y="460"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_4_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="860" y="580"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_5_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="860" y="700"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_6_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="860" y="820"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_16_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="1180" y="100"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_17_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="1180" y="220"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_18_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="1180" y="340"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_19_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="1180" y="460"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_20_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="1180" y="580"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_21_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="1180" y="700"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_22_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="1180" y="820"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_23_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="1180" y="940"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_7_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="860" y="940"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_8_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="860" y="1060"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_24_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="1180" y="1060"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_9_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="860" y="1180"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_25_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="1180" y="1180"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_10_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="860" y="1300"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_26_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="1180" y="1300"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_11_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="860" y="1420"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_27_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="1180" y="1420"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_12_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="860" y="1540"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_28_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="1180" y="1540"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_13_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="860" y="1660"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_29_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="1180" y="1660"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_14_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="860" y="1780"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_30_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="1180" y="1780"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_15_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="860" y="1900"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_31_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="1180" y="1900"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_core_0_coeff_out_to_fifo_0_data_in" kactus2:offPage="false">
+				<kactus2:position x="290" y="150"/>
+				<kactus2:position x="210" y="150"/>
+				<kactus2:position x="210" y="1190"/>
+				<kactus2:position x="290" y="1190"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="fifo_0_data_out_to_coeff_out" kactus2:offPage="false">
+				<kactus2:position x="290" y="1220"/>
+				<kactus2:position x="180" y="1220"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="fifo_0_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="540" y="1190"/>
+				<kactus2:position x="90" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="fifo_0_aclr_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="540" y="1210"/>
+				<kactus2:position x="90" y="140"/>
+			</kactus2:route>
+		</kactus2:routes>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>arst_n</kactus2:name>
+			<kactus2:position x="60" y="140"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>clk</kactus2:name>
+			<kactus2:position x="60" y="100"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>coeff_out</kactus2:name>
+			<kactus2:position x="180" y="1220"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>coeff_in</kactus2:name>
+			<kactus2:position x="180" y="100"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:adHocVisibilities/>
+	</ipxact:vendorExtensions>
+</ipxact:design>

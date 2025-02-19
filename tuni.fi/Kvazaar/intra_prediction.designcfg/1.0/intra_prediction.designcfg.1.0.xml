@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:designConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>tuni.fi</ipxact:vendor>
+	<ipxact:library>Kvazaar</ipxact:library>
+	<ipxact:name>intra_prediction.designcfg</ipxact:name>
+	<ipxact:version>1.0</ipxact:version>
+	<ipxact:designRef vendor="tuni.fi" library="Kvazaar" name="intra_prediction.design" version="1.0"/>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>ip_get_planar</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>sad_parallel</ipxact:instanceName>
+		<ipxact:view viewRef="flat_verilog"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>pred_buffer</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>ip_get_pos_0</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>ip_get_pos_1</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>ip_get_pos_2</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>ip_get_pos_3</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>ip_get_pos_4</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>ip_get_pos_5</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>ip_get_pos_6</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>ip_get_pos_7</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>ip_get_zero_0</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>ip_get_neg_0</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical_modes_11_25"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>ip_get_dc</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>ip_ctrl</ipxact:instanceName>
+		<ipxact:view viewRef="flat_verilog"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>sad_conf_fifo</ipxact:instanceName>
+		<ipxact:view viewRef="flat_vhdl"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>ip_get_neg_1</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical_modes_12_24"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>ip_get_neg_2</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical_modes_13_23"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>ip_get_neg_3</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical_modes_14_22"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>ip_get_neg_4</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical_modes_15_21"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>ip_get_neg_5</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical_modes_16_20"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>ip_get_neg_6</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical_modes_17_19"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>ip_get_neg_7</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical_modes_18_18"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>ref_dc_fifo</ipxact:instanceName>
+		<ipxact:view viewRef="flat_verilog"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>resid_dc_fifo</ipxact:instanceName>
+		<ipxact:view viewRef="flat_verilog"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>pred_dc_fifo</ipxact:instanceName>
+		<ipxact:view viewRef="flat_verilog"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>ip_config_dc_fifo</ipxact:instanceName>
+		<ipxact:view viewRef="flat_verilog"/>
+	</ipxact:viewConfiguration>
+	<ipxact:vendorExtensions>
+		<kactus2:version>3,11,1,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+		</kactus2:kts_attributes>
+	</ipxact:vendorExtensions>
+</ipxact:designConfiguration>

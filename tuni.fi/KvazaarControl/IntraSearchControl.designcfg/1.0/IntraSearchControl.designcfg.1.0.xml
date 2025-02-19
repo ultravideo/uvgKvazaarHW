@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:designConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>tuni.fi</ipxact:vendor>
+	<ipxact:library>KvazaarControl</ipxact:library>
+	<ipxact:name>IntraSearchControl.designcfg</ipxact:name>
+	<ipxact:version>1.0</ipxact:version>
+	<ipxact:designRef vendor="tuni.fi" library="KvazaarControl" name="IntraSearchControl.design" version="1.0"/>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>lcu_str</ipxact:instanceName>
+		<ipxact:view viewRef="flat_vhdl"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>lcu_sched</ipxact:instanceName>
+		<ipxact:view viewRef="flat_vhdl"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>init_chroma</ipxact:instanceName>
+		<ipxact:view viewRef="flat_vhdl"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>build_reference_border</ipxact:instanceName>
+		<ipxact:view viewRef="flat_verilog"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>exec_str</ipxact:instanceName>
+		<ipxact:view viewRef="flat_verilog"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>scheduler</ipxact:instanceName>
+		<ipxact:view viewRef="flat_verilog"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>init_ctu</ipxact:instanceName>
+		<ipxact:view viewRef="flat_verilog"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>inst_mem</ipxact:instanceName>
+		<ipxact:view viewRef="flat_vhdl"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>ctu_str_mem</ipxact:instanceName>
+		<ipxact:view viewRef="flat_vhdl"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>LCU_RecTop</ipxact:instanceName>
+		<ipxact:view viewRef="flat_vhdl"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>LCU_RecTopLeft</ipxact:instanceName>
+		<ipxact:view viewRef="flat_vhdl"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>LCU_RecLeft</ipxact:instanceName>
+		<ipxact:view viewRef="flat_vhdl"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>cu_info_mem</ipxact:instanceName>
+		<ipxact:view viewRef="flat_vhdl"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>cu_info_mem_2</ipxact:instanceName>
+		<ipxact:view viewRef="flat_vhdl"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>ctu_end_mem</ipxact:instanceName>
+		<ipxact:view viewRef="flat_vhdl"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>exec_end_stack</ipxact:instanceName>
+		<ipxact:view viewRef="flat_verilog"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>lcu_end_inst_fb_fifo</ipxact:instanceName>
+		<ipxact:view viewRef="flat_vhdl"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>rec_coeff_buffer</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>exec_end</ipxact:instanceName>
+		<ipxact:view viewRef="flat_verilog"/>
+	</ipxact:viewConfiguration>
+	<ipxact:vendorExtensions>
+		<kactus2:version>3,11,1,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+		</kactus2:kts_attributes>
+	</ipxact:vendorExtensions>
+</ipxact:designConfiguration>

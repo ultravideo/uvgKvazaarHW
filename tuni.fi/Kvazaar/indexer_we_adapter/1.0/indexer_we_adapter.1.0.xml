@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This file is part of uvgKvazaarHW.-->
+<!-- -->
+<!--Copyright (c) 2025, Tampere University, ITU/ISO/IEC, project contributors-->
+<!--All rights reserved.-->
+<!---->
+<!--Redistribution and use in source and binary forms, with or without modification,-->
+<!--are permitted provided that the following conditions are met:-->
+<!---->
+<!--* Redistributions of source code must retain the above copyright notice, this-->
+<!--  list of conditions and the following disclaimer.-->
+<!---->
+<!--* Redistributions in binary form must reproduce the above copyright notice, this-->
+<!--  list of conditions and the following disclaimer in the documentation and/or-->
+<!--  other materials provided with the distribution.-->
+<!---->
+<!--* Neither the name of the Tampere University or ITU/ISO/IEC nor the names of its-->
+<!--  contributors may be used to endorse or promote products derived from-->
+<!--  this software without specific prior written permission.-->
+<!---->
+<!--THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND-->
+<!--ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED-->
+<!--WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE-->
+<!--DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR-->
+<!--ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES-->
+<!--INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;-->
+<!--LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION HOWEVER CAUSED AND ON-->
+<!--ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT-->
+<!--SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
+<!--INCLUDING NEGLIGENCE OR OTHERWISE ARISING IN ANY WAY OUT OF THE USE OF THIS-->
+<ipxact:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>tuni.fi</ipxact:vendor>
+	<ipxact:library>Kvazaar</ipxact:library>
+	<ipxact:name>indexer_we_adapter</ipxact:name>
+	<ipxact:version>1.0</ipxact:version>
+	<ipxact:busInterfaces>
+		<ipxact:busInterface>
+			<ipxact:name>in</ipxact:name>
+			<ipxact:busType vendor="tuni.fi" library="interface" name="mem_read_and_write" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="tuni.fi" library="interface" name="mem_read_and_write.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>ADDR</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>in_adr</ipxact:name>
+							</ipxact:physicalPort>
+							<ipxact:isInformative>false</ipxact:isInformative>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>WREN</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>in_we</ipxact:name>
+							</ipxact:physicalPort>
+							<ipxact:isInformative>false</ipxact:isInformative>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>WDATA</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>in_d</ipxact:name>
+							</ipxact:physicalPort>
+							<ipxact:isInformative>false</ipxact:isInformative>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:slave/>
+		</ipxact:busInterface>
+		<ipxact:busInterface>
+			<ipxact:name>out</ipxact:name>
+			<ipxact:busType vendor="tuni.fi" library="interface" name="mem_read_and_write" version="1.0"/>
+			<ipxact:abstractionTypes>
+				<ipxact:abstractionType>
+					<ipxact:abstractionRef vendor="tuni.fi" library="interface" name="mem_read_and_write_byte_en.absDef" version="1.0"/>
+					<ipxact:portMaps>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>ADDR</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>out_adr</ipxact:name>
+							</ipxact:physicalPort>
+							<ipxact:isInformative>false</ipxact:isInformative>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>WREN</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>out_we</ipxact:name>
+							</ipxact:physicalPort>
+							<ipxact:isInformative>false</ipxact:isInformative>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>WDATA</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>out_d</ipxact:name>
+							</ipxact:physicalPort>
+							<ipxact:isInformative>false</ipxact:isInformative>
+						</ipxact:portMap>
+						<ipxact:portMap>
+							<ipxact:logicalPort>
+								<ipxact:name>BYTEEN</ipxact:name>
+							</ipxact:logicalPort>
+							<ipxact:physicalPort>
+								<ipxact:name>out_byte_enable</ipxact:name>
+							</ipxact:physicalPort>
+						</ipxact:portMap>
+					</ipxact:portMaps>
+				</ipxact:abstractionType>
+			</ipxact:abstractionTypes>
+			<ipxact:master/>
+		</ipxact:busInterface>
+	</ipxact:busInterfaces>
+	<ipxact:model>
+		<ipxact:views>
+			<ipxact:view>
+				<ipxact:name>flat_vhdl</ipxact:name>
+				<ipxact:envIdentifier>VHDL:Kactus2:</ipxact:envIdentifier>
+				<ipxact:componentInstantiationRef>vhdl_implementation</ipxact:componentInstantiationRef>
+			</ipxact:view>
+			<ipxact:view>
+				<ipxact:name>sim</ipxact:name>
+				<ipxact:componentInstantiationRef>sim</ipxact:componentInstantiationRef>
+			</ipxact:view>
+		</ipxact:views>
+		<ipxact:instantiations>
+			<ipxact:componentInstantiation>
+				<ipxact:name>vhdl_implementation</ipxact:name>
+				<ipxact:language>VHDL</ipxact:language>
+				<ipxact:moduleName>Indexer_we_adapter</ipxact:moduleName>
+				<ipxact:architectureName>combinatorial</ipxact:architectureName>
+				<ipxact:moduleParameters>
+					<ipxact:moduleParameter dataType="natural" parameterId="uuid_d5e491f6_19ea_4291_b02e_e1db6320735d" type="int" usageType="nontyped">
+						<ipxact:name>ADDR_WIDTH</ipxact:name>
+						<ipxact:value>uuid_37db8b50_8b79_4831_bff2_ba933473f280</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="natural" parameterId="uuid_ff06e8e6_622a_4f48_af4e_b4e9b0971991" type="int" usageType="nontyped">
+						<ipxact:name>WRITE_ENABLES</ipxact:name>
+						<ipxact:value>uuid_a79f059f_8139_4a71_802e_91486f171a7d</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="natural" parameterId="uuid_38e0debc_bd9b_4b1f_bc55_7a527a6d4006" type="int" usageType="nontyped">
+						<ipxact:name>DATA_WIDTH</ipxact:name>
+						<ipxact:value>uuid_bd7a0c5d_8abe_452a_8d1e_fe8d75d2095a</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="natural" parameterId="uuid_546c142e_a1c4_4aa0_9df3_0cb7bb92f0b1" type="int" usageType="nontyped">
+						<ipxact:name>WE_SELECT</ipxact:name>
+						<ipxact:value>uuid_0b2f6ce5_b293_4f05_b77b_14caa463fec4</ipxact:value>
+					</ipxact:moduleParameter>
+				</ipxact:moduleParameters>
+				<ipxact:fileSetRef>
+					<ipxact:localName>rtl</ipxact:localName>
+				</ipxact:fileSetRef>
+			</ipxact:componentInstantiation>
+			<ipxact:componentInstantiation>
+				<ipxact:name>sim</ipxact:name>
+				<ipxact:language>Verilog</ipxact:language>
+				<ipxact:moduleName>Indexer_we_adapter</ipxact:moduleName>
+				<ipxact:architectureName>combinatorial</ipxact:architectureName>
+				<ipxact:moduleParameters>
+					<ipxact:moduleParameter dataType="natural" parameterId="uuid_8ecb98b3_1dc9_4c89_9fca_d27f9cb978c3" type="int" usageType="nontyped">
+						<ipxact:name>ADDR_WIDTH</ipxact:name>
+						<ipxact:value>uuid_37db8b50_8b79_4831_bff2_ba933473f280</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="natural" parameterId="uuid_31141c88_3380_4ed4_8bf1_171766e480fb" type="int" usageType="nontyped">
+						<ipxact:name>DATA_WIDTH</ipxact:name>
+						<ipxact:value>uuid_bd7a0c5d_8abe_452a_8d1e_fe8d75d2095a</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="natural" parameterId="uuid_542daaf6_c3bb_4702_aa1d_a0f43cc60772" type="int" usageType="nontyped">
+						<ipxact:name>WE_SELECT</ipxact:name>
+						<ipxact:value>uuid_0b2f6ce5_b293_4f05_b77b_14caa463fec4</ipxact:value>
+					</ipxact:moduleParameter>
+					<ipxact:moduleParameter dataType="natural" parameterId="uuid_f3c9c722_aede_46ff_9cf5_43848210fd62" type="int" usageType="nontyped">
+						<ipxact:name>WRITE_ENABLES</ipxact:name>
+						<ipxact:value>uuid_a79f059f_8139_4a71_802e_91486f171a7d</ipxact:value>
+					</ipxact:moduleParameter>
+				</ipxact:moduleParameters>
+				<ipxact:fileSetRef>
+					<ipxact:localName>sim</ipxact:localName>
+				</ipxact:fileSetRef>
+			</ipxact:componentInstantiation>
+		</ipxact:instantiations>
+		<ipxact:ports>
+			<ipxact:port>
+				<ipxact:name>in_adr</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>uuid_37db8b50_8b79_4831_bff2_ba933473f280-1</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue></ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>in_we</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left></ipxact:left>
+							<ipxact:right></ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue></ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>in_d</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>uuid_bd7a0c5d_8abe_452a_8d1e_fe8d75d2095a-1+uuid_a79f059f_8139_4a71_802e_91486f171a7d</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue></ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>in_q</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>uuid_bd7a0c5d_8abe_452a_8d1e_fe8d75d2095a-1+uuid_a79f059f_8139_4a71_802e_91486f171a7d</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue></ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>out_adr</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>uuid_37db8b50_8b79_4831_bff2_ba933473f280-1</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue></ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>out_we</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left></ipxact:left>
+							<ipxact:right></ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue></ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>out_d</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>uuid_bd7a0c5d_8abe_452a_8d1e_fe8d75d2095a-1</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue></ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>out_q</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>in</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>uuid_bd7a0c5d_8abe_452a_8d1e_fe8d75d2095a-1</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue></ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+			<ipxact:port>
+				<ipxact:name>out_byte_enable</ipxact:name>
+				<ipxact:wire>
+					<ipxact:direction>out</ipxact:direction>
+					<ipxact:vectors>
+						<ipxact:vector>
+							<ipxact:left>(uuid_bd7a0c5d_8abe_452a_8d1e_fe8d75d2095a/8)-1</ipxact:left>
+							<ipxact:right>0</ipxact:right>
+						</ipxact:vector>
+					</ipxact:vectors>
+					<ipxact:drivers>
+						<ipxact:driver>
+							<ipxact:defaultValue></ipxact:defaultValue>
+						</ipxact:driver>
+					</ipxact:drivers>
+				</ipxact:wire>
+			</ipxact:port>
+		</ipxact:ports>
+	</ipxact:model>
+	<ipxact:fileSets>
+		<ipxact:fileSet>
+			<ipxact:name>rtl</ipxact:name>
+			<ipxact:file>
+				<ipxact:name>../../../../rtls/adapters/indexer_we_adapter.v</ipxact:name>
+				<ipxact:fileType>vhdlSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>91d29bf8ecfdfbea978a8fecd569c61e3c4df5c2</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+		</ipxact:fileSet>
+		<ipxact:fileSet>
+			<ipxact:name>sim</ipxact:name>
+			<ipxact:file>
+				<ipxact:name>../../../../rtls/adapters/indexer_we_adapter.v</ipxact:name>
+				<ipxact:fileType>verilogSource</ipxact:fileType>
+				<ipxact:vendorExtensions>
+					<kactus2:hash>d190d9b2df6a698b45959db5946015c68aca3e61</kactus2:hash>
+				</ipxact:vendorExtensions>
+			</ipxact:file>
+		</ipxact:fileSet>
+	</ipxact:fileSets>
+	<ipxact:parameters>
+		<ipxact:parameter kactus2:usageCount="16" parameterId="uuid_37db8b50_8b79_4831_bff2_ba933473f280" resolve="user" type="int">
+			<ipxact:name>ADDR_WIDTH</ipxact:name>
+			<ipxact:value>12</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="16" parameterId="uuid_a79f059f_8139_4a71_802e_91486f171a7d" resolve="user" type="int">
+			<ipxact:name>WRITE_ENABLES</ipxact:name>
+			<ipxact:value>9</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="27" parameterId="uuid_bd7a0c5d_8abe_452a_8d1e_fe8d75d2095a" resolve="user" type="int">
+			<ipxact:name>DATA_WIDTH</ipxact:name>
+			<ipxact:value>128</ipxact:value>
+		</ipxact:parameter>
+		<ipxact:parameter kactus2:usageCount="5" parameterId="uuid_0b2f6ce5_b293_4f05_b77b_14caa463fec4" resolve="user" type="int">
+			<ipxact:name>WE_SELECT</ipxact:name>
+			<ipxact:value>0</ipxact:value>
+		</ipxact:parameter>
+	</ipxact:parameters>
+	<ipxact:vendorExtensions>
+		<kactus2:version>3,13,199,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_productHier>Flat</kactus2:kts_productHier>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+			<kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
+		</kactus2:kts_attributes>
+		<kactus2:author>Tampere University</kactus2:author>
+		<kactus2:license>3-BSD clause</kactus2:license>
+	</ipxact:vendorExtensions>
+</ipxact:component>

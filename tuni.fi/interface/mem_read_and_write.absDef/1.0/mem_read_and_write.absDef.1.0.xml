@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:abstractionDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>tuni.fi</ipxact:vendor>
+	<ipxact:library>interface</ipxact:library>
+	<ipxact:name>mem_read_and_write.absDef</ipxact:name>
+	<ipxact:version>1.0</ipxact:version>
+	<ipxact:busType vendor="tuni.fi" library="interface" name="mem_read_and_write" version="1.0"/>
+	<ipxact:ports>
+		<ipxact:port>
+			<ipxact:logicalName>ADDR</ipxact:logicalName>
+			<ipxact:wire>
+				<ipxact:onMaster>
+					<ipxact:direction>out</ipxact:direction>
+				</ipxact:onMaster>
+				<ipxact:onSlave>
+					<ipxact:direction>in</ipxact:direction>
+				</ipxact:onSlave>
+			</ipxact:wire>
+		</ipxact:port>
+		<ipxact:port>
+			<ipxact:logicalName>WREN</ipxact:logicalName>
+			<ipxact:wire>
+				<ipxact:onMaster>
+					<ipxact:width>1</ipxact:width>
+					<ipxact:direction>out</ipxact:direction>
+				</ipxact:onMaster>
+				<ipxact:onSlave>
+					<ipxact:width>1</ipxact:width>
+					<ipxact:direction>in</ipxact:direction>
+				</ipxact:onSlave>
+			</ipxact:wire>
+		</ipxact:port>
+		<ipxact:port>
+			<ipxact:logicalName>RDATA</ipxact:logicalName>
+			<ipxact:wire>
+				<ipxact:onMaster>
+					<ipxact:direction>in</ipxact:direction>
+				</ipxact:onMaster>
+				<ipxact:onSlave>
+					<ipxact:direction>out</ipxact:direction>
+				</ipxact:onSlave>
+			</ipxact:wire>
+		</ipxact:port>
+		<ipxact:port>
+			<ipxact:logicalName>WDATA</ipxact:logicalName>
+			<ipxact:wire>
+				<ipxact:onMaster>
+					<ipxact:direction>out</ipxact:direction>
+				</ipxact:onMaster>
+				<ipxact:onSlave>
+					<ipxact:direction>in</ipxact:direction>
+				</ipxact:onSlave>
+			</ipxact:wire>
+		</ipxact:port>
+	</ipxact:ports>
+</ipxact:abstractionDefinition>

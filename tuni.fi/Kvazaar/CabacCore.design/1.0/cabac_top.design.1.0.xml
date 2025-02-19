@@ -1,0 +1,1101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>tuni.fi</ipxact:vendor>
+	<ipxact:library>Kvazaar</ipxact:library>
+	<ipxact:name>CabacCore.design</ipxact:name>
+	<ipxact:version>1.0</ipxact:version>
+	<ipxact:componentInstances>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>kvz_encode_coding_tree_hier</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarCabac" name="kvz_encode_coding_tree_hier" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{7cd4fd22-89b0-4fc9-abc4-94c44aaafe20}</kactus2:uuid>
+				<kactus2:position x="1180" y="60"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="110" y="100"/>
+					<kactus2:portPosition busRef="cabac_metas" x="-110" y="410"/>
+					<kactus2:portPosition busRef="cabac_state_data" x="110" y="40"/>
+					<kactus2:portPosition busRef="clk" x="110" y="120"/>
+					<kactus2:portPosition busRef="config_in_rsc" x="110" y="450"/>
+					<kactus2:portPosition busRef="encode_intra_config_and_cabac_write_rsc" x="-110" y="380"/>
+					<kactus2:portPosition busRef="lcu_left_rsc" x="110" y="350"/>
+					<kactus2:portPosition busRef="lcu_rsc" x="110" y="40"/>
+					<kactus2:portPosition busRef="lcu_top_rsc" x="110" y="170"/>
+				</kactus2:portPositions>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="bits_left_rsc_dat" x="-110" y="240"/>
+					<kactus2:adHocVisible portName="buffered_byte_rsc_dat" x="-110" y="220"/>
+					<kactus2:adHocVisible portName="low_rsc_dat" x="-110" y="160"/>
+					<kactus2:adHocVisible portName="num_buffered_bytes_rsc_dat" x="-110" y="200"/>
+					<kactus2:adHocVisible portName="range_rsc_dat" x="-110" y="180"/>
+					<kactus2:adHocVisible portName="stream_cur_bit_rsc_dat" x="-110" y="300"/>
+					<kactus2:adHocVisible portName="stream_data_rsc_dat" x="-110" y="280"/>
+					<kactus2:adHocVisible portName="stream_zercount_rsc_dat" x="-110" y="320"/>
+				</kactus2:adHocVisibilities>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>mux_channel</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarCabac" name="mux_channel" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{2dd4cb06-b241-468e-899c-99640a576fb8}</kactus2:uuid>
+				<kactus2:position x="420" y="330"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="80"/>
+					<kactus2:portPosition busRef="cabac_write_rsc" x="-110" y="40"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="60"/>
+					<kactus2:portPosition busRef="encode_intra_config_and_cabac_write_rsc" x="110" y="110"/>
+					<kactus2:portPosition busRef="encode_intra_config_rsc" x="110" y="420"/>
+				</kactus2:portPositions>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="encode_intra_config_rsc_vld" x="110" y="450"/>
+				</kactus2:adHocVisibilities>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>encode_transform_coeff</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarCabac" name="encode_intra_coding_unit_and_transform_coeff" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{2b20dbb7-bf77-4549-84d7-e667dbe77e40}</kactus2:uuid>
+				<kactus2:position x="1180" y="560"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="260"/>
+					<kactus2:portPosition busRef="cabac_done_rsc" x="-110" y="160"/>
+					<kactus2:portPosition busRef="cabac_main_config_rsc" x="-110" y="40"/>
+					<kactus2:portPosition busRef="cabac_write_rsc" x="-110" y="80"/>
+					<kactus2:portPosition busRef="cabac_write_rsc_z" x="110" y="380"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="220"/>
+					<kactus2:portPosition busRef="clk_cabac_main" x="-110" y="240"/>
+					<kactus2:portPosition busRef="clk_cabac_main_arst_n" x="-110" y="280"/>
+					<kactus2:portPosition busRef="config_in_rsc" x="-110" y="190"/>
+					<kactus2:portPosition busRef="lcu_left_rsc" x="110" y="200"/>
+					<kactus2:portPosition busRef="lcu_rsc" x="110" y="70"/>
+					<kactus2:portPosition busRef="lcu_top_rsc" x="110" y="110"/>
+				</kactus2:portPositions>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="active_rsc_dat" x="-110" y="310"/>
+				</kactus2:adHocVisibilities>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>FiFo</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="fifo" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_fd81b965_8582_40f1_a257_0b8a779fcc67">3</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_d3b30d51_12a4_49ad_a050_c3e9be454b37">&quot;OFF&quot;</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_7f07a290_908b_4599_aa0e_65a23a41c781">uuid_5a9d1a99_e100_4f5f_8c71_0d921a4e7ea1</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{ca2792b4-04d9-42c4-a4b7-86a6c93a50da}</kactus2:uuid>
+				<kactus2:position x="740" y="660"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="aclr_n" x="-110" y="60"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="40"/>
+					<kactus2:portPosition busRef="d_wrreq_wr_lz" x="110" y="80"/>
+					<kactus2:portPosition busRef="d_wrreq_wrlz" x="110" y="40"/>
+					<kactus2:portPosition busRef="data_in" x="110" y="40"/>
+					<kactus2:portPosition busRef="data_out" x="110" y="60"/>
+					<kactus2:portPosition busRef="wclk" x="110" y="80"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>bin_arbiter</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarCabac" name="bin_arbiter" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{6d01250a-6ea7-45cc-960e-ecc415aaa478}</kactus2:uuid>
+				<kactus2:position x="420" y="60"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="110" y="40"/>
+					<kactus2:portPosition busRef="cabac_write_coding_tree_rsc" x="-110" y="200"/>
+					<kactus2:portPosition busRef="cabac_write_encode_rsc" x="110" y="160"/>
+					<kactus2:portPosition busRef="cabac_write_out_rsc" x="110" y="100"/>
+					<kactus2:portPosition busRef="cabac_write_rsc" x="110" y="180"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="40"/>
+					<kactus2:portPosition busRef="clk_cabac_main" x="-110" y="60"/>
+					<kactus2:portPosition busRef="clk_cabac_main_arst_n" x="110" y="60"/>
+					<kactus2:portPosition busRef="clk_cabac_state" x="-110" y="80"/>
+					<kactus2:portPosition busRef="clk_cabac_state_arst_n" x="110" y="80"/>
+				</kactus2:portPositions>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="stall_coding_tree_rsc_dat" x="-110" y="220"/>
+				</kactus2:adHocVisibilities>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>bin_coding</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarCabac" name="bin_coding" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{fa33660e-d346-415f-8b4e-069a4f690b5c}</kactus2:uuid>
+				<kactus2:position x="740" y="60"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="60"/>
+					<kactus2:portPosition busRef="bitstream_last_data_rsc" x="110" y="120"/>
+					<kactus2:portPosition busRef="cabac_metas_rsc" x="110" y="80"/>
+					<kactus2:portPosition busRef="cabac_states_rsc" x="110" y="40"/>
+					<kactus2:portPosition busRef="cabac_write_rsc" x="-110" y="100"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="40"/>
+					<kactus2:portPosition busRef="ctu_done_rsc" x="110" y="350"/>
+				</kactus2:portPositions>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="bits_left_rsc_dat" x="110" y="240"/>
+					<kactus2:adHocVisible portName="buffered_byte_rsc_dat" x="110" y="220"/>
+					<kactus2:adHocVisible portName="low_rsc_dat" x="110" y="160"/>
+					<kactus2:adHocVisible portName="num_buffered_bytes_rsc_dat" x="110" y="200"/>
+					<kactus2:adHocVisible portName="range_rsc_dat" x="110" y="180"/>
+					<kactus2:adHocVisible portName="stream_cur_bit_rsc_dat" x="110" y="300"/>
+					<kactus2:adHocVisible portName="stream_data_rsc_dat" x="110" y="280"/>
+					<kactus2:adHocVisible portName="stream_zercount_rsc_dat" x="110" y="320"/>
+				</kactus2:adHocVisibilities>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>binarization</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarCabac" name="binarization" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{cc0d3f51-c003-406b-a9ae-beba9c0b7927}</kactus2:uuid>
+				<kactus2:position x="740" y="460"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="110"/>
+					<kactus2:portPosition busRef="cabac_write_out" x="-110" y="40"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="80"/>
+					<kactus2:portPosition busRef="clk_base" x="-110" y="80"/>
+					<kactus2:portPosition busRef="clk_binarization" x="-110" y="60"/>
+					<kactus2:portPosition busRef="coeff_rsc" x="110" y="50"/>
+					<kactus2:portPosition busRef="conf_in_rsc" x="110" y="70"/>
+					<kactus2:portPosition busRef="done_rsc" x="110" y="100"/>
+				</kactus2:portPositions>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="cabac_write_out_rsc_vld" x="-110" y="150"/>
+				</kactus2:adHocVisibilities>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OR3_1</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OR3" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{8a9d9735-b9f7-4f05-9030-8cd0e5c76767}</kactus2:uuid>
+				<kactus2:position x="420" y="830"/>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="input1" x="110" y="40"/>
+					<kactus2:adHocVisible portName="input2" x="110" y="60"/>
+					<kactus2:adHocVisible portName="input3" x="110" y="80"/>
+					<kactus2:adHocVisible portName="output1" x="-110" y="40"/>
+				</kactus2:adHocVisibilities>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+	</ipxact:componentInstances>
+	<ipxact:interconnections>
+		<ipxact:interconnection>
+			<ipxact:name>mux_channel_encode_intra_config_and_cabac_write_rsc_to_kvz_encode_coding_tree_hier_encode_intra_config_and_cabac_write_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="mux_channel" busRef="encode_intra_config_and_cabac_write_rsc"/>
+			<ipxact:activeInterface componentRef="kvz_encode_coding_tree_hier" busRef="encode_intra_config_and_cabac_write_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>mux_channel_encode_intra_config_rsc_to_encode_transform_coeff_config_in_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="mux_channel" busRef="encode_intra_config_rsc"/>
+			<ipxact:activeInterface componentRef="encode_transform_coeff" busRef="config_in_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>kvz_encode_coding_tree_hier_config_in_rsc_to_bus</ipxact:name>
+			<ipxact:activeInterface componentRef="kvz_encode_coding_tree_hier" busRef="config_in_rsc"/>
+			<ipxact:hierInterface busRef="config_in_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>bin_arbiter_cabac_write_coding_tree_rsc_to_mux_channel_cabac_write_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="bin_arbiter" busRef="cabac_write_coding_tree_rsc"/>
+			<ipxact:activeInterface componentRef="mux_channel" busRef="cabac_write_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>bin_arbiter_cabac_write_out_rsc_to_bin_coding_cabac_write_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="bin_arbiter" busRef="cabac_write_out_rsc"/>
+			<ipxact:activeInterface componentRef="bin_coding" busRef="cabac_write_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>bin_coding_ctu_done_rsc_to_bus</ipxact:name>
+			<ipxact:activeInterface componentRef="bin_coding" busRef="ctu_done_rsc"/>
+			<ipxact:hierInterface busRef="ctu_done_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>FiFo_data_out_to_encode_transform_coeff_cabac_done_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="FiFo" busRef="data_out"/>
+			<ipxact:activeInterface componentRef="encode_transform_coeff" busRef="cabac_done_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>binarization_done_rsc_to_FiFo_data_in</ipxact:name>
+			<ipxact:activeInterface componentRef="binarization" busRef="done_rsc"/>
+			<ipxact:activeInterface componentRef="FiFo" busRef="data_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>encode_transform_coeff_cabac_write_rsc_to_bin_arbiter_cabac_write_encode_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="encode_transform_coeff" busRef="cabac_write_rsc"/>
+			<ipxact:activeInterface componentRef="bin_arbiter" busRef="cabac_write_encode_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>binarization_cabac_write_out_to_bin_arbiter_cabac_write_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="binarization" busRef="cabac_write_out"/>
+			<ipxact:activeInterface componentRef="bin_arbiter" busRef="cabac_write_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>encode_transform_coeff_cabac_main_config_rsc_to_binarization_conf_in_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="encode_transform_coeff" busRef="cabac_main_config_rsc"/>
+			<ipxact:activeInterface componentRef="binarization" busRef="conf_in_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>bin_arbiter_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="bin_arbiter" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>bin_arbiter_clk_cabac_main_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="bin_arbiter" busRef="clk_cabac_main_arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>bin_arbiter_clk_cabac_state_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="bin_arbiter" busRef="clk_cabac_state_arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>mux_channel_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="mux_channel" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>bin_coding_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="bin_coding" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>binarization_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="binarization" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>FiFo_aclr_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="FiFo" busRef="aclr_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>kvz_encode_coding_tree_hier_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="kvz_encode_coding_tree_hier" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>encode_transform_coeff_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="encode_transform_coeff" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>encode_transform_coeff_clk_cabac_main_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="encode_transform_coeff" busRef="clk_cabac_main_arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>kvz_encode_coding_tree_hier_lcu_rsc_to_bus</ipxact:name>
+			<ipxact:activeInterface componentRef="kvz_encode_coding_tree_hier" busRef="lcu_rsc"/>
+			<ipxact:hierInterface busRef="lcu_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>kvz_encode_coding_tree_hier_lcu_top_rsc_to_bus</ipxact:name>
+			<ipxact:activeInterface componentRef="kvz_encode_coding_tree_hier" busRef="lcu_top_rsc"/>
+			<ipxact:hierInterface busRef="lcu_top_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>kvz_encode_coding_tree_hier_lcu_left_rsc_to_bus_1</ipxact:name>
+			<ipxact:activeInterface componentRef="kvz_encode_coding_tree_hier" busRef="lcu_left_rsc"/>
+			<ipxact:hierInterface busRef="lcu_left_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>encode_transform_coeff_lcu_rsc_to_bus_1</ipxact:name>
+			<ipxact:activeInterface componentRef="encode_transform_coeff" busRef="lcu_rsc"/>
+			<ipxact:hierInterface busRef="lcu_rsc_1"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>encode_transform_coeff_lcu_top_rsc_to_bus_2</ipxact:name>
+			<ipxact:activeInterface componentRef="encode_transform_coeff" busRef="lcu_top_rsc"/>
+			<ipxact:hierInterface busRef="lcu_top_rsc_1"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>encode_transform_coeff_lcu_left_rsc_to_bus</ipxact:name>
+			<ipxact:activeInterface componentRef="encode_transform_coeff" busRef="lcu_left_rsc"/>
+			<ipxact:hierInterface busRef="lcu_left_rsc_1"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>bin_coding_cabac_states_rsc_to_bus</ipxact:name>
+			<ipxact:activeInterface componentRef="bin_coding" busRef="cabac_states_rsc"/>
+			<ipxact:hierInterface busRef="cabac_states_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>bin_coding_bitstream_last_data_rsc_to_bus_1</ipxact:name>
+			<ipxact:activeInterface componentRef="bin_coding" busRef="bitstream_last_data_rsc"/>
+			<ipxact:hierInterface busRef="bitstream_last_data_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>binarization_coeff_rsc_to_bus_2</ipxact:name>
+			<ipxact:activeInterface componentRef="binarization" busRef="coeff_rsc"/>
+			<ipxact:hierInterface busRef="coeff_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>kvz_encode_coding_tree_hier_clk_to_clk_base</ipxact:name>
+			<ipxact:activeInterface componentRef="kvz_encode_coding_tree_hier" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk_base"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>mux_channel_clk_to_clk_base</ipxact:name>
+			<ipxact:activeInterface componentRef="mux_channel" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk_base"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>encode_transform_coeff_clk_to_clk_base</ipxact:name>
+			<ipxact:activeInterface componentRef="encode_transform_coeff" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk_base"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>FiFo_clk_to_clk_base</ipxact:name>
+			<ipxact:activeInterface componentRef="FiFo" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk_base"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>binarization_clk_to_clk_base</ipxact:name>
+			<ipxact:activeInterface componentRef="binarization" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk_base"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>binarization_clk_binarization_to_clk_binarization</ipxact:name>
+			<ipxact:activeInterface componentRef="binarization" busRef="clk_binarization"/>
+			<ipxact:hierInterface busRef="clk_binarization"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>encode_transform_coeff_clk_cabac_main_to_clk_binarization</ipxact:name>
+			<ipxact:activeInterface componentRef="encode_transform_coeff" busRef="clk_cabac_main"/>
+			<ipxact:hierInterface busRef="clk_binarization"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>bin_arbiter_clk_to_clk_base</ipxact:name>
+			<ipxact:activeInterface componentRef="bin_arbiter" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk_base"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>bin_arbiter_clk_cabac_main_to_clk_binarization</ipxact:name>
+			<ipxact:activeInterface componentRef="bin_arbiter" busRef="clk_cabac_main"/>
+			<ipxact:hierInterface busRef="clk_binarization"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>bin_arbiter_clk_cabac_state_to_clk_bin_coding</ipxact:name>
+			<ipxact:activeInterface componentRef="bin_arbiter" busRef="clk_cabac_state"/>
+			<ipxact:hierInterface busRef="clk_bin_coding"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>bin_coding_clk_to_clk_bin_coding</ipxact:name>
+			<ipxact:activeInterface componentRef="bin_coding" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk_bin_coding"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>bin_coding_cabac_metas_rsc_to_cabac_metas_push</ipxact:name>
+			<ipxact:activeInterface componentRef="bin_coding" busRef="cabac_metas_rsc"/>
+			<ipxact:hierInterface busRef="cabac_metas_push"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>kvz_encode_coding_tree_hier_cabac_metas_to_cabac_metas_pull</ipxact:name>
+			<ipxact:activeInterface componentRef="kvz_encode_coding_tree_hier" busRef="cabac_metas"/>
+			<ipxact:hierInterface busRef="cabac_metas_pull"/>
+		</ipxact:interconnection>
+	</ipxact:interconnections>
+	<ipxact:adHocConnections>
+		<ipxact:adHocConnection>
+			<ipxact:name>bin_coding_low_rsc_dat_to_kvz_encode_coding_tree_hier_low_rsc_dat</ipxact:name>
+			<ipxact:portReferences>
+				<ipxact:internalPortReference componentRef="bin_coding" portRef="low_rsc_dat"/>
+				<ipxact:internalPortReference componentRef="kvz_encode_coding_tree_hier" portRef="low_rsc_dat"/>
+			</ipxact:portReferences>
+		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name>kvz_encode_coding_tree_hier_range_rsc_dat_to_bin_coding_range_rsc_dat</ipxact:name>
+			<ipxact:portReferences>
+				<ipxact:internalPortReference componentRef="kvz_encode_coding_tree_hier" portRef="range_rsc_dat"/>
+				<ipxact:internalPortReference componentRef="bin_coding" portRef="range_rsc_dat"/>
+			</ipxact:portReferences>
+		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name>bin_coding_num_buffered_bytes_rsc_dat_to_kvz_encode_coding_tree_hier_num_buffered_bytes_rsc_dat</ipxact:name>
+			<ipxact:portReferences>
+				<ipxact:internalPortReference componentRef="bin_coding" portRef="num_buffered_bytes_rsc_dat"/>
+				<ipxact:internalPortReference componentRef="kvz_encode_coding_tree_hier" portRef="num_buffered_bytes_rsc_dat"/>
+			</ipxact:portReferences>
+		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name>kvz_encode_coding_tree_hier_buffered_byte_rsc_dat_to_bin_coding_buffered_byte_rsc_dat</ipxact:name>
+			<ipxact:portReferences>
+				<ipxact:internalPortReference componentRef="kvz_encode_coding_tree_hier" portRef="buffered_byte_rsc_dat"/>
+				<ipxact:internalPortReference componentRef="bin_coding" portRef="buffered_byte_rsc_dat"/>
+			</ipxact:portReferences>
+		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name>bin_coding_bits_left_rsc_dat_to_kvz_encode_coding_tree_hier_bits_left_rsc_dat</ipxact:name>
+			<ipxact:portReferences>
+				<ipxact:internalPortReference componentRef="bin_coding" portRef="bits_left_rsc_dat"/>
+				<ipxact:internalPortReference componentRef="kvz_encode_coding_tree_hier" portRef="bits_left_rsc_dat"/>
+			</ipxact:portReferences>
+		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name>kvz_encode_coding_tree_hier_stream_data_rsc_dat_to_bin_coding_stream_data_rsc_dat</ipxact:name>
+			<ipxact:portReferences>
+				<ipxact:internalPortReference componentRef="kvz_encode_coding_tree_hier" portRef="stream_data_rsc_dat"/>
+				<ipxact:internalPortReference componentRef="bin_coding" portRef="stream_data_rsc_dat"/>
+			</ipxact:portReferences>
+		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name>bin_coding_stream_cur_bit_rsc_dat_to_kvz_encode_coding_tree_hier_stream_cur_bit_rsc_dat</ipxact:name>
+			<ipxact:portReferences>
+				<ipxact:internalPortReference componentRef="bin_coding" portRef="stream_cur_bit_rsc_dat"/>
+				<ipxact:internalPortReference componentRef="kvz_encode_coding_tree_hier" portRef="stream_cur_bit_rsc_dat"/>
+			</ipxact:portReferences>
+		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name>kvz_encode_coding_tree_hier_stream_zercount_rsc_dat_to_bin_coding_stream_zercount_rsc_dat</ipxact:name>
+			<ipxact:portReferences>
+				<ipxact:internalPortReference componentRef="kvz_encode_coding_tree_hier" portRef="stream_zercount_rsc_dat"/>
+				<ipxact:internalPortReference componentRef="bin_coding" portRef="stream_zercount_rsc_dat"/>
+			</ipxact:portReferences>
+		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name>OR3_1_output1_to_bin_arbiter_stall_coding_tree_rsc_dat</ipxact:name>
+			<ipxact:portReferences>
+				<ipxact:internalPortReference componentRef="OR3_1" portRef="output1"/>
+				<ipxact:internalPortReference componentRef="bin_arbiter" portRef="stall_coding_tree_rsc_dat"/>
+			</ipxact:portReferences>
+		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name>mux_channel_encode_intra_config_rsc_vld_to_OR3_1_input2</ipxact:name>
+			<ipxact:portReferences>
+				<ipxact:internalPortReference componentRef="mux_channel" portRef="encode_intra_config_rsc_vld"/>
+				<ipxact:internalPortReference componentRef="OR3_1" portRef="input2"/>
+			</ipxact:portReferences>
+		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name>OR3_1_input1_to_encode_transform_coeff_active_rsc_dat</ipxact:name>
+			<ipxact:portReferences>
+				<ipxact:internalPortReference componentRef="OR3_1" portRef="input1"/>
+				<ipxact:internalPortReference componentRef="encode_transform_coeff" portRef="active_rsc_dat"/>
+			</ipxact:portReferences>
+		</ipxact:adHocConnection>
+		<ipxact:adHocConnection>
+			<ipxact:name>OR3_1_input3_to_binarization_cabac_write_out_rsc_vld</ipxact:name>
+			<ipxact:portReferences>
+				<ipxact:internalPortReference componentRef="OR3_1" portRef="input3"/>
+				<ipxact:internalPortReference componentRef="binarization" portRef="cabac_write_out_rsc_vld"/>
+			</ipxact:portReferences>
+		</ipxact:adHocConnection>
+	</ipxact:adHocConnections>
+	<ipxact:parameters>
+		<ipxact:parameter kactus2:usageCount="1" parameterId="uuid_5a9d1a99_e100_4f5f_8c71_0d921a4e7ea1" resolve="user">
+			<ipxact:name>Fifo_width</ipxact:name>
+			<ipxact:displayName>Fifo_width</ipxact:displayName>
+			<ipxact:value>1</ipxact:value>
+		</ipxact:parameter>
+	</ipxact:parameters>
+	<ipxact:vendorExtensions>
+		<kactus2:version>3,11,1,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+		</kactus2:kts_attributes>
+		<kactus2:columnLayout>
+			<kactus2:column name="IO" contentType="0" allowedItems="1" minWidth="119" width="119" x="900"/>
+			<kactus2:column name="Components" contentType="2" allowedItems="2" minWidth="319" width="319" x="1020"/>
+			<kactus2:column name="Components" contentType="2" allowedItems="2" minWidth="319" width="319" x="260"/>
+			<kactus2:column name="IO" contentType="0" allowedItems="1" minWidth="119" width="259" x="0"/>
+			<kactus2:column name="IO" contentType="0" allowedItems="1" minWidth="319" width="319" x="1340"/>
+			<kactus2:column name="Components" contentType="2" allowedItems="2" minWidth="319" width="319" x="580"/>
+		</kactus2:columnLayout>
+		<kactus2:routes>
+			<kactus2:route kactus2:connRef="lcu1_wrapper_clk_to_accel_clock" kactus2:offPage="false">
+				<kactus2:position x="1130" y="670"/>
+				<kactus2:position x="120" y="670"/>
+				<kactus2:position x="120" y="270"/>
+				<kactus2:position x="60" y="270"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="mux_channel_encode_intra_config_and_cabac_write_rsc_to_kvz_encode_coding_tree_hier_encode_intra_config_and_cabac_write_rsc" kactus2:offPage="false">
+				<kactus2:position x="530" y="440"/>
+				<kactus2:position x="1070" y="440"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="lcu1_wrapper_rst_n_to_avalon_reset" kactus2:offPage="false">
+				<kactus2:position x="1150" y="840"/>
+				<kactus2:position x="1640" y="840"/>
+				<kactus2:position x="1640" y="90"/>
+				<kactus2:position x="1680" y="90"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="lcu2_left_wrapper_rst_n_to_avalon_reset" kactus2:offPage="false">
+				<kactus2:position x="500" y="150"/>
+				<kactus2:position x="2630" y="150"/>
+				<kactus2:position x="2630" y="370"/>
+				<kactus2:position x="2650" y="370"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="bin_coding_low_rsc_dat_to_kvz_encode_coding_tree_hier_low_rsc_dat" kactus2:offPage="false">
+				<kactus2:position x="850" y="220"/>
+				<kactus2:position x="1070" y="220"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="kvz_encode_coding_tree_hier_range_rsc_dat_to_bin_coding_range_rsc_dat" kactus2:offPage="false">
+				<kactus2:position x="1070" y="240"/>
+				<kactus2:position x="850" y="240"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="bin_coding_num_buffered_bytes_rsc_dat_to_kvz_encode_coding_tree_hier_num_buffered_bytes_rsc_dat" kactus2:offPage="false">
+				<kactus2:position x="850" y="260"/>
+				<kactus2:position x="1070" y="260"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="kvz_encode_coding_tree_hier_buffered_byte_rsc_dat_to_bin_coding_buffered_byte_rsc_dat" kactus2:offPage="false">
+				<kactus2:position x="1070" y="280"/>
+				<kactus2:position x="850" y="280"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="bin_coding_bits_left_rsc_dat_to_kvz_encode_coding_tree_hier_bits_left_rsc_dat" kactus2:offPage="false">
+				<kactus2:position x="850" y="300"/>
+				<kactus2:position x="1070" y="300"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="kvz_encode_coding_tree_hier_stream_data_rsc_dat_to_bin_coding_stream_data_rsc_dat" kactus2:offPage="false">
+				<kactus2:position x="1070" y="340"/>
+				<kactus2:position x="850" y="340"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="bin_coding_stream_cur_bit_rsc_dat_to_kvz_encode_coding_tree_hier_stream_cur_bit_rsc_dat" kactus2:offPage="false">
+				<kactus2:position x="850" y="360"/>
+				<kactus2:position x="1070" y="360"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="kvz_encode_coding_tree_hier_stream_zercount_rsc_dat_to_bin_coding_stream_zercount_rsc_dat" kactus2:offPage="false">
+				<kactus2:position x="1070" y="380"/>
+				<kactus2:position x="850" y="380"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="mux_channel_encode_intra_config_rsc_to_encode_transform_coeff_config_in_rsc" kactus2:offPage="false">
+				<kactus2:position x="530" y="750"/>
+				<kactus2:position x="1070" y="750"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="kvz_encode_coding_tree_hier_config_in_rsc_to_config_in_rsc" kactus2:offPage="false">
+				<kactus2:position x="1250" y="580"/>
+				<kactus2:position x="1160" y="580"/>
+				<kactus2:position x="1160" y="590"/>
+				<kactus2:position x="1140" y="590"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="kvz_encode_coding_tree_hier_config_in_rsc_to_bus" kactus2:offPage="false">
+				<kactus2:position x="1290" y="510"/>
+				<kactus2:position x="1500" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="kvz_encode_coding_tree_hier_cabac_metas_to_cabac_metas" kactus2:offPage="false">
+				<kactus2:position x="1250" y="540"/>
+				<kactus2:position x="1140" y="540"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="bin_arbiter_cabac_write_coding_tree_rsc_to_mux_channel_cabac_write_rsc" kactus2:offPage="false">
+				<kactus2:position x="310" y="260"/>
+				<kactus2:position x="290" y="260"/>
+				<kactus2:position x="290" y="370"/>
+				<kactus2:position x="310" y="370"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="bin_arbiter_cabac_write_out_rsc_to_bin_coding_cabac_write_rsc" kactus2:offPage="false">
+				<kactus2:position x="530" y="160"/>
+				<kactus2:position x="630" y="160"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="bin_coding_ctu_done_rsc_to_ctu_done_rsc" kactus2:offPage="false">
+				<kactus2:position x="1030" y="410"/>
+				<kactus2:position x="1140" y="410"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="bin_coding_ctu_done_rsc_to_bus" kactus2:offPage="false">
+				<kactus2:position x="850" y="410"/>
+				<kactus2:position x="960" y="410"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="bin_coding_cabac_metas_rsc_to_cabac_metas_rsc" kactus2:offPage="false">
+				<kactus2:position x="1030" y="130"/>
+				<kactus2:position x="1140" y="130"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="FiFo_data_out_to_encode_transform_coeff_cabac_done_rsc" kactus2:offPage="false">
+				<kactus2:position x="850" y="720"/>
+				<kactus2:position x="1070" y="720"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="binarization_done_rsc_to_FiFo_data_in" kactus2:offPage="false">
+				<kactus2:position x="850" y="560"/>
+				<kactus2:position x="870" y="560"/>
+				<kactus2:position x="870" y="700"/>
+				<kactus2:position x="850" y="700"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="encode_transform_coeff_cabac_write_rsc_to_bin_arbiter_cabac_write_encode_rsc" kactus2:offPage="false">
+				<kactus2:position x="1070" y="640"/>
+				<kactus2:position x="550" y="640"/>
+				<kactus2:position x="550" y="220"/>
+				<kactus2:position x="530" y="220"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="binarization_cabac_write_out_to_bin_arbiter_cabac_write_rsc" kactus2:offPage="false">
+				<kactus2:position x="630" y="500"/>
+				<kactus2:position x="560" y="500"/>
+				<kactus2:position x="560" y="240"/>
+				<kactus2:position x="530" y="240"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="encode_transform_coeff_cabac_main_config_rsc_to_binarization_conf_in_rsc" kactus2:offPage="false">
+				<kactus2:position x="1070" y="600"/>
+				<kactus2:position x="880" y="600"/>
+				<kactus2:position x="880" y="530"/>
+				<kactus2:position x="850" y="530"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="lcu1_RAM_adapter_ram_b_to_ram_b" kactus2:offPage="false">
+				<kactus2:position x="1610" y="100"/>
+				<kactus2:position x="1800" y="100"/>
+				<kactus2:position x="1800" y="90"/>
+				<kactus2:position x="1820" y="90"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="lcu1_top_RAM_adapter_ram_b_to_ram_b_1" kactus2:offPage="false">
+				<kactus2:position x="1610" y="230"/>
+				<kactus2:position x="1820" y="230"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="lcu1_left_RAM_adapter_ram_b_to_ram_b_2" kactus2:offPage="false">
+				<kactus2:position x="1610" y="360"/>
+				<kactus2:position x="1820" y="360"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="lcu2_RAM_adapter_ram_b_to_ram_b" kactus2:offPage="false">
+				<kactus2:position x="1610" y="490"/>
+				<kactus2:position x="1820" y="490"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="lcu2_top_RAM_adapter_ram_b_to_ram_b_1" kactus2:offPage="false">
+				<kactus2:position x="1610" y="620"/>
+				<kactus2:position x="1820" y="620"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="lcu2_left_RAM_adapter_ram_b_to_ram_b_2" kactus2:offPage="false">
+				<kactus2:position x="1610" y="760"/>
+				<kactus2:position x="1820" y="760"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="cabac_states_RAM_adapter_ram_b_to_ram_b" kactus2:offPage="false">
+				<kactus2:position x="1610" y="890"/>
+				<kactus2:position x="1820" y="890"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="bitstream_RAM_adapter_ram_b_to_ram_b_1" kactus2:offPage="false">
+				<kactus2:position x="1610" y="1020"/>
+				<kactus2:position x="1800" y="1020"/>
+				<kactus2:position x="1800" y="1030"/>
+				<kactus2:position x="1820" y="1030"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_RAM_adapter_ram_b_to_ram_b_2" kactus2:offPage="false">
+				<kactus2:position x="1610" y="1150"/>
+				<kactus2:position x="1820" y="1150"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="bin_arbiter_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="560" y="100"/>
+				<kactus2:position x="160" y="620"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="bin_arbiter_clk_cabac_main_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="560" y="120"/>
+				<kactus2:position x="160" y="620"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="bin_arbiter_clk_cabac_state_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="560" y="140"/>
+				<kactus2:position x="160" y="620"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="mux_channel_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="280" y="410"/>
+				<kactus2:position x="160" y="620"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="bin_coding_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="600" y="120"/>
+				<kactus2:position x="160" y="620"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="binarization_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="600" y="570"/>
+				<kactus2:position x="160" y="620"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="FiFo_aclr_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="600" y="720"/>
+				<kactus2:position x="160" y="620"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="kvz_encode_coding_tree_hier_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="1320" y="160"/>
+				<kactus2:position x="160" y="620"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="encode_transform_coeff_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="1040" y="820"/>
+				<kactus2:position x="160" y="620"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="encode_transform_coeff_clk_cabac_main_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="1040" y="840"/>
+				<kactus2:position x="160" y="620"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="kvz_encode_coding_tree_hier_lcu_rsc_to_lcu_rsc" kactus2:offPage="false">
+				<kactus2:position x="1290" y="100"/>
+				<kactus2:position x="1480" y="100"/>
+				<kactus2:position x="1480" y="80"/>
+				<kactus2:position x="1500" y="80"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="kvz_encode_coding_tree_hier_lcu_rsc_to_bus" kactus2:offPage="false">
+				<kactus2:position x="1290" y="100"/>
+				<kactus2:position x="1500" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="kvz_encode_coding_tree_hier_lcu_top_rsc_to_lcu_top_rsc" kactus2:offPage="false">
+				<kactus2:position x="1290" y="230"/>
+				<kactus2:position x="1480" y="230"/>
+				<kactus2:position x="1480" y="260"/>
+				<kactus2:position x="1500" y="260"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="kvz_encode_coding_tree_hier_lcu_left_rsc_to_lcu_left_rsc" kactus2:offPage="false">
+				<kactus2:position x="1290" y="410"/>
+				<kactus2:position x="1480" y="410"/>
+				<kactus2:position x="1480" y="420"/>
+				<kactus2:position x="1500" y="420"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="kvz_encode_coding_tree_hier_lcu_top_rsc_to_bus" kactus2:offPage="false">
+				<kactus2:position x="1290" y="230"/>
+				<kactus2:position x="1500" y="230"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="kvz_encode_coding_tree_hier_lcu_left_rsc_to_bus_1" kactus2:offPage="false">
+				<kactus2:position x="1290" y="410"/>
+				<kactus2:position x="1500" y="410"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="encode_transform_coeff_lcu_rsc_to_lcu_rsc_1" kactus2:offPage="false">
+				<kactus2:position x="1290" y="630"/>
+				<kactus2:position x="1480" y="630"/>
+				<kactus2:position x="1480" y="670"/>
+				<kactus2:position x="1500" y="670"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="encode_transform_coeff_lcu_top_rsc_to_lcu_top_rsc_1" kactus2:offPage="false">
+				<kactus2:position x="1290" y="670"/>
+				<kactus2:position x="1480" y="670"/>
+				<kactus2:position x="1480" y="760"/>
+				<kactus2:position x="1500" y="760"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="encode_transform_coeff_lcu_left_rsc_to_lcu_left_rsc_1" kactus2:offPage="false">
+				<kactus2:position x="1290" y="760"/>
+				<kactus2:position x="1480" y="760"/>
+				<kactus2:position x="1480" y="810"/>
+				<kactus2:position x="1500" y="810"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="encode_transform_coeff_lcu_rsc_to_bus_1" kactus2:offPage="false">
+				<kactus2:position x="1290" y="630"/>
+				<kactus2:position x="1500" y="630"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="encode_transform_coeff_lcu_top_rsc_to_bus_2" kactus2:offPage="false">
+				<kactus2:position x="1290" y="670"/>
+				<kactus2:position x="1500" y="670"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="encode_transform_coeff_lcu_left_rsc_to_bus" kactus2:offPage="false">
+				<kactus2:position x="1290" y="760"/>
+				<kactus2:position x="1500" y="760"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="bin_coding_cabac_states_rsc_to_cabac_states_rsc" kactus2:offPage="false">
+				<kactus2:position x="850" y="100"/>
+				<kactus2:position x="960" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="bin_coding_bitstream_last_data_rsc_to_bitstream_last_data_rsc" kactus2:offPage="false">
+				<kactus2:position x="850" y="160"/>
+				<kactus2:position x="940" y="160"/>
+				<kactus2:position x="940" y="190"/>
+				<kactus2:position x="960" y="190"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="binarization_coeff_rsc_to_coeff_rsc" kactus2:offPage="false">
+				<kactus2:position x="850" y="500"/>
+				<kactus2:position x="940" y="500"/>
+				<kactus2:position x="940" y="560"/>
+				<kactus2:position x="960" y="560"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="bin_coding_cabac_states_rsc_to_bus" kactus2:offPage="false">
+				<kactus2:position x="850" y="100"/>
+				<kactus2:position x="960" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="bin_coding_bitstream_last_data_rsc_to_bus_1" kactus2:offPage="false">
+				<kactus2:position x="850" y="180"/>
+				<kactus2:position x="960" y="180"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="binarization_coeff_rsc_to_bus_2" kactus2:offPage="false">
+				<kactus2:position x="850" y="510"/>
+				<kactus2:position x="960" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="kvz_encode_coding_tree_hier_clk_to_clk_base" kactus2:offPage="true">
+				<kactus2:position x="1320" y="180"/>
+				<kactus2:position x="160" y="170"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="mux_channel_clk_to_clk_base" kactus2:offPage="true">
+				<kactus2:position x="280" y="390"/>
+				<kactus2:position x="160" y="170"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="encode_transform_coeff_clk_to_clk_base" kactus2:offPage="true">
+				<kactus2:position x="1040" y="780"/>
+				<kactus2:position x="160" y="170"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="FiFo_clk_to_clk_base" kactus2:offPage="true">
+				<kactus2:position x="600" y="700"/>
+				<kactus2:position x="160" y="170"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="binarization_clk_to_clk_base" kactus2:offPage="true">
+				<kactus2:position x="600" y="540"/>
+				<kactus2:position x="160" y="170"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="binarization_clk_binarization_to_clk_binarization" kactus2:offPage="true">
+				<kactus2:position x="600" y="520"/>
+				<kactus2:position x="160" y="210"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="encode_transform_coeff_clk_cabac_main_to_clk_binarization" kactus2:offPage="true">
+				<kactus2:position x="1040" y="800"/>
+				<kactus2:position x="160" y="210"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="bin_arbiter_clk_to_clk_base" kactus2:offPage="true">
+				<kactus2:position x="280" y="100"/>
+				<kactus2:position x="160" y="170"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="bin_arbiter_clk_cabac_main_to_clk_binarization" kactus2:offPage="true">
+				<kactus2:position x="280" y="120"/>
+				<kactus2:position x="160" y="210"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="bin_arbiter_clk_cabac_state_to_clk_bin_coding" kactus2:offPage="true">
+				<kactus2:position x="280" y="140"/>
+				<kactus2:position x="160" y="250"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="bin_coding_clk_to_clk_bin_coding" kactus2:offPage="true">
+				<kactus2:position x="600" y="100"/>
+				<kactus2:position x="160" y="250"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OR3_1_output1_to_bin_arbiter_stall_coding_tree_rsc_dat" kactus2:offPage="false">
+				<kactus2:position x="310" y="870"/>
+				<kactus2:position x="280" y="870"/>
+				<kactus2:position x="280" y="280"/>
+				<kactus2:position x="310" y="280"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="mux_channel_encode_intra_config_rsc_vld_to_OR3_1_input2" kactus2:offPage="false">
+				<kactus2:position x="530" y="780"/>
+				<kactus2:position x="550" y="780"/>
+				<kactus2:position x="550" y="890"/>
+				<kactus2:position x="530" y="890"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OR3_1_input1_to_encode_transform_coeff_active_rsc_dat" kactus2:offPage="false">
+				<kactus2:position x="530" y="870"/>
+				<kactus2:position x="1070" y="870"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OR3_1_input3_to_binarization_cabac_write_out_rsc_vld" kactus2:offPage="false">
+				<kactus2:position x="530" y="910"/>
+				<kactus2:position x="610" y="910"/>
+				<kactus2:position x="610" y="610"/>
+				<kactus2:position x="630" y="610"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="kvz_encode_coding_tree_hier_cabac_metas_to_cabac_metas" kactus2:offPage="false">
+				<kactus2:position x="1070" y="470"/>
+				<kactus2:position x="960" y="470"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="bin_coding_cabac_metas_rsc_to_cabac_metas_rsc" kactus2:offPage="false">
+				<kactus2:position x="850" y="140"/>
+				<kactus2:position x="960" y="140"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="bin_coding_cabac_metas_rsc_to_cabac_metas_push" kactus2:offPage="false">
+				<kactus2:position x="850" y="140"/>
+				<kactus2:position x="960" y="140"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="kvz_encode_coding_tree_hier_cabac_metas_to_cabac_metas_pull" kactus2:offPage="false">
+				<kactus2:position x="1070" y="470"/>
+				<kactus2:position x="960" y="470"/>
+			</kactus2:route>
+		</kactus2:routes>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>accel_clk</kactus2:name>
+			<kactus2:position x="380" y="130"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>clock_cabac_state</kactus2:name>
+			<kactus2:position x="130" y="210"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>clock_cabac_main</kactus2:name>
+			<kactus2:position x="380" y="210"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>reset</kactus2:name>
+			<kactus2:position x="1680" y="110"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>avalon_reset</kactus2:name>
+			<kactus2:position x="380" y="90"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>bus_interface</kactus2:name>
+			<kactus2:position x="380" y="200"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cabac_metas</kactus2:name>
+			<kactus2:position x="960" y="470"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>config_in_rsc</kactus2:name>
+			<kactus2:position x="1500" y="510"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cabac_metas</kactus2:name>
+			<kactus2:position x="1140" y="540"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>ctu_done_rsc</kactus2:name>
+			<kactus2:position x="960" y="410"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cabac_metas_rsc</kactus2:name>
+			<kactus2:position x="960" y="140"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>base_clk</kactus2:name>
+			<kactus2:position x="130" y="70"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>clock_cabac_binarization</kactus2:name>
+			<kactus2:position x="130" y="150"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>arst_n</kactus2:name>
+			<kactus2:position x="130" y="620"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>ram_b</kactus2:name>
+			<kactus2:position x="1820" y="100"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>ram_b_1</kactus2:name>
+			<kactus2:position x="1820" y="230"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>ram_b_2</kactus2:name>
+			<kactus2:position x="1820" y="360"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>ram_b</kactus2:name>
+			<kactus2:position x="1820" y="490"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>ram_b_1</kactus2:name>
+			<kactus2:position x="1820" y="620"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>ram_b_2</kactus2:name>
+			<kactus2:position x="1820" y="760"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>ram_b</kactus2:name>
+			<kactus2:position x="1820" y="890"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>ram_b_1</kactus2:name>
+			<kactus2:position x="1820" y="1030"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>ram_b_2</kactus2:name>
+			<kactus2:position x="1820" y="1150"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>clock_bin_coding</kactus2:name>
+			<kactus2:position x="130" y="110"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>clock_binarization</kactus2:name>
+			<kactus2:position x="130" y="150"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>lcu_rsc</kactus2:name>
+			<kactus2:position x="1500" y="100"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>lcu_top_rsc</kactus2:name>
+			<kactus2:position x="1500" y="230"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>lcu_left_rsc</kactus2:name>
+			<kactus2:position x="1500" y="410"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>lcu_left_rsc_1</kactus2:name>
+			<kactus2:position x="1500" y="760"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>lcu_rsc_1</kactus2:name>
+			<kactus2:position x="1500" y="630"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>lcu_top_rsc_1</kactus2:name>
+			<kactus2:position x="1500" y="670"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cabac_states_rsc</kactus2:name>
+			<kactus2:position x="960" y="100"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>bitstream_last_data_rsc</kactus2:name>
+			<kactus2:position x="960" y="180"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>coeff_rsc</kactus2:name>
+			<kactus2:position x="960" y="510"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>clk_base</kactus2:name>
+			<kactus2:position x="130" y="170"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>clk_bin_coding</kactus2:name>
+			<kactus2:position x="130" y="250"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>clk_binarization</kactus2:name>
+			<kactus2:position x="130" y="210"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cabac_metas_rsc</kactus2:name>
+			<kactus2:position x="960" y="140"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cabac_metas</kactus2:name>
+			<kactus2:position x="960" y="470"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cabac_metas_pull</kactus2:name>
+			<kactus2:position x="960" y="470"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cabac_metas_push</kactus2:name>
+			<kactus2:position x="960" y="140"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:note>
+			<kactus2:position x="710" y="770"/>
+			<kactus2:content>Width needs to be 2 for Altera FPGA synthesis´</kactus2:content>
+			<kactus2:associations>
+				<kactus2:position x="740" y="700"/>
+			</kactus2:associations>
+			<kactus2:timestamp>12.11.2024 13:07</kactus2:timestamp>
+		</kactus2:note>
+		<kactus2:adHocVisibilities/>
+	</ipxact:vendorExtensions>
+</ipxact:design>

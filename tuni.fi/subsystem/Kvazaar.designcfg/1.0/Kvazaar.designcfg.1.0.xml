@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:designConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>tuni.fi</ipxact:vendor>
+	<ipxact:library>subsystem</ipxact:library>
+	<ipxact:name>Kvazaar.designcfg</ipxact:name>
+	<ipxact:version>1.0</ipxact:version>
+	<ipxact:designRef vendor="tuni.fi" library="subsystem" name="Kvazaar.design" version="1.0"/>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>IntraSearchCore</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>coeff_top_btm_adapter_0</ipxact:instanceName>
+		<ipxact:view viewRef="flat_vhdl"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>CabacMemories_TOP</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>CabacMemories_BTM</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>intra_conf_dc_fifo</ipxact:instanceName>
+		<ipxact:view viewRef="flat_verilog"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>cabac_top_dc_fifo</ipxact:instanceName>
+		<ipxact:view viewRef="flat_verilog"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>cabac_btm_dc_fifo</ipxact:instanceName>
+		<ipxact:view viewRef="flat_verilog"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>indexer_0</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>Cabac_config_flush</ipxact:instanceName>
+		<ipxact:view viewRef="flat_vhdl"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>CTU_done_cycle_extender_top</ipxact:instanceName>
+		<ipxact:view viewRef="flat_vhdl"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>CTU_done_cycle_extender_btm</ipxact:instanceName>
+		<ipxact:view viewRef="flat_vhdl"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>cu_info_we_adapter_top</ipxact:instanceName>
+		<ipxact:view viewRef="flat_vhdl"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>cu_info_we_adapter_btm</ipxact:instanceName>
+		<ipxact:view viewRef="flat_vhdl"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>IntraMemories</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>CabacCore_TOP</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>CabacCore_BTM</ipxact:instanceName>
+		<ipxact:view viewRef="hierarchical"/>
+	</ipxact:viewConfiguration>
+	<ipxact:vendorExtensions>
+		<kactus2:version>3,11,1,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+		</kactus2:kts_attributes>
+	</ipxact:vendorExtensions>
+</ipxact:designConfiguration>

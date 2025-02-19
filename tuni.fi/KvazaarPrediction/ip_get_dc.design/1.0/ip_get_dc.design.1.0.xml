@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>tuni.fi</ipxact:vendor>
+	<ipxact:library>KvazaarPrediction</ipxact:library>
+	<ipxact:name>ip_get_dc.design</ipxact:name>
+	<ipxact:version>1.0</ipxact:version>
+	<ipxact:componentInstances>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>ip_get_dc_core_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarPrediction" name="ip_get_dc_core" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{e178e962-e13b-479d-8a82-44119f849fa5}</kactus2:uuid>
+				<kactus2:position x="600" y="60"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>fifo_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="fifo" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_7f07a290_908b_4599_aa0e_65a23a41c781">13</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_fd81b965_8582_40f1_a257_0b8a779fcc67">2</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_d3b30d51_12a4_49ad_a050_c3e9be454b37">&quot;OFF&quot;</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{ba5fb5c9-5a34-41fd-b22e-d6d012786196}</kactus2:uuid>
+				<kactus2:position x="280" y="60"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">32</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{da8ee09d-b897-4bdc-bd5d-a389518016ab}</kactus2:uuid>
+				<kactus2:position x="920" y="60"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>OnChipMemory_1</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="OnChipMemory" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_34d23aa3_1072_4bbb_b71e_7d6d2768ab02">32</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{df8900bf-e7db-45da-bd7a-887355929f16}</kactus2:uuid>
+				<kactus2:position x="920" y="180"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+	</ipxact:componentInstances>
+	<ipxact:interconnections>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_dc_core_0_pred_out_to_bus_1</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_dc_core_0" busRef="pred_out"/>
+			<ipxact:hierInterface busRef="pred_out"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_dc_core_0_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_dc_core_0" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_dc_core_0_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_dc_core_0" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>fifo_0_aclr_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="fifo_0" busRef="aclr_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>fifo_0_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="fifo_0" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>fifo_0_data_in_to_conf_in</ipxact:name>
+			<ipxact:activeInterface componentRef="fifo_0" busRef="data_in"/>
+			<ipxact:hierInterface busRef="conf_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>fifo_0_data_out_to_ip_get_dc_core_0_conf_in</ipxact:name>
+			<ipxact:activeInterface componentRef="fifo_0" busRef="data_out"/>
+			<ipxact:activeInterface componentRef="ip_get_dc_core_0" busRef="conf_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_dc_core_0_ref1_to_OnChipMemory_1_mem_read</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_dc_core_0" busRef="ref1"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_1" busRef="mem_read"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_dc_core_0_ref0_to_OnChipMemory_0_mem_read</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_dc_core_0" busRef="ref0"/>
+			<ipxact:activeInterface componentRef="OnChipMemory_0" busRef="mem_read"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_0_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_0" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_1_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_1" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_0_mem_write_to_ref</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_0" busRef="mem_write"/>
+			<ipxact:hierInterface busRef="ref"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>OnChipMemory_1_mem_write_to_ref</ipxact:name>
+			<ipxact:activeInterface componentRef="OnChipMemory_1" busRef="mem_write"/>
+			<ipxact:hierInterface busRef="ref"/>
+		</ipxact:interconnection>
+	</ipxact:interconnections>
+	<ipxact:vendorExtensions>
+		<kactus2:version>3,11,1,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+		</kactus2:kts_attributes>
+		<kactus2:columnLayout>
+			<kactus2:column name="IO" contentType="0" allowedItems="1" minWidth="119" width="119" x="0"/>
+			<kactus2:column name="Fifo" contentType="2" allowedItems="2" minWidth="319" width="319" x="120"/>
+			<kactus2:column name="Components" contentType="2" allowedItems="2" minWidth="319" width="319" x="440"/>
+			<kactus2:column name="IO" contentType="0" allowedItems="1" minWidth="119" width="119" x="1080"/>
+			<kactus2:column name="Memories" contentType="3" allowedItems="2" minWidth="319" width="319" x="760"/>
+		</kactus2:columnLayout>
+		<kactus2:routes>
+			<kactus2:route kactus2:connRef="ip_get_dc_core_0_conf_in_to_conf_in" kactus2:offPage="false">
+				<kactus2:position x="490" y="100"/>
+				<kactus2:position x="80" y="100"/>
+				<kactus2:position x="80" y="260"/>
+				<kactus2:position x="60" y="260"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_dc_core_0_pred_out_to_pred_out" kactus2:offPage="false">
+				<kactus2:position x="490" y="160"/>
+				<kactus2:position x="470" y="160"/>
+				<kactus2:position x="470" y="120"/>
+				<kactus2:position x="1140" y="120"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_dc_core_0_arst_n_to_arst_n" kactus2:offPage="false">
+				<kactus2:position x="710" y="130"/>
+				<kactus2:position x="730" y="130"/>
+				<kactus2:position x="730" y="90"/>
+				<kactus2:position x="60" y="90"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_dc_core_0_clk_to_clk" kactus2:offPage="false">
+				<kactus2:position x="710" y="100"/>
+				<kactus2:position x="740" y="100"/>
+				<kactus2:position x="740" y="130"/>
+				<kactus2:position x="60" y="130"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_dc_core_0_pred_out_to_bus_1" kactus2:offPage="false">
+				<kactus2:position x="490" y="160"/>
+				<kactus2:position x="470" y="160"/>
+				<kactus2:position x="470" y="120"/>
+				<kactus2:position x="1140" y="120"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="fifo_0_aclr_n_to_arst_n" kactus2:offPage="false">
+				<kactus2:position x="170" y="100"/>
+				<kactus2:position x="150" y="100"/>
+				<kactus2:position x="150" y="90"/>
+				<kactus2:position x="60" y="90"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="fifo_0_clk_to_clk" kactus2:offPage="false">
+				<kactus2:position x="390" y="100"/>
+				<kactus2:position x="410" y="100"/>
+				<kactus2:position x="410" y="130"/>
+				<kactus2:position x="60" y="130"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="fifo_0_data_in_to_conf_in" kactus2:offPage="false">
+				<kactus2:position x="390" y="130"/>
+				<kactus2:position x="420" y="130"/>
+				<kactus2:position x="420" y="190"/>
+				<kactus2:position x="60" y="190"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="fifo_0_data_out_to_ip_get_dc_core_0_conf_in" kactus2:offPage="false">
+				<kactus2:position x="170" y="130"/>
+				<kactus2:position x="140" y="130"/>
+				<kactus2:position x="140" y="100"/>
+				<kactus2:position x="490" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_dc_core_0_ref1_to_OnChipMemory_1_mem_read" kactus2:offPage="false">
+				<kactus2:position x="710" y="160"/>
+				<kactus2:position x="1050" y="160"/>
+				<kactus2:position x="1050" y="250"/>
+				<kactus2:position x="1030" y="250"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_dc_core_0_ref0_to_OnChipMemory_0_mem_read" kactus2:offPage="false">
+				<kactus2:position x="490" y="130"/>
+				<kactus2:position x="460" y="130"/>
+				<kactus2:position x="460" y="140"/>
+				<kactus2:position x="1050" y="140"/>
+				<kactus2:position x="1050" y="130"/>
+				<kactus2:position x="1030" y="130"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_0_clk_to_clk" kactus2:offPage="false">
+				<kactus2:position x="1030" y="100"/>
+				<kactus2:position x="1060" y="100"/>
+				<kactus2:position x="1060" y="130"/>
+				<kactus2:position x="60" y="130"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_1_clk_to_clk" kactus2:offPage="false">
+				<kactus2:position x="1030" y="220"/>
+				<kactus2:position x="1060" y="220"/>
+				<kactus2:position x="1060" y="130"/>
+				<kactus2:position x="60" y="130"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_1_mem_write_to_mem_write" kactus2:offPage="false">
+				<kactus2:position x="810" y="220"/>
+				<kactus2:position x="790" y="220"/>
+				<kactus2:position x="790" y="250"/>
+				<kactus2:position x="1140" y="250"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_0_mem_write_to_ref" kactus2:offPage="false">
+				<kactus2:position x="810" y="100"/>
+				<kactus2:position x="790" y="100"/>
+				<kactus2:position x="790" y="210"/>
+				<kactus2:position x="1140" y="210"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="OnChipMemory_1_mem_write_to_ref" kactus2:offPage="false">
+				<kactus2:position x="810" y="220"/>
+				<kactus2:position x="790" y="220"/>
+				<kactus2:position x="790" y="210"/>
+				<kactus2:position x="1140" y="210"/>
+			</kactus2:route>
+		</kactus2:routes>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>clk</kactus2:name>
+			<kactus2:position x="60" y="130"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>arst_n</kactus2:name>
+			<kactus2:position x="60" y="90"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>conf_in</kactus2:name>
+			<kactus2:position x="60" y="190"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>pred_out</kactus2:name>
+			<kactus2:position x="1140" y="120"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_write</kactus2:name>
+			<kactus2:position x="1140" y="250"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>ref</kactus2:name>
+			<kactus2:position x="1140" y="210"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:adHocVisibilities/>
+	</ipxact:vendorExtensions>
+</ipxact:design>

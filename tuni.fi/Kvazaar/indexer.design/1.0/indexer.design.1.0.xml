@@ -1,0 +1,1359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>tuni.fi</ipxact:vendor>
+	<ipxact:library>Kvazaar</ipxact:library>
+	<ipxact:name>indexer.design</ipxact:name>
+	<ipxact:version>1.0</ipxact:version>
+	<ipxact:componentInstances>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>indexer_core</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="indexer_core" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{434ee4ea-ffce-4f37-a586-ecbd5a444cc6}</kactus2:uuid>
+				<kactus2:position x="720" y="60"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="110" y="80"/>
+					<kactus2:portPosition busRef="bitstream_btm" x="110" y="360"/>
+					<kactus2:portPosition busRef="bitstream_top" x="110" y="400"/>
+					<kactus2:portPosition busRef="cabac_metas_push_btm" x="110" y="200"/>
+					<kactus2:portPosition busRef="cabac_metas_push_top" x="110" y="240"/>
+					<kactus2:portPosition busRef="cabac_states_btm" x="110" y="280"/>
+					<kactus2:portPosition busRef="cabac_states_top" x="110" y="320"/>
+					<kactus2:portPosition busRef="clk" x="110" y="40"/>
+					<kactus2:portPosition busRef="cu_info" x="110" y="440"/>
+					<kactus2:portPosition busRef="data_in" x="110" y="120"/>
+					<kactus2:portPosition busRef="data_out" x="110" y="160"/>
+					<kactus2:portPosition busRef="data_req" x="110" y="520"/>
+					<kactus2:portPosition busRef="mem_out_btm_top" x="-110" y="850"/>
+					<kactus2:portPosition busRef="mem_out_top" x="-110" y="40"/>
+					<kactus2:portPosition busRef="rec" x="110" y="480"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>indexer_we_adapter_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="indexer_we_adapter" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_0b2f6ce5_b293_4f05_b77b_14caa463fec4">0+128</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_37db8b50_8b79_4831_bff2_ba933473f280">13</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{791a0d0b-d09a-441e-94ff-b2987fed4c2c}</kactus2:uuid>
+				<kactus2:position x="400" y="60"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>indexer_we_adapter_1</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="indexer_we_adapter" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_0b2f6ce5_b293_4f05_b77b_14caa463fec4">1+128</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_37db8b50_8b79_4831_bff2_ba933473f280">13</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{e46bae0e-7769-42ec-b334-88722824b90d}</kactus2:uuid>
+				<kactus2:position x="400" y="150"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>indexer_we_adapter_2</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="indexer_we_adapter" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_0b2f6ce5_b293_4f05_b77b_14caa463fec4">2+128</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_37db8b50_8b79_4831_bff2_ba933473f280">13</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{2dd5801e-4f41-4f98-a2e5-b11b2eff2411}</kactus2:uuid>
+				<kactus2:position x="400" y="240"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>indexer_we_adapter_3</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="indexer_we_adapter" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_0b2f6ce5_b293_4f05_b77b_14caa463fec4">4+128</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_37db8b50_8b79_4831_bff2_ba933473f280">13</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{4dda9fe1-756e-4de4-be43-c594bfe23490}</kactus2:uuid>
+				<kactus2:position x="400" y="330"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>indexer_we_adapter_4</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="indexer_we_adapter" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_0b2f6ce5_b293_4f05_b77b_14caa463fec4">3+128</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_37db8b50_8b79_4831_bff2_ba933473f280">13</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{1bcdb66c-63f3-423d-ac40-0c29f94936a4}</kactus2:uuid>
+				<kactus2:position x="400" y="420"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>indexer_we_adapter_5</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="indexer_we_adapter" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_0b2f6ce5_b293_4f05_b77b_14caa463fec4">6+128</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_37db8b50_8b79_4831_bff2_ba933473f280">13</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{211c4c2f-762d-4d5e-b768-806decaf40c0}</kactus2:uuid>
+				<kactus2:position x="400" y="510"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>indexer_we_adapter_6</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="indexer_we_adapter" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_0b2f6ce5_b293_4f05_b77b_14caa463fec4">7+128</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_37db8b50_8b79_4831_bff2_ba933473f280">13</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{961748fe-3f1b-4e2e-9f26-549eaccb4dfd}</kactus2:uuid>
+				<kactus2:position x="400" y="600"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>indexer_we_adapter_7</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="indexer_we_adapter" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_0b2f6ce5_b293_4f05_b77b_14caa463fec4">8+128</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_37db8b50_8b79_4831_bff2_ba933473f280">13</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{f48b0c5d-7bea-447d-852a-0167669db000}</kactus2:uuid>
+				<kactus2:position x="400" y="690"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>indexer_we_adapter_8</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="indexer_we_adapter" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_0b2f6ce5_b293_4f05_b77b_14caa463fec4">5+128</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_37db8b50_8b79_4831_bff2_ba933473f280">13</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{e326ff10-470b-4a9c-8b7b-97583bc14c4f}</kactus2:uuid>
+				<kactus2:position x="400" y="780"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>indexer_we_adapter_9</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="indexer_we_adapter" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_0b2f6ce5_b293_4f05_b77b_14caa463fec4">2+128</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_a79f059f_8139_4a71_802e_91486f171a7d">4</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_37db8b50_8b79_4831_bff2_ba933473f280">13</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{44c3132b-a097-424f-8774-f5af69656d64}</kactus2:uuid>
+				<kactus2:position x="400" y="870"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>indexer_we_adapter_10</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="indexer_we_adapter" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_0b2f6ce5_b293_4f05_b77b_14caa463fec4">3+128</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_a79f059f_8139_4a71_802e_91486f171a7d">4</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_37db8b50_8b79_4831_bff2_ba933473f280">13</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{51502829-995e-476b-b49d-ace6bb98f8fb}</kactus2:uuid>
+				<kactus2:position x="400" y="960"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>indexer_we_adapter_11</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="indexer_we_adapter" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_a79f059f_8139_4a71_802e_91486f171a7d">4</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_0b2f6ce5_b293_4f05_b77b_14caa463fec4">0+128</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_37db8b50_8b79_4831_bff2_ba933473f280">13</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{8298ada9-389f-4d55-b3c5-771083fd91a9}</kactus2:uuid>
+				<kactus2:position x="400" y="1050"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>indexer_we_adapter_12</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="indexer_we_adapter" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_0b2f6ce5_b293_4f05_b77b_14caa463fec4">1+128</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_a79f059f_8139_4a71_802e_91486f171a7d">4</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_37db8b50_8b79_4831_bff2_ba933473f280">13</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{799ff51e-a4c5-4365-bc6c-16e010d71202}</kactus2:uuid>
+				<kactus2:position x="400" y="1140"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>indexer_we_adapter_13</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="indexer_we_adapter" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_0b2f6ce5_b293_4f05_b77b_14caa463fec4">2+128</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_a79f059f_8139_4a71_802e_91486f171a7d">4</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_37db8b50_8b79_4831_bff2_ba933473f280">13</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{0c93cada-838b-443e-b50a-83257ac702be}</kactus2:uuid>
+				<kactus2:position x="400" y="1230"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>indexer_we_adapter_14</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="indexer_we_adapter" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_0b2f6ce5_b293_4f05_b77b_14caa463fec4">3+128</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_a79f059f_8139_4a71_802e_91486f171a7d">4</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_37db8b50_8b79_4831_bff2_ba933473f280">13</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{d8b91803-f284-4c76-ba2d-5a57f1aa55f9}</kactus2:uuid>
+				<kactus2:position x="400" y="1320"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>indexer_we_adapter_15</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="indexer_we_adapter" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_a79f059f_8139_4a71_802e_91486f171a7d">4</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_0b2f6ce5_b293_4f05_b77b_14caa463fec4">0+128</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_37db8b50_8b79_4831_bff2_ba933473f280">13</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{fb616fe2-e661-4df7-8183-a2df8552409a}</kactus2:uuid>
+				<kactus2:position x="400" y="1410"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>indexer_we_adapter_16</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="indexer_we_adapter" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_0b2f6ce5_b293_4f05_b77b_14caa463fec4">1+128</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_a79f059f_8139_4a71_802e_91486f171a7d">4</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_37db8b50_8b79_4831_bff2_ba933473f280">13</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{72cf8526-c239-463d-9584-65a2e43a7498}</kactus2:uuid>
+				<kactus2:position x="400" y="1500"/>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+	</ipxact:componentInstances>
+	<ipxact:interconnections>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_data_in_to_data_in</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="data_in"/>
+			<ipxact:hierInterface busRef="data_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_data_out_to_data_out</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="data_out"/>
+			<ipxact:hierInterface busRef="data_out"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_cabac_metas_push_btm_to_cabac_metas_push_btm</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="cabac_metas_push_btm"/>
+			<ipxact:hierInterface busRef="cabac_metas_push_btm"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_cabac_metas_push_top_to_cabac_metas_push_top</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="cabac_metas_push_top"/>
+			<ipxact:hierInterface busRef="cabac_metas_push_top"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_cabac_states_btm_to_cabac_states_btm</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="cabac_states_btm"/>
+			<ipxact:hierInterface busRef="cabac_states_btm"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_bitstream_btm_to_bitstream_btm</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="bitstream_btm"/>
+			<ipxact:hierInterface busRef="bitstream_btm"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_cabac_states_top_to_cabac_states_top</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="cabac_states_top"/>
+			<ipxact:hierInterface busRef="cabac_states_top"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_bitstream_top_to_bitstream_top</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="bitstream_top"/>
+			<ipxact:hierInterface busRef="bitstream_top"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_cu_info_to_cu_info</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="cu_info"/>
+			<ipxact:hierInterface busRef="cu_info"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_rec_to_rec</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="rec"/>
+			<ipxact:hierInterface busRef="rec"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_mem_out_top_to_indexer_we_adapter_0_in</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="mem_out_top"/>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_0" busRef="in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_mem_out_top_to_indexer_we_adapter_1_in</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="mem_out_top"/>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_1" busRef="in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_mem_out_top_to_indexer_we_adapter_2_in</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="mem_out_top"/>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_2" busRef="in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_mem_out_top_to_indexer_we_adapter_3_in</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="mem_out_top"/>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_3" busRef="in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_mem_out_top_to_indexer_we_adapter_4_in</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="mem_out_top"/>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_4" busRef="in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_mem_out_top_to_indexer_we_adapter_5_in</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="mem_out_top"/>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_5" busRef="in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_mem_out_top_to_indexer_we_adapter_6_in</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="mem_out_top"/>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_6" busRef="in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_mem_out_top_to_indexer_we_adapter_7_in</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="mem_out_top"/>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_7" busRef="in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_we_adapter_8_in_to_indexer_core_mem_out_top</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_8" busRef="in"/>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="mem_out_top"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_mem_out_btm_top_to_indexer_we_adapter_9_in</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="mem_out_btm_top"/>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_9" busRef="in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_mem_out_btm_top_to_indexer_we_adapter_10_in</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="mem_out_btm_top"/>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_10" busRef="in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_mem_out_btm_top_to_indexer_we_adapter_11_in</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="mem_out_btm_top"/>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_11" busRef="in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_mem_out_btm_top_to_indexer_we_adapter_12_in</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="mem_out_btm_top"/>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_12" busRef="in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_mem_out_btm_top_to_indexer_we_adapter_13_in</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="mem_out_btm_top"/>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_13" busRef="in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_mem_out_btm_top_to_indexer_we_adapter_14_in</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="mem_out_btm_top"/>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_14" busRef="in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_mem_out_btm_top_to_indexer_we_adapter_15_in</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="mem_out_btm_top"/>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_15" busRef="in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_mem_out_btm_top_to_indexer_we_adapter_16_in</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="mem_out_btm_top"/>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_16" busRef="in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_core_data_req_to_bus</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_core" busRef="data_req"/>
+			<ipxact:hierInterface busRef="data_req"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_we_adapter_0_out_to_ref</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_0" busRef="out"/>
+			<ipxact:hierInterface busRef="ref"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_we_adapter_1_out_to_top_border</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_1" busRef="out"/>
+			<ipxact:hierInterface busRef="top_border"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_we_adapter_2_out_to_left_border</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_2" busRef="out"/>
+			<ipxact:hierInterface busRef="left_border"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_we_adapter_3_out_to_cu_info_hor</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_3" busRef="out"/>
+			<ipxact:hierInterface busRef="cu_info_hor"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_we_adapter_4_out_to_cu_info_ver</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_4" busRef="out"/>
+			<ipxact:hierInterface busRef="cu_info_ver"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_we_adapter_5_out_to_cabac</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_5" busRef="out"/>
+			<ipxact:hierInterface busRef="cabac"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_we_adapter_6_out_to_cabac_metas_pull_btm</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_6" busRef="out"/>
+			<ipxact:hierInterface busRef="cabac_metas_pull_btm"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_we_adapter_7_out_to_cabac_metas_pull_top</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_7" busRef="out"/>
+			<ipxact:hierInterface busRef="cabac_metas_pull_top"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_we_adapter_8_out_to_cu_info_hor_str</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_8" busRef="out"/>
+			<ipxact:hierInterface busRef="cu_info_hor_str"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_we_adapter_9_out_to_cu_info1_hor_btm</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_9" busRef="out"/>
+			<ipxact:hierInterface busRef="cu_info1_hor_btm"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_we_adapter_10_out_to_cu_info1_hor_top</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_10" busRef="out"/>
+			<ipxact:hierInterface busRef="cu_info1_hor_top"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_we_adapter_11_out_to_cu_info1_ver_btm</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_11" busRef="out"/>
+			<ipxact:hierInterface busRef="cu_info1_ver_btm"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_we_adapter_12_out_to_cu_info1_ver_top</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_12" busRef="out"/>
+			<ipxact:hierInterface busRef="cu_info1_ver_top"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_we_adapter_13_out_to_cu_info2_hor_btm</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_13" busRef="out"/>
+			<ipxact:hierInterface busRef="cu_info2_hor_btm"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_we_adapter_14_out_to_cu_info2_hor_top</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_14" busRef="out"/>
+			<ipxact:hierInterface busRef="cu_info2_hor_top"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_we_adapter_15_out_to_cu_info2_ver_btm</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_15" busRef="out"/>
+			<ipxact:hierInterface busRef="cu_info2_ver_btm"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>indexer_we_adapter_16_out_to_cu_info2_ver_top</ipxact:name>
+			<ipxact:activeInterface componentRef="indexer_we_adapter_16" busRef="out"/>
+			<ipxact:hierInterface busRef="cu_info2_ver_top"/>
+		</ipxact:interconnection>
+	</ipxact:interconnections>
+	<ipxact:vendorExtensions>
+		<kactus2:version>3,13,199,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+		</kactus2:kts_attributes>
+		<kactus2:columnLayout>
+			<kactus2:column name="IO" contentType="0" allowedItems="1" minWidth="119" width="119" x="880"/>
+			<kactus2:column name="Components" contentType="2" allowedItems="2" minWidth="319" width="319" x="560"/>
+			<kactus2:column name="Adapters" contentType="2" allowedItems="2" minWidth="319" width="319" x="240"/>
+			<kactus2:column name="IO" contentType="0" allowedItems="1" minWidth="119" width="239" x="0"/>
+		</kactus2:columnLayout>
+		<kactus2:routes>
+			<kactus2:route kactus2:connRef="indexer_core_clk_to_clk" kactus2:offPage="false">
+				<kactus2:position x="830" y="100"/>
+				<kactus2:position x="940" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_arst_n_to_arst_n" kactus2:offPage="false">
+				<kactus2:position x="830" y="140"/>
+				<kactus2:position x="940" y="140"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_data_in_to_data_in" kactus2:offPage="false">
+				<kactus2:position x="830" y="180"/>
+				<kactus2:position x="940" y="180"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_data_out_to_data_out" kactus2:offPage="false">
+				<kactus2:position x="830" y="220"/>
+				<kactus2:position x="940" y="220"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_cabac_metas_push_btm_to_cabac_metas_push_btm" kactus2:offPage="false">
+				<kactus2:position x="830" y="260"/>
+				<kactus2:position x="940" y="260"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_cabac_metas_push_top_to_cabac_metas_push_top" kactus2:offPage="false">
+				<kactus2:position x="830" y="300"/>
+				<kactus2:position x="940" y="300"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_cabac_states_btm_to_cabac_states_btm" kactus2:offPage="false">
+				<kactus2:position x="830" y="340"/>
+				<kactus2:position x="940" y="340"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_bitstream_btm_to_bitstream_btm" kactus2:offPage="false">
+				<kactus2:position x="830" y="420"/>
+				<kactus2:position x="940" y="420"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_cabac_states_top_to_cabac_states_top" kactus2:offPage="false">
+				<kactus2:position x="830" y="380"/>
+				<kactus2:position x="940" y="380"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_bitstream_top_to_bitstream_top" kactus2:offPage="false">
+				<kactus2:position x="830" y="460"/>
+				<kactus2:position x="940" y="460"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_cu_info_to_cu_info" kactus2:offPage="false">
+				<kactus2:position x="830" y="500"/>
+				<kactus2:position x="940" y="500"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_rec_to_rec" kactus2:offPage="false">
+				<kactus2:position x="830" y="540"/>
+				<kactus2:position x="940" y="540"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_top_to_mem_out_top" kactus2:offPage="false">
+				<kactus2:position x="610" y="140"/>
+				<kactus2:position x="140" y="140"/>
+				<kactus2:position x="140" y="150"/>
+				<kactus2:position x="120" y="150"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_top_to_mem_out_top" kactus2:offPage="false">
+				<kactus2:position x="610" y="140"/>
+				<kactus2:position x="140" y="140"/>
+				<kactus2:position x="140" y="220"/>
+				<kactus2:position x="120" y="220"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_top_to_mem_out_top_1" kactus2:offPage="false">
+				<kactus2:position x="610" y="140"/>
+				<kactus2:position x="140" y="140"/>
+				<kactus2:position x="140" y="260"/>
+				<kactus2:position x="120" y="260"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_top_to_mem_out_top_2" kactus2:offPage="false">
+				<kactus2:position x="610" y="140"/>
+				<kactus2:position x="140" y="140"/>
+				<kactus2:position x="140" y="340"/>
+				<kactus2:position x="120" y="340"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_top_to_mem_out_top_3" kactus2:offPage="false">
+				<kactus2:position x="610" y="140"/>
+				<kactus2:position x="140" y="140"/>
+				<kactus2:position x="140" y="460"/>
+				<kactus2:position x="120" y="460"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_top_to_mem_out_top_4" kactus2:offPage="false">
+				<kactus2:position x="610" y="140"/>
+				<kactus2:position x="140" y="140"/>
+				<kactus2:position x="140" y="550"/>
+				<kactus2:position x="120" y="550"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_top_to_mem_out_top_5" kactus2:offPage="false">
+				<kactus2:position x="610" y="140"/>
+				<kactus2:position x="140" y="140"/>
+				<kactus2:position x="140" y="610"/>
+				<kactus2:position x="120" y="610"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_top_to_mem_out_top_6" kactus2:offPage="false">
+				<kactus2:position x="610" y="140"/>
+				<kactus2:position x="140" y="140"/>
+				<kactus2:position x="140" y="690"/>
+				<kactus2:position x="120" y="690"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_btm_top_to_mem_out_btm_top_1" kactus2:offPage="false">
+				<kactus2:position x="610" y="100"/>
+				<kactus2:position x="120" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_btm_top_to_mem_out_btm_top_2" kactus2:offPage="false">
+				<kactus2:position x="610" y="100"/>
+				<kactus2:position x="140" y="100"/>
+				<kactus2:position x="140" y="170"/>
+				<kactus2:position x="120" y="170"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_btm_top_to_mem_out_btm_top_3" kactus2:offPage="false">
+				<kactus2:position x="610" y="100"/>
+				<kactus2:position x="140" y="100"/>
+				<kactus2:position x="140" y="290"/>
+				<kactus2:position x="120" y="290"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_btm_top_to_mem_out_btm_top_4" kactus2:offPage="false">
+				<kactus2:position x="610" y="100"/>
+				<kactus2:position x="140" y="100"/>
+				<kactus2:position x="140" y="340"/>
+				<kactus2:position x="120" y="340"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_btm_top_to_mem_out_btm_top_1" kactus2:offPage="false">
+				<kactus2:position x="610" y="100"/>
+				<kactus2:position x="140" y="100"/>
+				<kactus2:position x="140" y="80"/>
+				<kactus2:position x="120" y="80"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_btm_top_to_mem_out_btm_top_2" kactus2:offPage="false">
+				<kactus2:position x="610" y="100"/>
+				<kactus2:position x="140" y="100"/>
+				<kactus2:position x="140" y="130"/>
+				<kactus2:position x="120" y="130"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_btm_top_to_mem_out_btm_top_3" kactus2:offPage="false">
+				<kactus2:position x="610" y="100"/>
+				<kactus2:position x="140" y="100"/>
+				<kactus2:position x="140" y="180"/>
+				<kactus2:position x="120" y="180"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_btm_top_to_mem_out_btm_top_4" kactus2:offPage="false">
+				<kactus2:position x="610" y="100"/>
+				<kactus2:position x="140" y="100"/>
+				<kactus2:position x="140" y="230"/>
+				<kactus2:position x="120" y="230"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_top_to_indexer_we_adapter_0_in" kactus2:offPage="false">
+				<kactus2:position x="610" y="100"/>
+				<kactus2:position x="510" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_top_to_indexer_we_adapter_1_in" kactus2:offPage="false">
+				<kactus2:position x="610" y="100"/>
+				<kactus2:position x="530" y="100"/>
+				<kactus2:position x="530" y="190"/>
+				<kactus2:position x="510" y="190"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_top_to_indexer_we_adapter_2_in" kactus2:offPage="false">
+				<kactus2:position x="610" y="100"/>
+				<kactus2:position x="530" y="100"/>
+				<kactus2:position x="530" y="280"/>
+				<kactus2:position x="510" y="280"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_top_to_indexer_we_adapter_3_in" kactus2:offPage="false">
+				<kactus2:position x="610" y="100"/>
+				<kactus2:position x="530" y="100"/>
+				<kactus2:position x="530" y="370"/>
+				<kactus2:position x="510" y="370"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_top_to_indexer_we_adapter_4_in" kactus2:offPage="false">
+				<kactus2:position x="610" y="100"/>
+				<kactus2:position x="530" y="100"/>
+				<kactus2:position x="530" y="460"/>
+				<kactus2:position x="510" y="460"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_top_to_indexer_we_adapter_5_in" kactus2:offPage="false">
+				<kactus2:position x="610" y="100"/>
+				<kactus2:position x="530" y="100"/>
+				<kactus2:position x="530" y="550"/>
+				<kactus2:position x="510" y="550"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_top_to_indexer_we_adapter_6_in" kactus2:offPage="false">
+				<kactus2:position x="610" y="100"/>
+				<kactus2:position x="530" y="100"/>
+				<kactus2:position x="530" y="640"/>
+				<kactus2:position x="510" y="640"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_top_to_indexer_we_adapter_7_in" kactus2:offPage="false">
+				<kactus2:position x="610" y="100"/>
+				<kactus2:position x="530" y="100"/>
+				<kactus2:position x="530" y="730"/>
+				<kactus2:position x="510" y="730"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_8_in_to_indexer_core_mem_out_top" kactus2:offPage="false">
+				<kactus2:position x="510" y="820"/>
+				<kactus2:position x="530" y="820"/>
+				<kactus2:position x="530" y="100"/>
+				<kactus2:position x="610" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_btm_top_to_indexer_we_adapter_9_in" kactus2:offPage="false">
+				<kactus2:position x="610" y="910"/>
+				<kactus2:position x="510" y="910"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_btm_top_to_indexer_we_adapter_10_in" kactus2:offPage="false">
+				<kactus2:position x="610" y="910"/>
+				<kactus2:position x="530" y="910"/>
+				<kactus2:position x="530" y="1000"/>
+				<kactus2:position x="510" y="1000"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_btm_top_to_indexer_we_adapter_11_in" kactus2:offPage="false">
+				<kactus2:position x="610" y="910"/>
+				<kactus2:position x="530" y="910"/>
+				<kactus2:position x="530" y="1090"/>
+				<kactus2:position x="510" y="1090"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_btm_top_to_indexer_we_adapter_12_in" kactus2:offPage="false">
+				<kactus2:position x="610" y="910"/>
+				<kactus2:position x="530" y="910"/>
+				<kactus2:position x="530" y="1180"/>
+				<kactus2:position x="510" y="1180"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_btm_top_to_indexer_we_adapter_13_in" kactus2:offPage="false">
+				<kactus2:position x="610" y="910"/>
+				<kactus2:position x="530" y="910"/>
+				<kactus2:position x="530" y="1270"/>
+				<kactus2:position x="510" y="1270"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_btm_top_to_indexer_we_adapter_14_in" kactus2:offPage="false">
+				<kactus2:position x="610" y="910"/>
+				<kactus2:position x="530" y="910"/>
+				<kactus2:position x="530" y="1360"/>
+				<kactus2:position x="510" y="1360"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_btm_top_to_indexer_we_adapter_15_in" kactus2:offPage="false">
+				<kactus2:position x="610" y="910"/>
+				<kactus2:position x="530" y="910"/>
+				<kactus2:position x="530" y="1450"/>
+				<kactus2:position x="510" y="1450"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_mem_out_btm_top_to_indexer_we_adapter_16_in" kactus2:offPage="false">
+				<kactus2:position x="610" y="910"/>
+				<kactus2:position x="530" y="910"/>
+				<kactus2:position x="530" y="1540"/>
+				<kactus2:position x="510" y="1540"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_data_req_to_data_req" kactus2:offPage="false">
+				<kactus2:position x="830" y="580"/>
+				<kactus2:position x="940" y="580"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_core_data_req_to_bus" kactus2:offPage="false">
+				<kactus2:position x="830" y="580"/>
+				<kactus2:position x="940" y="580"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_0_out_to_out" kactus2:offPage="false">
+				<kactus2:position x="290" y="100"/>
+				<kactus2:position x="120" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_0_out_to_ref" kactus2:offPage="false">
+				<kactus2:position x="290" y="100"/>
+				<kactus2:position x="120" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_1_out_to_out" kactus2:offPage="false">
+				<kactus2:position x="290" y="190"/>
+				<kactus2:position x="120" y="190"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_2_out_to_out_1" kactus2:offPage="false">
+				<kactus2:position x="290" y="280"/>
+				<kactus2:position x="120" y="280"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_3_out_to_out_2" kactus2:offPage="false">
+				<kactus2:position x="290" y="370"/>
+				<kactus2:position x="120" y="370"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_4_out_to_out_3" kactus2:offPage="false">
+				<kactus2:position x="290" y="460"/>
+				<kactus2:position x="120" y="460"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_5_out_to_out_4" kactus2:offPage="false">
+				<kactus2:position x="290" y="550"/>
+				<kactus2:position x="120" y="550"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_6_out_to_out_5" kactus2:offPage="false">
+				<kactus2:position x="290" y="640"/>
+				<kactus2:position x="120" y="640"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_7_out_to_out_6" kactus2:offPage="false">
+				<kactus2:position x="290" y="730"/>
+				<kactus2:position x="120" y="730"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_8_out_to_out_7" kactus2:offPage="false">
+				<kactus2:position x="290" y="820"/>
+				<kactus2:position x="120" y="820"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_9_out_to_out_8" kactus2:offPage="false">
+				<kactus2:position x="290" y="910"/>
+				<kactus2:position x="120" y="910"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_10_out_to_out_9" kactus2:offPage="false">
+				<kactus2:position x="290" y="1000"/>
+				<kactus2:position x="120" y="1000"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_11_out_to_out_10" kactus2:offPage="false">
+				<kactus2:position x="290" y="1090"/>
+				<kactus2:position x="120" y="1090"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_12_out_to_out_11" kactus2:offPage="false">
+				<kactus2:position x="290" y="1180"/>
+				<kactus2:position x="120" y="1180"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_13_out_to_out_12" kactus2:offPage="false">
+				<kactus2:position x="290" y="1270"/>
+				<kactus2:position x="120" y="1270"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_14_out_to_out_13" kactus2:offPage="false">
+				<kactus2:position x="290" y="1360"/>
+				<kactus2:position x="120" y="1360"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_15_out_to_out_14" kactus2:offPage="false">
+				<kactus2:position x="290" y="1450"/>
+				<kactus2:position x="120" y="1450"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_16_out_to_out_15" kactus2:offPage="false">
+				<kactus2:position x="290" y="1540"/>
+				<kactus2:position x="120" y="1540"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_1_out_to_top_border" kactus2:offPage="false">
+				<kactus2:position x="290" y="190"/>
+				<kactus2:position x="120" y="190"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_2_out_to_left_border" kactus2:offPage="false">
+				<kactus2:position x="290" y="280"/>
+				<kactus2:position x="120" y="280"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_3_out_to_cu_info_hor" kactus2:offPage="false">
+				<kactus2:position x="290" y="370"/>
+				<kactus2:position x="120" y="370"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_4_out_to_cu_info_ver" kactus2:offPage="false">
+				<kactus2:position x="290" y="460"/>
+				<kactus2:position x="120" y="460"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_5_out_to_cabac" kactus2:offPage="false">
+				<kactus2:position x="290" y="550"/>
+				<kactus2:position x="120" y="550"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_6_out_to_cabac_metas_pull_btm" kactus2:offPage="false">
+				<kactus2:position x="290" y="640"/>
+				<kactus2:position x="120" y="640"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_7_out_to_cabac_metas_pull_top" kactus2:offPage="false">
+				<kactus2:position x="290" y="730"/>
+				<kactus2:position x="120" y="730"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_8_out_to_cu_info_hor_str" kactus2:offPage="false">
+				<kactus2:position x="290" y="820"/>
+				<kactus2:position x="120" y="820"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_9_out_to_cu_info1_hor_btm" kactus2:offPage="false">
+				<kactus2:position x="290" y="910"/>
+				<kactus2:position x="120" y="910"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_10_out_to_cu_info1_hor_top" kactus2:offPage="false">
+				<kactus2:position x="290" y="1000"/>
+				<kactus2:position x="120" y="1000"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_11_out_to_cu_info1_ver_btm" kactus2:offPage="false">
+				<kactus2:position x="290" y="1090"/>
+				<kactus2:position x="120" y="1090"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_12_out_to_cu_info1_ver_top" kactus2:offPage="false">
+				<kactus2:position x="290" y="1180"/>
+				<kactus2:position x="120" y="1180"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_13_out_to_cu_info2_hor_btm" kactus2:offPage="false">
+				<kactus2:position x="290" y="1270"/>
+				<kactus2:position x="120" y="1270"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_14_out_to_cu_info2_hor_top" kactus2:offPage="false">
+				<kactus2:position x="290" y="1360"/>
+				<kactus2:position x="120" y="1360"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_15_out_to_cu_info2_ver_btm" kactus2:offPage="false">
+				<kactus2:position x="290" y="1450"/>
+				<kactus2:position x="120" y="1450"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="indexer_we_adapter_16_out_to_cu_info2_ver_top" kactus2:offPage="false">
+				<kactus2:position x="290" y="1540"/>
+				<kactus2:position x="120" y="1540"/>
+			</kactus2:route>
+		</kactus2:routes>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>clk</kactus2:name>
+			<kactus2:position x="940" y="100"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>arst_n</kactus2:name>
+			<kactus2:position x="940" y="140"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>data_in</kactus2:name>
+			<kactus2:position x="940" y="180"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>data_out</kactus2:name>
+			<kactus2:position x="940" y="220"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top</kactus2:name>
+			<kactus2:position x="120" y="300"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_btm_top</kactus2:name>
+			<kactus2:position x="120" y="920"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cabac_states_btm</kactus2:name>
+			<kactus2:position x="940" y="340"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>rec</kactus2:name>
+			<kactus2:position x="940" y="540"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cu_info</kactus2:name>
+			<kactus2:position x="940" y="500"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cabac_metas_push_btm</kactus2:name>
+			<kactus2:position x="940" y="260"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>bitstream_btm</kactus2:name>
+			<kactus2:position x="940" y="420"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cabac_states_top</kactus2:name>
+			<kactus2:position x="940" y="380"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cabac_metas_push_top</kactus2:name>
+			<kactus2:position x="940" y="300"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>bitstream_top</kactus2:name>
+			<kactus2:position x="940" y="460"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cabac_pull_btm</kactus2:name>
+			<kactus2:position x="120" y="160"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top</kactus2:name>
+			<kactus2:position x="120" y="150"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cabac_pull_top</kactus2:name>
+			<kactus2:position x="120" y="120"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top</kactus2:name>
+			<kactus2:position x="120" y="220"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top</kactus2:name>
+			<kactus2:position x="120" y="70"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top_1</kactus2:name>
+			<kactus2:position x="120" y="260"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top</kactus2:name>
+			<kactus2:position x="120" y="120"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top_1</kactus2:name>
+			<kactus2:position x="120" y="70"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top_2</kactus2:name>
+			<kactus2:position x="120" y="340"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top</kactus2:name>
+			<kactus2:position x="120" y="160"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top_1</kactus2:name>
+			<kactus2:position x="120" y="120"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top_2</kactus2:name>
+			<kactus2:position x="120" y="70"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top_3</kactus2:name>
+			<kactus2:position x="120" y="460"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top</kactus2:name>
+			<kactus2:position x="120" y="200"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top_1</kactus2:name>
+			<kactus2:position x="120" y="160"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top_2</kactus2:name>
+			<kactus2:position x="120" y="120"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top_3</kactus2:name>
+			<kactus2:position x="120" y="70"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top_4</kactus2:name>
+			<kactus2:position x="120" y="550"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top</kactus2:name>
+			<kactus2:position x="120" y="240"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top_1</kactus2:name>
+			<kactus2:position x="120" y="200"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top_2</kactus2:name>
+			<kactus2:position x="120" y="160"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top_3</kactus2:name>
+			<kactus2:position x="120" y="120"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top_4</kactus2:name>
+			<kactus2:position x="120" y="70"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top_5</kactus2:name>
+			<kactus2:position x="120" y="610"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top</kactus2:name>
+			<kactus2:position x="120" y="280"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top_1</kactus2:name>
+			<kactus2:position x="120" y="240"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top_2</kactus2:name>
+			<kactus2:position x="120" y="200"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top_3</kactus2:name>
+			<kactus2:position x="120" y="160"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top_4</kactus2:name>
+			<kactus2:position x="120" y="120"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top_5</kactus2:name>
+			<kactus2:position x="120" y="70"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_top_6</kactus2:name>
+			<kactus2:position x="120" y="690"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_btm_top_1</kactus2:name>
+			<kactus2:position x="120" y="100"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cu_info_hor_cabac1</kactus2:name>
+			<kactus2:position x="120" y="120"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_btm_top_1</kactus2:name>
+			<kactus2:position x="120" y="70"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_btm_top_2</kactus2:name>
+			<kactus2:position x="120" y="170"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_btm_top_1</kactus2:name>
+			<kactus2:position x="120" y="120"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_btm_top_2</kactus2:name>
+			<kactus2:position x="120" y="70"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_btm_top_4</kactus2:name>
+			<kactus2:position x="120" y="340"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_btm_top_3</kactus2:name>
+			<kactus2:position x="120" y="290"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_btm_top_4</kactus2:name>
+			<kactus2:position x="120" y="230"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_btm_top_3</kactus2:name>
+			<kactus2:position x="120" y="180"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_btm_top_2</kactus2:name>
+			<kactus2:position x="120" y="130"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>mem_out_btm_top_1</kactus2:name>
+			<kactus2:position x="120" y="80"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>data_req</kactus2:name>
+			<kactus2:position x="940" y="580"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>out</kactus2:name>
+			<kactus2:position x="120" y="190"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>ref</kactus2:name>
+			<kactus2:position x="120" y="100"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>out</kactus2:name>
+			<kactus2:position x="120" y="190"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>out_1</kactus2:name>
+			<kactus2:position x="120" y="280"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>out_2</kactus2:name>
+			<kactus2:position x="120" y="370"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>out_3</kactus2:name>
+			<kactus2:position x="120" y="460"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>out_4</kactus2:name>
+			<kactus2:position x="120" y="550"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>out_5</kactus2:name>
+			<kactus2:position x="120" y="640"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>out_6</kactus2:name>
+			<kactus2:position x="120" y="730"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>out_7</kactus2:name>
+			<kactus2:position x="120" y="820"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>out_8</kactus2:name>
+			<kactus2:position x="120" y="910"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>out_9</kactus2:name>
+			<kactus2:position x="120" y="1000"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>out_10</kactus2:name>
+			<kactus2:position x="120" y="1090"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>out_11</kactus2:name>
+			<kactus2:position x="120" y="1180"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>out_12</kactus2:name>
+			<kactus2:position x="120" y="1270"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>out_13</kactus2:name>
+			<kactus2:position x="120" y="1360"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>out_14</kactus2:name>
+			<kactus2:position x="120" y="1450"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>out_15</kactus2:name>
+			<kactus2:position x="120" y="1540"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cu_info2_ver_top</kactus2:name>
+			<kactus2:position x="120" y="1540"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cu_info2_ver_btm</kactus2:name>
+			<kactus2:position x="120" y="1450"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cu_info2_hor_top</kactus2:name>
+			<kactus2:position x="120" y="1360"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cu_info2_hor_btm</kactus2:name>
+			<kactus2:position x="120" y="1270"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cu_info1_ver_top</kactus2:name>
+			<kactus2:position x="120" y="1180"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cu_info1_ver_btm</kactus2:name>
+			<kactus2:position x="120" y="1090"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cu_info1_hor_top</kactus2:name>
+			<kactus2:position x="120" y="1000"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cu_info1_hor_btm</kactus2:name>
+			<kactus2:position x="120" y="910"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cu_info_hor_str</kactus2:name>
+			<kactus2:position x="120" y="820"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cabac_metas_pull_top</kactus2:name>
+			<kactus2:position x="120" y="730"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cabac_metas_pull_btm</kactus2:name>
+			<kactus2:position x="120" y="640"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cabac</kactus2:name>
+			<kactus2:position x="120" y="550"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cu_info_ver</kactus2:name>
+			<kactus2:position x="120" y="460"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>cu_info_hor</kactus2:name>
+			<kactus2:position x="120" y="370"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>left_border</kactus2:name>
+			<kactus2:position x="120" y="280"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>top_border</kactus2:name>
+			<kactus2:position x="120" y="190"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:adHocVisibilities/>
+	</ipxact:vendorExtensions>
+</ipxact:design>

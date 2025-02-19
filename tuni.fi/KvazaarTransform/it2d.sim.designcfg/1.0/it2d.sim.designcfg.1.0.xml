@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:designConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>tuni.fi</ipxact:vendor>
+	<ipxact:library>KvazaarTransform</ipxact:library>
+	<ipxact:name>it2d.sim.designcfg</ipxact:name>
+	<ipxact:version>1.0</ipxact:version>
+	<ipxact:designRef vendor="tuni.fi" library="KvazaarTransform" name="it2d.design" version="1.0"/>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_31</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_30</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_29</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_28</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_27</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_26</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_25</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_24</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_23</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_21</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_22</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_20</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_19</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_18</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_17</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_16</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_15</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_14</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_13</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_12</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_11</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_10</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_9</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_8</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_7</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_6</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_5</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_4</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_3</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_2</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_1</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>OnChipMemory_0</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>it2d_core_0</ipxact:instanceName>
+		<ipxact:view viewRef="flat_verilog"/>
+	</ipxact:viewConfiguration>
+	<ipxact:vendorExtensions>
+		<kactus2:version>3,13,489,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+		</kactus2:kts_attributes>
+	</ipxact:vendorExtensions>
+</ipxact:designConfiguration>

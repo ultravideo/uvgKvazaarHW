@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:designConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>tuni.fi</ipxact:vendor>
+	<ipxact:library>Kvazaar</ipxact:library>
+	<ipxact:name>indexer.sim.designcfg</ipxact:name>
+	<ipxact:version>1.0</ipxact:version>
+	<ipxact:designRef vendor="tuni.fi" library="Kvazaar" name="indexer.design" version="1.0"/>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>indexer_core</ipxact:instanceName>
+		<ipxact:view viewRef="flat_verilog"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>indexer_we_adapter_15</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>indexer_we_adapter_16</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>indexer_we_adapter_13</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>indexer_we_adapter_11</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>indexer_we_adapter_14</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>indexer_we_adapter_10</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>indexer_we_adapter_12</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>indexer_we_adapter_8</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>indexer_we_adapter_9</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>indexer_we_adapter_6</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>indexer_we_adapter_7</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>indexer_we_adapter_4</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>indexer_we_adapter_5</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>indexer_we_adapter_2</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>indexer_we_adapter_3</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>indexer_we_adapter_0</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:viewConfiguration>
+		<ipxact:instanceName>indexer_we_adapter_1</ipxact:instanceName>
+		<ipxact:view viewRef="sim"/>
+	</ipxact:viewConfiguration>
+	<ipxact:vendorExtensions>
+		<kactus2:kts_attributes>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+		</kactus2:kts_attributes>
+		<kactus2:version>3,13,646,0</kactus2:version>
+	</ipxact:vendorExtensions>
+</ipxact:designConfiguration>

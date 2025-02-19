@@ -1,0 +1,1979 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>tuni.fi</ipxact:vendor>
+	<ipxact:library>Kvazaar</ipxact:library>
+	<ipxact:name>intra_prediction.design</ipxact:name>
+	<ipxact:version>1.0</ipxact:version>
+	<ipxact:componentInstances>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>ip_ctrl</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarPrediction" name="ip_ctrl" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{f7736991-a84b-4f86-960c-fbad7e583a49}</kactus2:uuid>
+				<kactus2:position x="600" y="60"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="ang_neg_out_11_rsc" x="110" y="1710"/>
+					<kactus2:portPosition busRef="ang_neg_out_12_rsc" x="110" y="1860"/>
+					<kactus2:portPosition busRef="ang_neg_out_13_rsc" x="110" y="2010"/>
+					<kactus2:portPosition busRef="ang_neg_out_14_rsc" x="110" y="2160"/>
+					<kactus2:portPosition busRef="ang_neg_out_15_rsc" x="110" y="2310"/>
+					<kactus2:portPosition busRef="ang_neg_out_16_rsc" x="110" y="2460"/>
+					<kactus2:portPosition busRef="ang_neg_out_17_rsc" x="110" y="2610"/>
+					<kactus2:portPosition busRef="ang_neg_out_18_rsc" x="110" y="2760"/>
+					<kactus2:portPosition busRef="ang_pos_out2_rsc" x="110" y="360"/>
+					<kactus2:portPosition busRef="ang_pos_out3_rsc" x="110" y="510"/>
+					<kactus2:portPosition busRef="ang_pos_out4_rsc" x="110" y="660"/>
+					<kactus2:portPosition busRef="ang_pos_out5_rsc" x="110" y="810"/>
+					<kactus2:portPosition busRef="ang_pos_out6_rsc" x="110" y="960"/>
+					<kactus2:portPosition busRef="ang_pos_out7_rsc" x="110" y="1110"/>
+					<kactus2:portPosition busRef="ang_pos_out8_rsc" x="110" y="1260"/>
+					<kactus2:portPosition busRef="ang_pos_out9_rsc" x="110" y="1410"/>
+					<kactus2:portPosition busRef="ang_zero_out_rsc" x="110" y="1560"/>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="100"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="70"/>
+					<kactus2:portPosition busRef="conf_in_rsc" x="-110" y="40"/>
+					<kactus2:portPosition busRef="dc_out_rsc" x="110" y="210"/>
+					<kactus2:portPosition busRef="planar_out_rsc" x="110" y="40"/>
+					<kactus2:portPosition busRef="ref0_rsc" x="110" y="60"/>
+					<kactus2:portPosition busRef="ref10_rsc" x="110" y="1580"/>
+					<kactus2:portPosition busRef="ref11_rsc" x="110" y="1730"/>
+					<kactus2:portPosition busRef="ref12_rsc" x="110" y="1880"/>
+					<kactus2:portPosition busRef="ref13_rsc" x="110" y="2030"/>
+					<kactus2:portPosition busRef="ref14_rsc" x="110" y="2180"/>
+					<kactus2:portPosition busRef="ref15_rsc" x="110" y="2330"/>
+					<kactus2:portPosition busRef="ref16_rsc" x="110" y="2480"/>
+					<kactus2:portPosition busRef="ref17_rsc" x="110" y="2630"/>
+					<kactus2:portPosition busRef="ref18_rsc" x="110" y="2780"/>
+					<kactus2:portPosition busRef="ref1_rsc" x="110" y="230"/>
+					<kactus2:portPosition busRef="ref2_rsc" x="110" y="380"/>
+					<kactus2:portPosition busRef="ref3_rsc" x="110" y="530"/>
+					<kactus2:portPosition busRef="ref4_rsc" x="110" y="680"/>
+					<kactus2:portPosition busRef="ref5_rsc" x="110" y="830"/>
+					<kactus2:portPosition busRef="ref6_rsc" x="110" y="980"/>
+					<kactus2:portPosition busRef="ref7_rsc" x="110" y="1130"/>
+					<kactus2:portPosition busRef="ref8_rsc" x="110" y="1280"/>
+					<kactus2:portPosition busRef="ref9_rsc" x="110" y="1430"/>
+					<kactus2:portPosition busRef="sad_config_rsc" x="-110" y="190"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>ip_get_planar</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarPrediction" name="ip_get_planar" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{a0447952-cfed-4ae6-94bf-2b5f1c47f2bf}</kactus2:uuid>
+				<kactus2:position x="920" y="60"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="100"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="80"/>
+					<kactus2:portPosition busRef="conf_in" x="-110" y="40"/>
+					<kactus2:portPosition busRef="pred_out" x="110" y="40"/>
+					<kactus2:portPosition busRef="ref" x="-110" y="60"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>ip_get_dc</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarPrediction" name="ip_get_dc" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{bb1f6c09-46ee-44e1-a697-ce23b3713137}</kactus2:uuid>
+				<kactus2:position x="920" y="210"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="100"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="120"/>
+					<kactus2:portPosition busRef="conf_in" x="-110" y="60"/>
+					<kactus2:portPosition busRef="pred_out" x="110" y="60"/>
+					<kactus2:portPosition busRef="ref" x="-110" y="80"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>sad_parallel</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarPrediction" name="sad_parallel" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{dcfe424c-32fc-4164-bc88-bf7b694f4f3f}</kactus2:uuid>
+				<kactus2:position x="1240" y="60"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="conf_in_rsc" x="-110" y="260"/>
+					<kactus2:portPosition busRef="conf_out_rsc" x="110" y="190"/>
+					<kactus2:portPosition busRef="in_rsc_0" x="-110" y="40"/>
+					<kactus2:portPosition busRef="in_rsc_1" x="-110" y="210"/>
+					<kactus2:portPosition busRef="in_rsc_10" x="-110" y="1570"/>
+					<kactus2:portPosition busRef="in_rsc_11" x="-110" y="1710"/>
+					<kactus2:portPosition busRef="in_rsc_12" x="-110" y="1860"/>
+					<kactus2:portPosition busRef="in_rsc_13" x="-110" y="2010"/>
+					<kactus2:portPosition busRef="in_rsc_14" x="-110" y="2160"/>
+					<kactus2:portPosition busRef="in_rsc_15" x="-110" y="2310"/>
+					<kactus2:portPosition busRef="in_rsc_16" x="-110" y="2460"/>
+					<kactus2:portPosition busRef="in_rsc_17" x="-110" y="2610"/>
+					<kactus2:portPosition busRef="in_rsc_18" x="-110" y="2760"/>
+					<kactus2:portPosition busRef="in_rsc_19" x="-110" y="2630"/>
+					<kactus2:portPosition busRef="in_rsc_2" x="-110" y="360"/>
+					<kactus2:portPosition busRef="in_rsc_20" x="-110" y="2480"/>
+					<kactus2:portPosition busRef="in_rsc_21" x="-110" y="2330"/>
+					<kactus2:portPosition busRef="in_rsc_22" x="-110" y="2180"/>
+					<kactus2:portPosition busRef="in_rsc_23" x="-110" y="2030"/>
+					<kactus2:portPosition busRef="in_rsc_24" x="-110" y="1880"/>
+					<kactus2:portPosition busRef="in_rsc_25" x="-110" y="1730"/>
+					<kactus2:portPosition busRef="in_rsc_26" x="-110" y="1590"/>
+					<kactus2:portPosition busRef="in_rsc_27" x="-110" y="1430"/>
+					<kactus2:portPosition busRef="in_rsc_28" x="-110" y="1280"/>
+					<kactus2:portPosition busRef="in_rsc_29" x="-110" y="1130"/>
+					<kactus2:portPosition busRef="in_rsc_3" x="-110" y="510"/>
+					<kactus2:portPosition busRef="in_rsc_30" x="-110" y="980"/>
+					<kactus2:portPosition busRef="in_rsc_31" x="-110" y="830"/>
+					<kactus2:portPosition busRef="in_rsc_32" x="-110" y="680"/>
+					<kactus2:portPosition busRef="in_rsc_33" x="-110" y="530"/>
+					<kactus2:portPosition busRef="in_rsc_34" x="-110" y="380"/>
+					<kactus2:portPosition busRef="in_rsc_4" x="-110" y="660"/>
+					<kactus2:portPosition busRef="in_rsc_5" x="-110" y="810"/>
+					<kactus2:portPosition busRef="in_rsc_6" x="-110" y="960"/>
+					<kactus2:portPosition busRef="in_rsc_7" x="-110" y="1110"/>
+					<kactus2:portPosition busRef="in_rsc_8" x="-110" y="1260"/>
+					<kactus2:portPosition busRef="in_rsc_9" x="-110" y="1410"/>
+					<kactus2:portPosition busRef="intra_mode_out" x="110" y="210"/>
+					<kactus2:portPosition busRef="lcu_ref_rsc" x="-110" y="300"/>
+					<kactus2:portPosition busRef="pred_out_rsc" x="110" y="230"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>pred_buffer</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarPrediction" name="pred_buffer" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{7378124a-6887-4e2e-97f3-ade608fe298d}</kactus2:uuid>
+				<kactus2:position x="1560" y="60"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="60"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="40"/>
+					<kactus2:portPosition busRef="conf_in_rsc" x="-110" y="190"/>
+					<kactus2:portPosition busRef="intra_mode_in" x="-110" y="210"/>
+					<kactus2:portPosition busRef="pred_in_rsc" x="-110" y="230"/>
+					<kactus2:portPosition busRef="pred_out" x="110" y="40"/>
+					<kactus2:portPosition busRef="pred_out_rsc" x="110" y="70"/>
+					<kactus2:portPosition busRef="ref_out" x="110" y="40"/>
+					<kactus2:portPosition busRef="ref_out_rsc" x="110" y="350"/>
+					<kactus2:portPosition busRef="resid_out" x="110" y="40"/>
+					<kactus2:portPosition busRef="resid_out_rsc" x="110" y="190"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>sad_conf_fifo</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="fifo" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_7f07a290_908b_4599_aa0e_65a23a41c781">64</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_fd81b965_8582_40f1_a257_0b8a779fcc67">4</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_d3b30d51_12a4_49ad_a050_c3e9be454b37">&quot;OFF&quot;</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{d3fb3d60-c05c-429b-becc-5627b4b8bb33}</kactus2:uuid>
+				<kactus2:position x="280" y="210"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="aclr_n" x="-110" y="70"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="40"/>
+					<kactus2:portPosition busRef="data_in" x="110" y="40"/>
+					<kactus2:portPosition busRef="data_out" x="110" y="110"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>ip_config_dc_fifo</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="dc_fifo" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_86479744_cae4_489d_a285_ae52b02f79d5">88</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_8aca556b_cfd4_4867_b621_3d4925df4c9c">88</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_febc9636_6a0c_427c_aae0_5bed3ab3e479">256</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{05b3218e-59cb-4251-81bd-99012f47bd2a}</kactus2:uuid>
+				<kactus2:position x="280" y="60"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="aclr_n" x="-110" y="100"/>
+					<kactus2:portPosition busRef="data_in" x="-110" y="40"/>
+					<kactus2:portPosition busRef="data_out" x="110" y="40"/>
+					<kactus2:portPosition busRef="in_clk" x="-110" y="70"/>
+					<kactus2:portPosition busRef="out_clk" x="110" y="70"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>ip_get_pos_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarPrediction" name="ip_get_pos" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{257f517e-c29a-43e4-83bd-dd922cf24cce}</kactus2:uuid>
+				<kactus2:position x="920" y="380"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="80"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="100"/>
+					<kactus2:portPosition busRef="conf_in" x="-110" y="40"/>
+					<kactus2:portPosition busRef="hor_out" x="110" y="40"/>
+					<kactus2:portPosition busRef="ref" x="-110" y="60"/>
+					<kactus2:portPosition busRef="ver_out" x="110" y="60"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>ip_get_pos_1</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarPrediction" name="ip_get_pos" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{bbd9b8e5-4a44-47b7-994b-d0e13caf2fd6}</kactus2:uuid>
+				<kactus2:position x="920" y="530"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="80"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="100"/>
+					<kactus2:portPosition busRef="conf_in" x="-110" y="40"/>
+					<kactus2:portPosition busRef="ref" x="-110" y="60"/>
+					<kactus2:portPosition busRef="ver_out" x="110" y="60"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>ip_get_pos_2</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarPrediction" name="ip_get_pos" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{96136679-2e86-44d4-885e-1bfb521b6493}</kactus2:uuid>
+				<kactus2:position x="920" y="680"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="80"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="100"/>
+					<kactus2:portPosition busRef="conf_in" x="-110" y="40"/>
+					<kactus2:portPosition busRef="ref" x="-110" y="60"/>
+					<kactus2:portPosition busRef="ver_out" x="110" y="60"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>ip_get_pos_3</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarPrediction" name="ip_get_pos" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{4d25e29b-2946-4de9-be3b-43c6d3456957}</kactus2:uuid>
+				<kactus2:position x="920" y="830"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="80"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="100"/>
+					<kactus2:portPosition busRef="conf_in" x="-110" y="40"/>
+					<kactus2:portPosition busRef="ref" x="-110" y="60"/>
+					<kactus2:portPosition busRef="ver_out" x="110" y="60"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>ip_get_pos_4</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarPrediction" name="ip_get_pos" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{87caa950-38f8-4303-b777-8c907ffad163}</kactus2:uuid>
+				<kactus2:position x="920" y="980"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="80"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="100"/>
+					<kactus2:portPosition busRef="conf_in" x="-110" y="40"/>
+					<kactus2:portPosition busRef="ref" x="-110" y="60"/>
+					<kactus2:portPosition busRef="ver_out" x="110" y="60"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>ip_get_pos_5</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarPrediction" name="ip_get_pos" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{b7c37259-c78d-4f1f-8012-ed0a0cb5b477}</kactus2:uuid>
+				<kactus2:position x="920" y="1130"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="80"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="100"/>
+					<kactus2:portPosition busRef="conf_in" x="-110" y="40"/>
+					<kactus2:portPosition busRef="ref" x="-110" y="60"/>
+					<kactus2:portPosition busRef="ver_out" x="110" y="60"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>ip_get_pos_6</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarPrediction" name="ip_get_pos" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{18e2ec6e-245e-4303-846e-af2537d43213}</kactus2:uuid>
+				<kactus2:position x="920" y="1280"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="80"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="100"/>
+					<kactus2:portPosition busRef="conf_in" x="-110" y="40"/>
+					<kactus2:portPosition busRef="hor_out" x="110" y="40"/>
+					<kactus2:portPosition busRef="ref" x="-110" y="60"/>
+					<kactus2:portPosition busRef="ver_out" x="110" y="60"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>ip_get_pos_7</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarPrediction" name="ip_get_pos" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{2e29e1ce-b814-48cc-9a94-ddbfc1f2122b}</kactus2:uuid>
+				<kactus2:position x="920" y="1430"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="80"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="100"/>
+					<kactus2:portPosition busRef="conf_in" x="-110" y="40"/>
+					<kactus2:portPosition busRef="ref" x="-110" y="60"/>
+					<kactus2:portPosition busRef="ver_out" x="110" y="60"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>ip_get_zero_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarPrediction" name="ip_get_zero" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{b6a18ee9-a591-4b0e-81fc-17d3c185c374}</kactus2:uuid>
+				<kactus2:position x="920" y="1580"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="80"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="100"/>
+					<kactus2:portPosition busRef="conf_in" x="-110" y="40"/>
+					<kactus2:portPosition busRef="hor_out" x="110" y="50"/>
+					<kactus2:portPosition busRef="ref" x="-110" y="60"/>
+					<kactus2:portPosition busRef="ver_out" x="110" y="70"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>ip_get_neg_0</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarPrediction" name="ip_get_neg" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{1e80871b-e7d7-4654-b4f4-8f400a30f719}</kactus2:uuid>
+				<kactus2:position x="920" y="1730"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="80"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="100"/>
+					<kactus2:portPosition busRef="conf_in" x="-110" y="40"/>
+					<kactus2:portPosition busRef="hor_out" x="110" y="40"/>
+					<kactus2:portPosition busRef="ref" x="-110" y="60"/>
+					<kactus2:portPosition busRef="ver_out" x="110" y="60"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>ip_get_neg_1</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarPrediction" name="ip_get_neg" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{8f967a93-07d3-407e-b42c-d538b040d7a2}</kactus2:uuid>
+				<kactus2:position x="920" y="1880"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="80"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="100"/>
+					<kactus2:portPosition busRef="conf_in" x="-110" y="40"/>
+					<kactus2:portPosition busRef="hor_out" x="110" y="40"/>
+					<kactus2:portPosition busRef="ref" x="-110" y="60"/>
+					<kactus2:portPosition busRef="ver_out" x="110" y="60"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>ip_get_neg_2</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarPrediction" name="ip_get_neg" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{fdc85c95-5021-4615-8ab4-20c0e81a00f7}</kactus2:uuid>
+				<kactus2:position x="920" y="2030"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="80"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="100"/>
+					<kactus2:portPosition busRef="conf_in" x="-110" y="40"/>
+					<kactus2:portPosition busRef="hor_out" x="110" y="40"/>
+					<kactus2:portPosition busRef="ref" x="-110" y="60"/>
+					<kactus2:portPosition busRef="ver_out" x="110" y="60"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>ip_get_neg_3</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarPrediction" name="ip_get_neg" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{5535146f-9e68-46ab-b377-3b6fca31c782}</kactus2:uuid>
+				<kactus2:position x="920" y="2180"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="80"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="100"/>
+					<kactus2:portPosition busRef="conf_in" x="-110" y="40"/>
+					<kactus2:portPosition busRef="hor_out" x="110" y="40"/>
+					<kactus2:portPosition busRef="ref" x="-110" y="60"/>
+					<kactus2:portPosition busRef="ver_out" x="110" y="60"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>ip_get_neg_4</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarPrediction" name="ip_get_neg" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{b713378c-73a5-43db-8338-2f87d2537efc}</kactus2:uuid>
+				<kactus2:position x="920" y="2330"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="80"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="100"/>
+					<kactus2:portPosition busRef="conf_in" x="-110" y="40"/>
+					<kactus2:portPosition busRef="hor_out" x="110" y="40"/>
+					<kactus2:portPosition busRef="ref" x="-110" y="60"/>
+					<kactus2:portPosition busRef="ver_out" x="110" y="60"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>ip_get_neg_5</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarPrediction" name="ip_get_neg" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{be692e11-7210-4218-93e9-62a912ba13e7}</kactus2:uuid>
+				<kactus2:position x="920" y="2480"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="80"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="100"/>
+					<kactus2:portPosition busRef="conf_in" x="-110" y="40"/>
+					<kactus2:portPosition busRef="hor_out" x="110" y="40"/>
+					<kactus2:portPosition busRef="ref" x="-110" y="60"/>
+					<kactus2:portPosition busRef="ver_out" x="110" y="60"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>ip_get_neg_6</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarPrediction" name="ip_get_neg" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{17510681-6dc5-429b-ba6d-8a337c499aea}</kactus2:uuid>
+				<kactus2:position x="920" y="2630"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="80"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="100"/>
+					<kactus2:portPosition busRef="conf_in" x="-110" y="40"/>
+					<kactus2:portPosition busRef="hor_out" x="110" y="40"/>
+					<kactus2:portPosition busRef="ref" x="-110" y="60"/>
+					<kactus2:portPosition busRef="ver_out" x="110" y="60"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>ip_get_neg_7</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarPrediction" name="ip_get_neg" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{2ffbce4c-5102-48a3-a848-4708d8586243}</kactus2:uuid>
+				<kactus2:position x="920" y="2780"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="80"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="100"/>
+					<kactus2:portPosition busRef="conf_in" x="-110" y="40"/>
+					<kactus2:portPosition busRef="hor_out" x="110" y="40"/>
+					<kactus2:portPosition busRef="ref" x="-110" y="60"/>
+					<kactus2:portPosition busRef="ver_out" x="110" y="60"/>
+				</kactus2:portPositions>
+				<kactus2:adHocVisibilities>
+					<kactus2:adHocVisible portName="ver_out_rsc_rdy" x="110" y="90"/>
+				</kactus2:adHocVisibilities>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>pred_dc_fifo</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="dc_fifo" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_febc9636_6a0c_427c_aae0_5bed3ab3e479">128</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{63db8fea-b35a-4d1a-87b4-b059aa71bb0b}</kactus2:uuid>
+				<kactus2:position x="1880" y="60"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="aclr_n" x="110" y="90"/>
+					<kactus2:portPosition busRef="data_in" x="-110" y="70"/>
+					<kactus2:portPosition busRef="data_out" x="110" y="40"/>
+					<kactus2:portPosition busRef="out_clk" x="-110" y="90"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>resid_dc_fifo</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="dc_fifo" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_86479744_cae4_489d_a285_ae52b02f79d5">288</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_8aca556b_cfd4_4867_b621_3d4925df4c9c">288</ipxact:configurableElementValue>
+					<ipxact:configurableElementValue referenceId="uuid_febc9636_6a0c_427c_aae0_5bed3ab3e479">8</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{2d881dc4-9bcb-49a0-8332-0b797d6aa5ea}</kactus2:uuid>
+				<kactus2:position x="1880" y="200"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="aclr_n" x="110" y="110"/>
+					<kactus2:portPosition busRef="data_in" x="-110" y="50"/>
+					<kactus2:portPosition busRef="data_out" x="110" y="50"/>
+					<kactus2:portPosition busRef="in_clk" x="110" y="90"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>ref_dc_fifo</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="Kvazaar" name="dc_fifo" version="1.0">
+				<ipxact:configurableElementValues>
+					<ipxact:configurableElementValue referenceId="uuid_febc9636_6a0c_427c_aae0_5bed3ab3e479">128</ipxact:configurableElementValue>
+				</ipxact:configurableElementValues>
+			</ipxact:componentRef>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{a05a57c4-6ac3-4488-984e-844b378dda82}</kactus2:uuid>
+				<kactus2:position x="1880" y="360"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="aclr_n" x="110" y="110"/>
+					<kactus2:portPosition busRef="data_in" x="-110" y="50"/>
+					<kactus2:portPosition busRef="data_out" x="110" y="50"/>
+					<kactus2:portPosition busRef="in_clk" x="110" y="90"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+	</ipxact:componentInstances>
+	<ipxact:interconnections>
+		<ipxact:interconnection>
+			<ipxact:name>sad_parallel_conf_out_rsc_to_pred_buffer_conf_in_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="conf_out_rsc"/>
+			<ipxact:activeInterface componentRef="pred_buffer" busRef="conf_in_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>sad_parallel_intra_mode_out_to_pred_buffer_intra_mode_in</ipxact:name>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="intra_mode_out"/>
+			<ipxact:activeInterface componentRef="pred_buffer" busRef="intra_mode_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_planar_conf_in_to_ip_ctrl_planar_out_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_planar" busRef="conf_in"/>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="planar_out_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_ctrl_ref0_rsc_to_ip_get_planar_ref</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ref0_rsc"/>
+			<ipxact:activeInterface componentRef="ip_get_planar" busRef="ref"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_dc_conf_in_to_ip_ctrl_dc_out_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_dc" busRef="conf_in"/>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="dc_out_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_dc_ref_to_ip_ctrl_ref1_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_dc" busRef="ref"/>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ref1_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>sad_parallel_in_rsc_0_to_ip_get_planar_pred_out</ipxact:name>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_0"/>
+			<ipxact:activeInterface componentRef="ip_get_planar" busRef="pred_out"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_dc_pred_out_to_sad_parallel_in_rsc_1</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_dc" busRef="pred_out"/>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_1"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_planar_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_planar" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_dc_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_dc" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_ctrl_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>sad_conf_fifo_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="sad_conf_fifo" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>pred_buffer_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="pred_buffer" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_planar_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_planar" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_dc_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_dc" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>pred_buffer_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="pred_buffer" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_ctrl_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_config_dc_fifo_data_out_to_ip_ctrl_conf_in_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_config_dc_fifo" busRef="data_out"/>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="conf_in_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_config_dc_fifo_data_in_to_ip_config_in</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_config_dc_fifo" busRef="data_in"/>
+			<ipxact:hierInterface busRef="ip_config_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>sad_conf_fifo_data_out_to_sad_parallel_conf_in_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="sad_conf_fifo" busRef="data_out"/>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="conf_in_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_ctrl_ref2_rsc_to_ip_get_pos_0_ref</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ref2_rsc"/>
+			<ipxact:activeInterface componentRef="ip_get_pos_0" busRef="ref"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_ctrl_ang_pos_out2_rsc_to_ip_get_pos_0_conf_in</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ang_pos_out2_rsc"/>
+			<ipxact:activeInterface componentRef="ip_get_pos_0" busRef="conf_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_ctrl_ang_pos_out3_rsc_to_ip_get_pos_1_conf_in</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ang_pos_out3_rsc"/>
+			<ipxact:activeInterface componentRef="ip_get_pos_1" busRef="conf_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_ctrl_ref3_rsc_to_ip_get_pos_1_ref</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ref3_rsc"/>
+			<ipxact:activeInterface componentRef="ip_get_pos_1" busRef="ref"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_ctrl_ang_pos_out4_rsc_to_ip_get_pos_2_conf_in</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ang_pos_out4_rsc"/>
+			<ipxact:activeInterface componentRef="ip_get_pos_2" busRef="conf_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_ctrl_ref4_rsc_to_ip_get_pos_2_ref</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ref4_rsc"/>
+			<ipxact:activeInterface componentRef="ip_get_pos_2" busRef="ref"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_ctrl_ang_pos_out5_rsc_to_ip_get_pos_3_conf_in</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ang_pos_out5_rsc"/>
+			<ipxact:activeInterface componentRef="ip_get_pos_3" busRef="conf_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_ctrl_ref5_rsc_to_ip_get_pos_3_ref</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ref5_rsc"/>
+			<ipxact:activeInterface componentRef="ip_get_pos_3" busRef="ref"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_ctrl_ang_pos_out6_rsc_to_ip_get_pos_4_conf_in</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ang_pos_out6_rsc"/>
+			<ipxact:activeInterface componentRef="ip_get_pos_4" busRef="conf_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_pos_4_ref_to_ip_ctrl_ref6_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_pos_4" busRef="ref"/>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ref6_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_ctrl_ang_pos_out7_rsc_to_ip_get_pos_5_conf_in</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ang_pos_out7_rsc"/>
+			<ipxact:activeInterface componentRef="ip_get_pos_5" busRef="conf_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_pos_5_ref_to_ip_ctrl_ref7_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_pos_5" busRef="ref"/>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ref7_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_ctrl_ang_pos_out8_rsc_to_ip_get_pos_6_conf_in</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ang_pos_out8_rsc"/>
+			<ipxact:activeInterface componentRef="ip_get_pos_6" busRef="conf_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_ctrl_ref8_rsc_to_ip_get_pos_6_ref</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ref8_rsc"/>
+			<ipxact:activeInterface componentRef="ip_get_pos_6" busRef="ref"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_ctrl_ang_pos_out9_rsc_to_ip_get_pos_7_conf_in</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ang_pos_out9_rsc"/>
+			<ipxact:activeInterface componentRef="ip_get_pos_7" busRef="conf_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_pos_7_ref_to_ip_ctrl_ref9_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_pos_7" busRef="ref"/>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ref9_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_ctrl_ang_zero_out_rsc_to_ip_get_zero_0_conf_in</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ang_zero_out_rsc"/>
+			<ipxact:activeInterface componentRef="ip_get_zero_0" busRef="conf_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_zero_0_ref_to_ip_ctrl_ref10_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_zero_0" busRef="ref"/>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ref10_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_ctrl_ang_neg_out_11_rsc_to_ip_get_neg_0_conf_in</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ang_neg_out_11_rsc"/>
+			<ipxact:activeInterface componentRef="ip_get_neg_0" busRef="conf_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_0_ref_to_ip_ctrl_ref11_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_0" busRef="ref"/>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ref11_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_ctrl_ang_neg_out_12_rsc_to_ip_get_neg_1_conf_in</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ang_neg_out_12_rsc"/>
+			<ipxact:activeInterface componentRef="ip_get_neg_1" busRef="conf_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_1_ref_to_ip_ctrl_ref12_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_1" busRef="ref"/>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ref12_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_ctrl_ang_neg_out_13_rsc_to_ip_get_neg_2_conf_in</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ang_neg_out_13_rsc"/>
+			<ipxact:activeInterface componentRef="ip_get_neg_2" busRef="conf_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_2_ref_to_ip_ctrl_ref13_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_2" busRef="ref"/>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ref13_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_ctrl_ang_neg_out_14_rsc_to_ip_get_neg_3_conf_in</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ang_neg_out_14_rsc"/>
+			<ipxact:activeInterface componentRef="ip_get_neg_3" busRef="conf_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_3_ref_to_ip_ctrl_ref14_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_3" busRef="ref"/>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ref14_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_ctrl_ang_neg_out_15_rsc_to_ip_get_neg_4_conf_in</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ang_neg_out_15_rsc"/>
+			<ipxact:activeInterface componentRef="ip_get_neg_4" busRef="conf_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_4_ref_to_ip_ctrl_ref15_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_4" busRef="ref"/>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ref15_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_ctrl_ang_neg_out_16_rsc_to_ip_get_neg_5_conf_in</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ang_neg_out_16_rsc"/>
+			<ipxact:activeInterface componentRef="ip_get_neg_5" busRef="conf_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_5_ref_to_ip_ctrl_ref16_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_5" busRef="ref"/>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ref16_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_ctrl_ang_neg_out_17_rsc_to_ip_get_neg_6_conf_in</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ang_neg_out_17_rsc"/>
+			<ipxact:activeInterface componentRef="ip_get_neg_6" busRef="conf_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_6_ref_to_ip_ctrl_ref17_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_6" busRef="ref"/>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ref17_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_ctrl_ang_neg_out_18_rsc_to_ip_get_neg_7_conf_in</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ang_neg_out_18_rsc"/>
+			<ipxact:activeInterface componentRef="ip_get_neg_7" busRef="conf_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_7_ref_to_ip_ctrl_ref18_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_7" busRef="ref"/>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="ref18_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_pos_0_hor_out_to_sad_parallel_in_rsc_2</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_pos_0" busRef="hor_out"/>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_2"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>sad_parallel_in_rsc_34_to_ip_get_pos_0_ver_out</ipxact:name>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_34"/>
+			<ipxact:activeInterface componentRef="ip_get_pos_0" busRef="ver_out"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_pos_1_ver_out_to_sad_parallel_in_rsc_33</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_pos_1" busRef="ver_out"/>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_33"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>sad_parallel_in_rsc_3_to_ip_get_pos_1_hor_out</ipxact:name>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_3"/>
+			<ipxact:activeInterface componentRef="ip_get_pos_1" busRef="hor_out"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_pos_2_hor_out_to_sad_parallel_in_rsc_4</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_pos_2" busRef="hor_out"/>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_4"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>sad_parallel_in_rsc_32_to_ip_get_pos_2_ver_out</ipxact:name>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_32"/>
+			<ipxact:activeInterface componentRef="ip_get_pos_2" busRef="ver_out"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_pos_3_hor_out_to_sad_parallel_in_rsc_5</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_pos_3" busRef="hor_out"/>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_5"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>sad_parallel_in_rsc_31_to_ip_get_pos_3_ver_out</ipxact:name>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_31"/>
+			<ipxact:activeInterface componentRef="ip_get_pos_3" busRef="ver_out"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_pos_4_hor_out_to_sad_parallel_in_rsc_6</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_pos_4" busRef="hor_out"/>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_6"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>sad_parallel_in_rsc_30_to_ip_get_pos_4_ver_out</ipxact:name>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_30"/>
+			<ipxact:activeInterface componentRef="ip_get_pos_4" busRef="ver_out"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_pos_5_hor_out_to_sad_parallel_in_rsc_7</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_pos_5" busRef="hor_out"/>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_7"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>sad_parallel_in_rsc_29_to_ip_get_pos_5_ver_out</ipxact:name>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_29"/>
+			<ipxact:activeInterface componentRef="ip_get_pos_5" busRef="ver_out"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_pos_6_hor_out_to_sad_parallel_in_rsc_8</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_pos_6" busRef="hor_out"/>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_8"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>sad_parallel_in_rsc_28_to_ip_get_pos_6_ver_out</ipxact:name>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_28"/>
+			<ipxact:activeInterface componentRef="ip_get_pos_6" busRef="ver_out"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_pos_7_hor_out_to_sad_parallel_in_rsc_9</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_pos_7" busRef="hor_out"/>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_9"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>sad_parallel_in_rsc_27_to_ip_get_pos_7_ver_out</ipxact:name>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_27"/>
+			<ipxact:activeInterface componentRef="ip_get_pos_7" busRef="ver_out"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_zero_0_hor_out_to_sad_parallel_in_rsc_10</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_zero_0" busRef="hor_out"/>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_10"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>sad_parallel_in_rsc_26_to_ip_get_zero_0_ver_out</ipxact:name>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_26"/>
+			<ipxact:activeInterface componentRef="ip_get_zero_0" busRef="ver_out"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_0_hor_out_to_sad_parallel_in_rsc_11</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_0" busRef="hor_out"/>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_11"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>sad_parallel_in_rsc_25_to_ip_get_neg_0_ver_out</ipxact:name>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_25"/>
+			<ipxact:activeInterface componentRef="ip_get_neg_0" busRef="ver_out"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_1_hor_out_to_sad_parallel_in_rsc_12</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_1" busRef="hor_out"/>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_12"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>sad_parallel_in_rsc_24_to_ip_get_neg_1_ver_out</ipxact:name>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_24"/>
+			<ipxact:activeInterface componentRef="ip_get_neg_1" busRef="ver_out"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_2_hor_out_to_sad_parallel_in_rsc_13</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_2" busRef="hor_out"/>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_13"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>sad_parallel_in_rsc_23_to_ip_get_neg_2_ver_out</ipxact:name>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_23"/>
+			<ipxact:activeInterface componentRef="ip_get_neg_2" busRef="ver_out"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_3_hor_out_to_sad_parallel_in_rsc_14</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_3" busRef="hor_out"/>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_14"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>sad_parallel_in_rsc_22_to_ip_get_neg_3_ver_out</ipxact:name>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_22"/>
+			<ipxact:activeInterface componentRef="ip_get_neg_3" busRef="ver_out"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_5_hor_out_to_sad_parallel_in_rsc_16</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_5" busRef="hor_out"/>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_16"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>sad_parallel_in_rsc_20_to_ip_get_neg_5_ver_out</ipxact:name>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_20"/>
+			<ipxact:activeInterface componentRef="ip_get_neg_5" busRef="ver_out"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_6_hor_out_to_sad_parallel_in_rsc_17</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_6" busRef="hor_out"/>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_17"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>sad_parallel_in_rsc_19_to_ip_get_neg_6_ver_out</ipxact:name>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_19"/>
+			<ipxact:activeInterface componentRef="ip_get_neg_6" busRef="ver_out"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_7_hor_out_to_sad_parallel_in_rsc_18</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_7" busRef="hor_out"/>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_18"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>sad_parallel_lcu_ref_rsc_to_bus</ipxact:name>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="lcu_ref_rsc"/>
+			<ipxact:hierInterface busRef="lcu_ref_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>sad_parallel_pred_out_rsc_to_pred_buffer_pred_in_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="pred_out_rsc"/>
+			<ipxact:activeInterface componentRef="pred_buffer" busRef="pred_in_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_ctrl_sad_config_rsc_to_sad_conf_fifo_data_in</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_ctrl" busRef="sad_config_rsc"/>
+			<ipxact:activeInterface componentRef="sad_conf_fifo" busRef="data_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>pred_dc_fifo_in_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="pred_dc_fifo" busRef="in_clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>resid_dc_fifo_in_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="resid_dc_fifo" busRef="in_clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ref_dc_fifo_in_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="ref_dc_fifo" busRef="in_clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>pred_buffer_pred_out_rsc_to_pred_dc_fifo_data_in</ipxact:name>
+			<ipxact:activeInterface componentRef="pred_buffer" busRef="pred_out_rsc"/>
+			<ipxact:activeInterface componentRef="pred_dc_fifo" busRef="data_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>pred_dc_fifo_data_out_to_pred_out_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="pred_dc_fifo" busRef="data_out"/>
+			<ipxact:hierInterface busRef="pred_out_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>pred_buffer_resid_out_rsc_to_resid_dc_fifo_data_in</ipxact:name>
+			<ipxact:activeInterface componentRef="pred_buffer" busRef="resid_out_rsc"/>
+			<ipxact:activeInterface componentRef="resid_dc_fifo" busRef="data_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>resid_dc_fifo_data_out_to_resid_out_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="resid_dc_fifo" busRef="data_out"/>
+			<ipxact:hierInterface busRef="resid_out_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>pred_buffer_ref_out_rsc_to_ref_dc_fifo_data_in</ipxact:name>
+			<ipxact:activeInterface componentRef="pred_buffer" busRef="ref_out_rsc"/>
+			<ipxact:activeInterface componentRef="ref_dc_fifo" busRef="data_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ref_dc_fifo_data_out_to_ref_out_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="ref_dc_fifo" busRef="data_out"/>
+			<ipxact:hierInterface busRef="ref_out_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>pred_dc_fifo_aclr_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="pred_dc_fifo" busRef="aclr_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>resid_dc_fifo_aclr_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="resid_dc_fifo" busRef="aclr_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ref_dc_fifo_aclr_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="ref_dc_fifo" busRef="aclr_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_config_dc_fifo_in_clk_to_clk_base</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_config_dc_fifo" busRef="in_clk"/>
+			<ipxact:hierInterface busRef="clk_base"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_config_dc_fifo_aclr_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_config_dc_fifo" busRef="aclr_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>sad_conf_fifo_aclr_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="sad_conf_fifo" busRef="aclr_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>pred_dc_fifo_out_clk_to_clk_base</ipxact:name>
+			<ipxact:activeInterface componentRef="pred_dc_fifo" busRef="out_clk"/>
+			<ipxact:hierInterface busRef="clk_base"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>resid_dc_fifo_out_clk_to_clk_base</ipxact:name>
+			<ipxact:activeInterface componentRef="resid_dc_fifo" busRef="out_clk"/>
+			<ipxact:hierInterface busRef="clk_base"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ref_dc_fifo_out_clk_to_clk_base</ipxact:name>
+			<ipxact:activeInterface componentRef="ref_dc_fifo" busRef="out_clk"/>
+			<ipxact:hierInterface busRef="clk_base"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_pos_0_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_pos_0" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_pos_1_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_pos_1" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_pos_2_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_pos_2" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_pos_3_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_pos_3" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_pos_4_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_pos_4" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_pos_5_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_pos_5" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_pos_6_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_pos_6" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_pos_7_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_pos_7" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_zero_0_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_zero_0" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_0_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_0" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_2_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_2" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_1_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_1" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_3_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_3" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_4_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_4" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_5_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_5" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_6_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_6" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_7_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_7" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_pos_0_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_pos_0" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_pos_1_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_pos_1" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_pos_2_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_pos_2" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_pos_3_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_pos_3" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_pos_4_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_pos_4" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_pos_5_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_pos_5" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_pos_6_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_pos_6" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_pos_7_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_pos_7" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_zero_0_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_zero_0" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_0_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_0" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_1_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_1" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_2_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_2" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_3_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_3" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_4_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_4" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_5_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_5" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_6_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_6" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_7_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_7" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>sad_parallel_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>sad_parallel_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_config_dc_fifo_out_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_config_dc_fifo" busRef="out_clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_4_ver_out_to_sad_parallel_in_rsc_21</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_4" busRef="ver_out"/>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_21"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>ip_get_neg_4_hor_out_to_sad_parallel_in_rsc_15</ipxact:name>
+			<ipxact:activeInterface componentRef="ip_get_neg_4" busRef="hor_out"/>
+			<ipxact:activeInterface componentRef="sad_parallel" busRef="in_rsc_15"/>
+		</ipxact:interconnection>
+	</ipxact:interconnections>
+	<ipxact:adHocConnections>
+		<ipxact:adHocConnection>
+			<ipxact:name>ip_get_neg_7_ver_out_rsc_rdy_to_tiedValue</ipxact:name>
+			<ipxact:tiedValue>1</ipxact:tiedValue>
+			<ipxact:portReferences>
+				<ipxact:internalPortReference componentRef="ip_get_neg_7" portRef="ver_out_rsc_rdy"/>
+			</ipxact:portReferences>
+		</ipxact:adHocConnection>
+	</ipxact:adHocConnections>
+	<ipxact:vendorExtensions>
+		<kactus2:version>3,11,1,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+		</kactus2:kts_attributes>
+		<kactus2:columnLayout>
+			<kactus2:column name="IO" contentType="0" allowedItems="1" minWidth="119" width="119" x="0"/>
+			<kactus2:column name="IO" contentType="0" allowedItems="1" minWidth="119" width="119" x="2040"/>
+			<kactus2:column name="FIFOs" contentType="2" allowedItems="2" minWidth="319" width="319" x="120"/>
+			<kactus2:column name="Components" contentType="2" allowedItems="2" minWidth="319" width="319" x="760"/>
+			<kactus2:column name="Components" contentType="2" allowedItems="2" minWidth="119" width="319" x="1080"/>
+			<kactus2:column name="Components" contentType="2" allowedItems="2" minWidth="119" width="319" x="440"/>
+			<kactus2:column name="Components" contentType="2" allowedItems="2" minWidth="319" width="319" x="1400"/>
+			<kactus2:column name="FIFOs" contentType="2" allowedItems="2" minWidth="319" width="319" x="1720"/>
+		</kactus2:columnLayout>
+		<kactus2:routes>
+			<kactus2:route kactus2:connRef="pred_fifo_q_to_pred_out_z" kactus2:offPage="false">
+				<kactus2:position x="490" y="750"/>
+				<kactus2:position x="420" y="750"/>
+				<kactus2:position x="420" y="390"/>
+				<kactus2:position x="380" y="390"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="sad_parallel_conf_out_rsc_to_pred_buffer_conf_in_rsc" kactus2:offPage="false">
+				<kactus2:position x="1350" y="250"/>
+				<kactus2:position x="1450" y="250"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="sad_parallel_intra_mode_out_to_pred_buffer_intra_mode_in" kactus2:offPage="false">
+				<kactus2:position x="1350" y="270"/>
+				<kactus2:position x="1450" y="270"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_planar_conf_in_to_ip_ctrl_planar_out_rsc" kactus2:offPage="false">
+				<kactus2:position x="810" y="100"/>
+				<kactus2:position x="710" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_ctrl_ref0_rsc_to_ip_get_planar_ref" kactus2:offPage="false">
+				<kactus2:position x="710" y="120"/>
+				<kactus2:position x="810" y="120"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_dc_conf_in_to_ip_ctrl_dc_out_rsc" kactus2:offPage="false">
+				<kactus2:position x="810" y="270"/>
+				<kactus2:position x="710" y="270"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_dc_ref_to_ip_ctrl_ref1_rsc" kactus2:offPage="false">
+				<kactus2:position x="810" y="290"/>
+				<kactus2:position x="710" y="290"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="sad_parallel_in_rsc_0_to_ip_get_planar_pred_out" kactus2:offPage="false">
+				<kactus2:position x="1130" y="100"/>
+				<kactus2:position x="1030" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_dc_pred_out_to_sad_parallel_in_rsc_1" kactus2:offPage="false">
+				<kactus2:position x="1030" y="270"/>
+				<kactus2:position x="1130" y="270"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_planar_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="780" y="140"/>
+				<kactus2:position x="90" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_dc_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="780" y="330"/>
+				<kactus2:position x="90" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_ctrl_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="460" y="130"/>
+				<kactus2:position x="90" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="sad_conf_fifo_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="140" y="250"/>
+				<kactus2:position x="90" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="pred_buffer_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="1420" y="100"/>
+				<kactus2:position x="90" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_planar_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="780" y="160"/>
+				<kactus2:position x="90" y="430"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_dc_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="780" y="310"/>
+				<kactus2:position x="90" y="430"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="pred_buffer_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="1420" y="120"/>
+				<kactus2:position x="90" y="430"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_ctrl_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="460" y="160"/>
+				<kactus2:position x="90" y="430"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="dc_fifo_0_data_in_to_data_in" kactus2:offPage="false">
+				<kactus2:position x="490" y="440"/>
+				<kactus2:position x="380" y="440"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="dc_fifo_0_data_in_to_data_in" kactus2:offPage="false">
+				<kactus2:position x="490" y="440"/>
+				<kactus2:position x="380" y="440"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_config_dc_fifo_data_out_to_ip_ctrl_conf_in_rsc" kactus2:offPage="false">
+				<kactus2:position x="390" y="100"/>
+				<kactus2:position x="490" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_config_dc_fifo_data_in_to_ip_config_in" kactus2:offPage="false">
+				<kactus2:position x="170" y="100"/>
+				<kactus2:position x="60" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="sad_conf_fifo_data_out_to_sad_parallel_conf_in_rsc" kactus2:offPage="true">
+				<kactus2:position x="420" y="320"/>
+				<kactus2:position x="1100" y="320"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_ctrl_ref2_rsc_to_ip_get_pos_0_ref" kactus2:offPage="false">
+				<kactus2:position x="710" y="440"/>
+				<kactus2:position x="810" y="440"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_ctrl_ang_pos_out2_rsc_to_ip_get_pos_0_conf_in" kactus2:offPage="false">
+				<kactus2:position x="710" y="420"/>
+				<kactus2:position x="810" y="420"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_ctrl_ang_pos_out3_rsc_to_ip_get_pos_1_conf_in" kactus2:offPage="false">
+				<kactus2:position x="710" y="570"/>
+				<kactus2:position x="810" y="570"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_ctrl_ref3_rsc_to_ip_get_pos_1_ref" kactus2:offPage="false">
+				<kactus2:position x="710" y="590"/>
+				<kactus2:position x="810" y="590"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_ctrl_ang_pos_out4_rsc_to_ip_get_pos_2_conf_in" kactus2:offPage="false">
+				<kactus2:position x="710" y="720"/>
+				<kactus2:position x="810" y="720"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_ctrl_ref4_rsc_to_ip_get_pos_2_ref" kactus2:offPage="false">
+				<kactus2:position x="710" y="740"/>
+				<kactus2:position x="810" y="740"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_ctrl_ang_pos_out5_rsc_to_ip_get_pos_3_conf_in" kactus2:offPage="false">
+				<kactus2:position x="710" y="870"/>
+				<kactus2:position x="810" y="870"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_ctrl_ref5_rsc_to_ip_get_pos_3_ref" kactus2:offPage="false">
+				<kactus2:position x="710" y="890"/>
+				<kactus2:position x="810" y="890"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_ctrl_ang_pos_out6_rsc_to_ip_get_pos_4_conf_in" kactus2:offPage="false">
+				<kactus2:position x="710" y="1020"/>
+				<kactus2:position x="810" y="1020"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_pos_4_ref_to_ip_ctrl_ref6_rsc" kactus2:offPage="false">
+				<kactus2:position x="810" y="1040"/>
+				<kactus2:position x="710" y="1040"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_ctrl_ang_pos_out7_rsc_to_ip_get_pos_5_conf_in" kactus2:offPage="false">
+				<kactus2:position x="710" y="1170"/>
+				<kactus2:position x="810" y="1170"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_pos_5_ref_to_ip_ctrl_ref7_rsc" kactus2:offPage="false">
+				<kactus2:position x="810" y="1190"/>
+				<kactus2:position x="710" y="1190"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_ctrl_ang_pos_out8_rsc_to_ip_get_pos_6_conf_in" kactus2:offPage="false">
+				<kactus2:position x="710" y="1320"/>
+				<kactus2:position x="810" y="1320"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_ctrl_ref8_rsc_to_ip_get_pos_6_ref" kactus2:offPage="false">
+				<kactus2:position x="710" y="1340"/>
+				<kactus2:position x="810" y="1340"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_ctrl_ang_pos_out9_rsc_to_ip_get_pos_7_conf_in" kactus2:offPage="false">
+				<kactus2:position x="710" y="1470"/>
+				<kactus2:position x="810" y="1470"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_pos_7_ref_to_ip_ctrl_ref9_rsc" kactus2:offPage="false">
+				<kactus2:position x="810" y="1490"/>
+				<kactus2:position x="710" y="1490"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_ctrl_ang_zero_out_rsc_to_ip_get_zero_0_conf_in" kactus2:offPage="false">
+				<kactus2:position x="710" y="1620"/>
+				<kactus2:position x="810" y="1620"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_zero_0_ref_to_ip_ctrl_ref10_rsc" kactus2:offPage="false">
+				<kactus2:position x="810" y="1640"/>
+				<kactus2:position x="710" y="1640"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_ctrl_ang_neg_out_11_rsc_to_ip_get_neg_0_conf_in" kactus2:offPage="false">
+				<kactus2:position x="710" y="1770"/>
+				<kactus2:position x="810" y="1770"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_0_ref_to_ip_ctrl_ref11_rsc" kactus2:offPage="false">
+				<kactus2:position x="810" y="1790"/>
+				<kactus2:position x="710" y="1790"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_ctrl_ang_neg_out_12_rsc_to_ip_get_neg_1_conf_in" kactus2:offPage="false">
+				<kactus2:position x="710" y="1920"/>
+				<kactus2:position x="810" y="1920"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_1_ref_to_ip_ctrl_ref12_rsc" kactus2:offPage="false">
+				<kactus2:position x="810" y="1940"/>
+				<kactus2:position x="710" y="1940"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_ctrl_ang_neg_out_13_rsc_to_ip_get_neg_2_conf_in" kactus2:offPage="false">
+				<kactus2:position x="710" y="2070"/>
+				<kactus2:position x="810" y="2070"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_2_ref_to_ip_ctrl_ref13_rsc" kactus2:offPage="false">
+				<kactus2:position x="810" y="2090"/>
+				<kactus2:position x="710" y="2090"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_ctrl_ang_neg_out_14_rsc_to_ip_get_neg_3_conf_in" kactus2:offPage="false">
+				<kactus2:position x="710" y="2220"/>
+				<kactus2:position x="810" y="2220"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_3_ref_to_ip_ctrl_ref14_rsc" kactus2:offPage="false">
+				<kactus2:position x="810" y="2240"/>
+				<kactus2:position x="710" y="2240"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_ctrl_ang_neg_out_15_rsc_to_ip_get_neg_4_conf_in" kactus2:offPage="false">
+				<kactus2:position x="710" y="2370"/>
+				<kactus2:position x="810" y="2370"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_4_ref_to_ip_ctrl_ref15_rsc" kactus2:offPage="false">
+				<kactus2:position x="810" y="2390"/>
+				<kactus2:position x="710" y="2390"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_ctrl_ang_neg_out_16_rsc_to_ip_get_neg_5_conf_in" kactus2:offPage="false">
+				<kactus2:position x="710" y="2520"/>
+				<kactus2:position x="810" y="2520"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_5_ref_to_ip_ctrl_ref16_rsc" kactus2:offPage="false">
+				<kactus2:position x="810" y="2540"/>
+				<kactus2:position x="710" y="2540"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_ctrl_ang_neg_out_17_rsc_to_ip_get_neg_6_conf_in" kactus2:offPage="false">
+				<kactus2:position x="710" y="2670"/>
+				<kactus2:position x="810" y="2670"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_6_ref_to_ip_ctrl_ref17_rsc" kactus2:offPage="false">
+				<kactus2:position x="810" y="2690"/>
+				<kactus2:position x="710" y="2690"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_ctrl_ang_neg_out_18_rsc_to_ip_get_neg_7_conf_in" kactus2:offPage="false">
+				<kactus2:position x="710" y="2820"/>
+				<kactus2:position x="810" y="2820"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_7_ref_to_ip_ctrl_ref18_rsc" kactus2:offPage="false">
+				<kactus2:position x="810" y="2840"/>
+				<kactus2:position x="710" y="2840"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_pos_0_hor_out_to_sad_parallel_in_rsc_2" kactus2:offPage="false">
+				<kactus2:position x="1030" y="420"/>
+				<kactus2:position x="1130" y="420"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="sad_parallel_in_rsc_34_to_ip_get_pos_0_ver_out" kactus2:offPage="false">
+				<kactus2:position x="1130" y="440"/>
+				<kactus2:position x="1030" y="440"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_pos_1_ver_out_to_sad_parallel_in_rsc_33" kactus2:offPage="false">
+				<kactus2:position x="1030" y="590"/>
+				<kactus2:position x="1130" y="590"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="sad_parallel_in_rsc_3_to_ip_get_pos_1_hor_out" kactus2:offPage="false">
+				<kactus2:position x="1130" y="570"/>
+				<kactus2:position x="1030" y="570"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_pos_2_hor_out_to_sad_parallel_in_rsc_4" kactus2:offPage="false">
+				<kactus2:position x="1030" y="720"/>
+				<kactus2:position x="1130" y="720"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="sad_parallel_in_rsc_32_to_ip_get_pos_2_ver_out" kactus2:offPage="false">
+				<kactus2:position x="1130" y="740"/>
+				<kactus2:position x="1030" y="740"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_pos_3_hor_out_to_sad_parallel_in_rsc_5" kactus2:offPage="false">
+				<kactus2:position x="1030" y="870"/>
+				<kactus2:position x="1130" y="870"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="sad_parallel_in_rsc_31_to_ip_get_pos_3_ver_out" kactus2:offPage="false">
+				<kactus2:position x="1130" y="890"/>
+				<kactus2:position x="1030" y="890"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_pos_4_hor_out_to_sad_parallel_in_rsc_6" kactus2:offPage="false">
+				<kactus2:position x="1030" y="1020"/>
+				<kactus2:position x="1130" y="1020"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="sad_parallel_in_rsc_30_to_ip_get_pos_4_ver_out" kactus2:offPage="false">
+				<kactus2:position x="1130" y="1040"/>
+				<kactus2:position x="1030" y="1040"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_pos_5_hor_out_to_sad_parallel_in_rsc_7" kactus2:offPage="false">
+				<kactus2:position x="1030" y="1170"/>
+				<kactus2:position x="1130" y="1170"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="sad_parallel_in_rsc_29_to_ip_get_pos_5_ver_out" kactus2:offPage="false">
+				<kactus2:position x="1130" y="1190"/>
+				<kactus2:position x="1030" y="1190"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_pos_6_hor_out_to_sad_parallel_in_rsc_8" kactus2:offPage="false">
+				<kactus2:position x="1030" y="1320"/>
+				<kactus2:position x="1130" y="1320"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="sad_parallel_in_rsc_28_to_ip_get_pos_6_ver_out" kactus2:offPage="false">
+				<kactus2:position x="1130" y="1340"/>
+				<kactus2:position x="1030" y="1340"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_pos_7_hor_out_to_sad_parallel_in_rsc_9" kactus2:offPage="false">
+				<kactus2:position x="1030" y="1470"/>
+				<kactus2:position x="1130" y="1470"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="sad_parallel_in_rsc_27_to_ip_get_pos_7_ver_out" kactus2:offPage="false">
+				<kactus2:position x="1130" y="1490"/>
+				<kactus2:position x="1030" y="1490"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_zero_0_hor_out_to_sad_parallel_in_rsc_10" kactus2:offPage="false">
+				<kactus2:position x="1030" y="1630"/>
+				<kactus2:position x="1130" y="1630"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="sad_parallel_in_rsc_26_to_ip_get_zero_0_ver_out" kactus2:offPage="false">
+				<kactus2:position x="1130" y="1650"/>
+				<kactus2:position x="1030" y="1650"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_0_hor_out_to_sad_parallel_in_rsc_11" kactus2:offPage="false">
+				<kactus2:position x="1030" y="1770"/>
+				<kactus2:position x="1130" y="1770"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="sad_parallel_in_rsc_25_to_ip_get_neg_0_ver_out" kactus2:offPage="false">
+				<kactus2:position x="1130" y="1790"/>
+				<kactus2:position x="1030" y="1790"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_1_hor_out_to_sad_parallel_in_rsc_12" kactus2:offPage="false">
+				<kactus2:position x="1030" y="1920"/>
+				<kactus2:position x="1130" y="1920"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="sad_parallel_in_rsc_24_to_ip_get_neg_1_ver_out" kactus2:offPage="false">
+				<kactus2:position x="1130" y="1940"/>
+				<kactus2:position x="1030" y="1940"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_2_hor_out_to_sad_parallel_in_rsc_13" kactus2:offPage="false">
+				<kactus2:position x="1030" y="2070"/>
+				<kactus2:position x="1130" y="2070"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="sad_parallel_in_rsc_23_to_ip_get_neg_2_ver_out" kactus2:offPage="false">
+				<kactus2:position x="1130" y="2090"/>
+				<kactus2:position x="1030" y="2090"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_3_hor_out_to_sad_parallel_in_rsc_14" kactus2:offPage="false">
+				<kactus2:position x="1030" y="2220"/>
+				<kactus2:position x="1130" y="2220"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="sad_parallel_in_rsc_22_to_ip_get_neg_3_ver_out" kactus2:offPage="false">
+				<kactus2:position x="1130" y="2240"/>
+				<kactus2:position x="1030" y="2240"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_5_hor_out_to_sad_parallel_in_rsc_16" kactus2:offPage="false">
+				<kactus2:position x="1030" y="2520"/>
+				<kactus2:position x="1130" y="2520"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="sad_parallel_in_rsc_20_to_ip_get_neg_5_ver_out" kactus2:offPage="false">
+				<kactus2:position x="1130" y="2540"/>
+				<kactus2:position x="1030" y="2540"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_6_hor_out_to_sad_parallel_in_rsc_17" kactus2:offPage="false">
+				<kactus2:position x="1030" y="2670"/>
+				<kactus2:position x="1130" y="2670"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="sad_parallel_in_rsc_19_to_ip_get_neg_6_ver_out" kactus2:offPage="false">
+				<kactus2:position x="1130" y="2690"/>
+				<kactus2:position x="1030" y="2690"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_7_hor_out_to_sad_parallel_in_rsc_18" kactus2:offPage="false">
+				<kactus2:position x="1030" y="2820"/>
+				<kactus2:position x="1130" y="2820"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="sad_parallel_lcu_ref_rsc_to_lcu_ref_rsc" kactus2:offPage="false">
+				<kactus2:position x="1450" y="360"/>
+				<kactus2:position x="400" y="360"/>
+				<kactus2:position x="400" y="380"/>
+				<kactus2:position x="380" y="380"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="sad_parallel_lcu_ref_rsc_to_bus" kactus2:offPage="false">
+				<kactus2:position x="1130" y="360"/>
+				<kactus2:position x="60" y="360"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="sad_parallel_pred_out_rsc_to_pred_buffer_pred_in_rsc" kactus2:offPage="false">
+				<kactus2:position x="1350" y="290"/>
+				<kactus2:position x="1450" y="290"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_ctrl_sad_config_rsc_to_sad_conf_fifo_data_in" kactus2:offPage="false">
+				<kactus2:position x="490" y="250"/>
+				<kactus2:position x="390" y="250"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="pred_dc_fifo_in_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="2020" y="130"/>
+				<kactus2:position x="90" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="resid_dc_fifo_in_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="2020" y="290"/>
+				<kactus2:position x="90" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ref_dc_fifo_in_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="2020" y="450"/>
+				<kactus2:position x="90" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="pred_buffer_pred_out_rsc_to_pred_out_rsc" kactus2:offPage="false">
+				<kactus2:position x="1990" y="160"/>
+				<kactus2:position x="2400" y="160"/>
+				<kactus2:position x="2400" y="120"/>
+				<kactus2:position x="2420" y="120"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="pred_buffer_resid_out_rsc_to_resid_out_rsc" kactus2:offPage="false">
+				<kactus2:position x="1990" y="130"/>
+				<kactus2:position x="2400" y="130"/>
+				<kactus2:position x="2400" y="300"/>
+				<kactus2:position x="2420" y="300"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="pred_buffer_ref_out_rsc_to_ref_out_rsc" kactus2:offPage="false">
+				<kactus2:position x="1990" y="190"/>
+				<kactus2:position x="2400" y="190"/>
+				<kactus2:position x="2400" y="410"/>
+				<kactus2:position x="2420" y="410"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="pred_buffer_pred_out_rsc_to_pred_dc_fifo_data_in" kactus2:offPage="false">
+				<kactus2:position x="1670" y="130"/>
+				<kactus2:position x="1770" y="130"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="pred_dc_fifo_data_out_to_pred_out_rsc" kactus2:offPage="false">
+				<kactus2:position x="1990" y="100"/>
+				<kactus2:position x="2100" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="pred_buffer_resid_out_rsc_to_resid_dc_fifo_data_in" kactus2:offPage="false">
+				<kactus2:position x="1670" y="250"/>
+				<kactus2:position x="1770" y="250"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="resid_dc_fifo_data_out_to_resid_out_rsc" kactus2:offPage="false">
+				<kactus2:position x="1990" y="250"/>
+				<kactus2:position x="2100" y="250"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="pred_buffer_ref_out_rsc_to_ref_dc_fifo_data_in" kactus2:offPage="false">
+				<kactus2:position x="1670" y="410"/>
+				<kactus2:position x="1770" y="410"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ref_dc_fifo_data_out_to_ref_out_rsc" kactus2:offPage="false">
+				<kactus2:position x="1990" y="410"/>
+				<kactus2:position x="2100" y="410"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="pred_dc_fifo_aclr_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="2020" y="150"/>
+				<kactus2:position x="90" y="430"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="resid_dc_fifo_aclr_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="2020" y="310"/>
+				<kactus2:position x="90" y="430"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ref_dc_fifo_aclr_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="2020" y="470"/>
+				<kactus2:position x="90" y="430"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_config_dc_fifo_in_clk_to_clk_base" kactus2:offPage="true">
+				<kactus2:position x="140" y="130"/>
+				<kactus2:position x="90" y="470"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_config_dc_fifo_aclr_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="140" y="160"/>
+				<kactus2:position x="90" y="430"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="sad_conf_fifo_aclr_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="140" y="280"/>
+				<kactus2:position x="90" y="430"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="pred_dc_fifo_out_clk_to_clk_base" kactus2:offPage="true">
+				<kactus2:position x="1740" y="150"/>
+				<kactus2:position x="90" y="470"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="resid_dc_fifo_out_clk_to_clk_base" kactus2:offPage="true">
+				<kactus2:position x="1740" y="280"/>
+				<kactus2:position x="90" y="470"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ref_dc_fifo_out_clk_to_clk_base" kactus2:offPage="true">
+				<kactus2:position x="1740" y="440"/>
+				<kactus2:position x="90" y="470"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_pos_0_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="780" y="480"/>
+				<kactus2:position x="90" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_pos_1_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="780" y="630"/>
+				<kactus2:position x="90" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_pos_2_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="780" y="780"/>
+				<kactus2:position x="90" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_pos_3_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="780" y="930"/>
+				<kactus2:position x="90" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_pos_4_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="780" y="1080"/>
+				<kactus2:position x="90" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_pos_5_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="780" y="1230"/>
+				<kactus2:position x="90" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_pos_6_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="780" y="1380"/>
+				<kactus2:position x="90" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_pos_7_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="780" y="1530"/>
+				<kactus2:position x="90" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_zero_0_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="780" y="1680"/>
+				<kactus2:position x="90" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_0_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="780" y="1830"/>
+				<kactus2:position x="90" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_2_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="780" y="2130"/>
+				<kactus2:position x="90" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_1_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="780" y="1980"/>
+				<kactus2:position x="90" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_3_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="780" y="2280"/>
+				<kactus2:position x="90" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_4_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="780" y="2430"/>
+				<kactus2:position x="90" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_5_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="780" y="2580"/>
+				<kactus2:position x="90" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_6_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="780" y="2730"/>
+				<kactus2:position x="90" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_7_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="780" y="2880"/>
+				<kactus2:position x="90" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_pos_0_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="780" y="460"/>
+				<kactus2:position x="90" y="430"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_pos_1_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="780" y="610"/>
+				<kactus2:position x="90" y="430"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_pos_2_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="780" y="760"/>
+				<kactus2:position x="90" y="430"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_pos_3_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="780" y="910"/>
+				<kactus2:position x="90" y="430"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_pos_4_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="780" y="1060"/>
+				<kactus2:position x="90" y="430"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_pos_5_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="780" y="1210"/>
+				<kactus2:position x="90" y="430"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_pos_6_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="780" y="1360"/>
+				<kactus2:position x="90" y="430"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_pos_7_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="780" y="1510"/>
+				<kactus2:position x="90" y="430"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_zero_0_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="780" y="1660"/>
+				<kactus2:position x="90" y="430"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_0_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="780" y="1810"/>
+				<kactus2:position x="90" y="430"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_1_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="780" y="1960"/>
+				<kactus2:position x="90" y="430"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_2_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="780" y="2110"/>
+				<kactus2:position x="90" y="430"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_3_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="780" y="2260"/>
+				<kactus2:position x="90" y="430"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_4_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="780" y="2410"/>
+				<kactus2:position x="90" y="430"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_5_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="780" y="2560"/>
+				<kactus2:position x="90" y="430"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_6_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="780" y="2710"/>
+				<kactus2:position x="90" y="430"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_7_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="780" y="2860"/>
+				<kactus2:position x="90" y="430"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="sad_parallel_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="1380" y="320"/>
+				<kactus2:position x="90" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="sad_parallel_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="1380" y="350"/>
+				<kactus2:position x="90" y="430"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_config_dc_fifo_out_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="420" y="130"/>
+				<kactus2:position x="90" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_4_ver_out_to_sad_parallel_in_rsc_21" kactus2:offPage="false">
+				<kactus2:position x="1030" y="2390"/>
+				<kactus2:position x="1130" y="2390"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="ip_get_neg_4_hor_out_to_sad_parallel_in_rsc_15" kactus2:offPage="false">
+				<kactus2:position x="1030" y="2370"/>
+				<kactus2:position x="1130" y="2370"/>
+			</kactus2:route>
+		</kactus2:routes>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>conf_in_rsc</kactus2:name>
+			<kactus2:position x="380" y="70"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>ip_config_inREMOVE</kactus2:name>
+			<kactus2:position x="380" y="150"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>clk</kactus2:name>
+			<kactus2:position x="60" y="510"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>normal_clock</kactus2:name>
+			<kactus2:position x="380" y="180"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>arst</kactus2:name>
+			<kactus2:position x="380" y="150"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>arst_n</kactus2:name>
+			<kactus2:position x="60" y="430"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>data_in</kactus2:name>
+			<kactus2:position x="380" y="440"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>data_in</kactus2:name>
+			<kactus2:position x="380" y="440"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>ip_config_in</kactus2:name>
+			<kactus2:position x="60" y="100"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>lcu_ref_rsc</kactus2:name>
+			<kactus2:position x="60" y="360"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>pred_out_rsc</kactus2:name>
+			<kactus2:position x="2100" y="100"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>resid_out_rsc</kactus2:name>
+			<kactus2:position x="2100" y="250"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>ref_out_rsc</kactus2:name>
+			<kactus2:position x="2100" y="410"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>clk_base</kactus2:name>
+			<kactus2:position x="60" y="470"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:note>
+			<kactus2:position x="1380" y="2910"/>
+			<kactus2:content>ver_out unconnected on purpose, both hor and ver produce identical data</kactus2:content>
+			<kactus2:associations>
+				<kactus2:position x="920" y="2840"/>
+			</kactus2:associations>
+			<kactus2:timestamp>08.03.2024 08:20</kactus2:timestamp>
+		</kactus2:note>
+		<kactus2:adHocVisibilities/>
+	</ipxact:vendorExtensions>
+</ipxact:design>

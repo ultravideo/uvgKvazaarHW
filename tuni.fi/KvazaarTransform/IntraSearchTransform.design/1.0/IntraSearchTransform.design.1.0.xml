@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipxact:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+	<ipxact:vendor>tuni.fi</ipxact:vendor>
+	<ipxact:library>KvazaarTransform</ipxact:library>
+	<ipxact:name>IntraSearchTransform.design</ipxact:name>
+	<ipxact:version>1.0</ipxact:version>
+	<ipxact:componentInstances>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>t2d</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarTransform" name="t2d" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{9432bf6a-1e67-4dad-877c-28fbb5be98a4}</kactus2:uuid>
+				<kactus2:position x="280" y="60"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="120"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="80"/>
+					<kactus2:portPosition busRef="coeff_out" x="110" y="40"/>
+					<kactus2:portPosition busRef="resid_in" x="-110" y="40"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>main_quant</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarTransform" name="main_quant" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{0f715142-bc76-418b-a4f3-358bc865db91}</kactus2:uuid>
+				<kactus2:position x="600" y="60"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="120"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="80"/>
+					<kactus2:portPosition busRef="coeff_in_rsc" x="-110" y="40"/>
+					<kactus2:portPosition busRef="coeff_out_rsc" x="110" y="190"/>
+					<kactus2:portPosition busRef="quant_out_rsc" x="110" y="40"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>it2d</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarTransform" name="it2d" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{72ae3e58-a4c2-4d35-aa79-78b62df28b2a}</kactus2:uuid>
+				<kactus2:position x="920" y="210"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="80"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="100"/>
+					<kactus2:portPosition busRef="coeff_in" x="-110" y="40"/>
+					<kactus2:portPosition busRef="coeff_out" x="-110" y="140"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>main_reconstruct</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarTransform" name="main_reconstruct" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{bfbb207a-e6ad-4681-959f-eaf34337dacf}</kactus2:uuid>
+				<kactus2:position x="920" y="400"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="170"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="150"/>
+					<kactus2:portPosition busRef="pred_in_rsc" x="-110" y="110"/>
+					<kactus2:portPosition busRef="rec_out_rsc" x="110" y="40"/>
+					<kactus2:portPosition busRef="ref_in_rsc" x="-110" y="70"/>
+					<kactus2:portPosition busRef="resid_in_rsc" x="-110" y="40"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+		<ipxact:componentInstance>
+			<ipxact:instanceName>coeff_cost</ipxact:instanceName>
+			<ipxact:componentRef vendor="tuni.fi" library="KvazaarTransform" name="coeff_cost" version="1.0"/>
+			<ipxact:vendorExtensions>
+				<kactus2:uuid>{c7b444a2-bb9d-445c-bea0-aa33f8292263}</kactus2:uuid>
+				<kactus2:position x="920" y="60"/>
+				<kactus2:portPositions>
+					<kactus2:portPosition busRef="arst_n" x="-110" y="100"/>
+					<kactus2:portPosition busRef="clk" x="-110" y="80"/>
+					<kactus2:portPosition busRef="coeff_in" x="-110" y="40"/>
+					<kactus2:portPosition busRef="coeff_out" x="110" y="40"/>
+				</kactus2:portPositions>
+			</ipxact:vendorExtensions>
+		</ipxact:componentInstance>
+	</ipxact:componentInstances>
+	<ipxact:interconnections>
+		<ipxact:interconnection>
+			<ipxact:name>t2d_coeff_out_to_main_quant_coeff_in_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="t2d" busRef="coeff_out"/>
+			<ipxact:activeInterface componentRef="main_quant" busRef="coeff_in_rsc"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>t2d_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="t2d" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>main_quant_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="main_quant" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>main_reconstruct_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="main_reconstruct" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>it2d_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="it2d" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>t2d_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="t2d" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>main_reconstruct_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="main_reconstruct" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>main_quant_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="main_quant" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>it2d_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="it2d" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_arst_n_to_arst_n</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost" busRef="arst_n"/>
+			<ipxact:hierInterface busRef="arst_n"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_clk_to_clk</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost" busRef="clk"/>
+			<ipxact:hierInterface busRef="clk"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>main_quant_quant_out_rsc_to_coeff_cost_coeff_in</ipxact:name>
+			<ipxact:activeInterface componentRef="main_quant" busRef="quant_out_rsc"/>
+			<ipxact:activeInterface componentRef="coeff_cost" busRef="coeff_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>coeff_cost_coeff_out_to_bus</ipxact:name>
+			<ipxact:activeInterface componentRef="coeff_cost" busRef="coeff_out"/>
+			<ipxact:hierInterface busRef="coeff_out"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>main_quant_coeff_out_rsc_to_it2d_coeff_in</ipxact:name>
+			<ipxact:activeInterface componentRef="main_quant" busRef="coeff_out_rsc"/>
+			<ipxact:activeInterface componentRef="it2d" busRef="coeff_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>t2d_resid_in_to_bus</ipxact:name>
+			<ipxact:activeInterface componentRef="t2d" busRef="resid_in"/>
+			<ipxact:hierInterface busRef="resid_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>main_reconstruct_ref_in_rsc_to_ref_in</ipxact:name>
+			<ipxact:activeInterface componentRef="main_reconstruct" busRef="ref_in_rsc"/>
+			<ipxact:hierInterface busRef="ref_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>main_reconstruct_rec_out_rsc_to_rec_out</ipxact:name>
+			<ipxact:activeInterface componentRef="main_reconstruct" busRef="rec_out_rsc"/>
+			<ipxact:hierInterface busRef="rec_out"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>main_reconstruct_pred_in_rsc_to_pred_in</ipxact:name>
+			<ipxact:activeInterface componentRef="main_reconstruct" busRef="pred_in_rsc"/>
+			<ipxact:hierInterface busRef="pred_in"/>
+		</ipxact:interconnection>
+		<ipxact:interconnection>
+			<ipxact:name>it2d_coeff_out_to_main_reconstruct_resid_in_rsc</ipxact:name>
+			<ipxact:activeInterface componentRef="it2d" busRef="coeff_out"/>
+			<ipxact:activeInterface componentRef="main_reconstruct" busRef="resid_in_rsc"/>
+		</ipxact:interconnection>
+	</ipxact:interconnections>
+	<ipxact:vendorExtensions>
+		<kactus2:version>3,11,1,0</kactus2:version>
+		<kactus2:kts_attributes>
+			<kactus2:kts_implementation>HW</kactus2:kts_implementation>
+		</kactus2:kts_attributes>
+		<kactus2:columnLayout>
+			<kactus2:column name="IO" contentType="0" allowedItems="1" minWidth="119" width="119" x="0"/>
+			<kactus2:column name="Components" contentType="2" allowedItems="2" minWidth="319" width="319" x="120"/>
+			<kactus2:column name="out" contentType="0" allowedItems="1" minWidth="119" width="119" x="1080"/>
+			<kactus2:column name="quant" contentType="2" allowedItems="2" minWidth="319" width="319" x="440"/>
+			<kactus2:column name="reconst" contentType="2" allowedItems="2" minWidth="319" width="319" x="760"/>
+		</kactus2:columnLayout>
+		<kactus2:routes>
+			<kactus2:route kactus2:connRef="t2d_coeff_out_to_main_quant_coeff_in_rsc" kactus2:offPage="false">
+				<kactus2:position x="390" y="100"/>
+				<kactus2:position x="490" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="t2d_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="140" y="180"/>
+				<kactus2:position x="90" y="180"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="main_quant_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="460" y="180"/>
+				<kactus2:position x="90" y="180"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="main_reconstruct_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="780" y="570"/>
+				<kactus2:position x="90" y="180"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="it2d_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="780" y="290"/>
+				<kactus2:position x="90" y="180"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="t2d_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="140" y="140"/>
+				<kactus2:position x="90" y="140"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="main_reconstruct_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="780" y="550"/>
+				<kactus2:position x="90" y="140"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="main_quant_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="460" y="140"/>
+				<kactus2:position x="90" y="140"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="it2d_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="780" y="310"/>
+				<kactus2:position x="90" y="140"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_arst_n_to_arst_n" kactus2:offPage="true">
+				<kactus2:position x="780" y="160"/>
+				<kactus2:position x="90" y="180"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_clk_to_clk" kactus2:offPage="true">
+				<kactus2:position x="780" y="140"/>
+				<kactus2:position x="90" y="140"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="main_quant_quant_out_rsc_to_coeff_cost_coeff_in" kactus2:offPage="false">
+				<kactus2:position x="710" y="100"/>
+				<kactus2:position x="810" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_coeff_out_to_coeff_out" kactus2:offPage="false">
+				<kactus2:position x="1030" y="100"/>
+				<kactus2:position x="1140" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="coeff_cost_coeff_out_to_bus" kactus2:offPage="false">
+				<kactus2:position x="1030" y="100"/>
+				<kactus2:position x="1140" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="main_quant_coeff_out_rsc_to_it2d_coeff_in" kactus2:offPage="false">
+				<kactus2:position x="710" y="250"/>
+				<kactus2:position x="810" y="250"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="t2d_resid_in_to_resid_in" kactus2:offPage="false">
+				<kactus2:position x="170" y="100"/>
+				<kactus2:position x="60" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="t2d_resid_in_to_bus" kactus2:offPage="false">
+				<kactus2:position x="170" y="100"/>
+				<kactus2:position x="60" y="100"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="main_reconstruct_rec_out_rsc_to_rec_out_rsc" kactus2:offPage="false">
+				<kactus2:position x="1030" y="410"/>
+				<kactus2:position x="1140" y="410"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="main_reconstruct_ref_in_rsc_to_ref_in_rsc" kactus2:offPage="false">
+				<kactus2:position x="810" y="440"/>
+				<kactus2:position x="60" y="440"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="main_reconstruct_pred_in_rsc_to_pred_in_rsc" kactus2:offPage="false">
+				<kactus2:position x="810" y="480"/>
+				<kactus2:position x="60" y="480"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="main_reconstruct_ref_in_rsc_to_ref_in" kactus2:offPage="false">
+				<kactus2:position x="810" y="470"/>
+				<kactus2:position x="60" y="470"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="main_reconstruct_rec_out_rsc_to_rec_out" kactus2:offPage="false">
+				<kactus2:position x="1030" y="440"/>
+				<kactus2:position x="1140" y="440"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="main_reconstruct_pred_in_rsc_to_pred_in" kactus2:offPage="false">
+				<kactus2:position x="810" y="510"/>
+				<kactus2:position x="60" y="510"/>
+			</kactus2:route>
+			<kactus2:route kactus2:connRef="it2d_coeff_out_to_main_reconstruct_resid_in_rsc" kactus2:offPage="false">
+				<kactus2:position x="810" y="350"/>
+				<kactus2:position x="790" y="350"/>
+				<kactus2:position x="790" y="440"/>
+				<kactus2:position x="810" y="440"/>
+			</kactus2:route>
+		</kactus2:routes>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>arst_n</kactus2:name>
+			<kactus2:position x="60" y="180"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>clk</kactus2:name>
+			<kactus2:position x="60" y="140"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>coeff_out</kactus2:name>
+			<kactus2:position x="1140" y="100"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>resid_in</kactus2:name>
+			<kactus2:position x="60" y="100"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>rec_out_rsc</kactus2:name>
+			<kactus2:position x="1140" y="410"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>ref_in_rsc</kactus2:name>
+			<kactus2:position x="60" y="440"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>pred_in_rsc</kactus2:name>
+			<kactus2:position x="60" y="480"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>rec_out</kactus2:name>
+			<kactus2:position x="1140" y="440"/>
+			<kactus2:direction x="-1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>ref_in</kactus2:name>
+			<kactus2:position x="60" y="470"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:interfaceGraphics>
+			<kactus2:name>pred_in</kactus2:name>
+			<kactus2:position x="60" y="510"/>
+			<kactus2:direction x="1" y="0"/>
+		</kactus2:interfaceGraphics>
+		<kactus2:adHocVisibilities/>
+	</ipxact:vendorExtensions>
+</ipxact:design>
